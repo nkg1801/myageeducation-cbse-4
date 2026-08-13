@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/imageViewSubjectImage"
+        android:layout_width="@dimen/winners_photo_width"
+        android:layout_height="@dimen/winners_photo_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/science"/>
+
+    <TextView
+        android:id="@+id/textViewVerticalLine"
+        android:layout_height="100dp"
+        android:layout_width="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/imageViewSubjectImage"
+        android:background="#FFff80"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/textViewContestName"
+        android:text="Contest:  Jan - 2018 "
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/textViewVerticalLine"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/winner_name_font_size"
+        />
+
+    <TextView
+        android:id="@+id/textViewWinnerName"
+        android:text="Name:  Winner Name "
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/textViewVerticalLine"
+        android:layout_below="@+id/textViewContestName"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/winner_name_font_size"
+        />
+
+    <TextView
+        android:id="@+id/textViewWinnerCity"
+        android:text="City:  Winner City "
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/textViewVerticalLine"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewWinnerName"
+        android:textSize="@dimen/winner_name_font_size"
+        />
+</RelativeLayout>

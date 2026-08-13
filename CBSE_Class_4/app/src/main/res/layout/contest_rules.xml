@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="10dip">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:max="500"
+        android:progress="0"
+        android:progressDrawable="@drawable/circular_progress" />
+
+    <TextView
+        android:id="@+id/textViewWaiting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/progressBar"
+        android:gravity="center_horizontal"
+        android:textSize="14sp"
+        android:text="Getting data from the server, please wait..." />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/buttonOk"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewContestRules"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#938359"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/adView"
+        android:layout_marginBottom="10dp"
+        android:text="OK"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button_dark_grey"
+        android:paddingLeft="10dp"
+        android:onClick="onClickButtonOk"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/admob_banner_adunitid">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

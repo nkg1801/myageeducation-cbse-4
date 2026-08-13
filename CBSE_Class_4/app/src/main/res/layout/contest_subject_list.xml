@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_centerHorizontal="true"
+                android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/textViewContestSubjects"
+        android:text="Choose the subject"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:id="@+id/tableLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:stretchColumns="0,1"
+                 android:layout_alignParentTop="true"
+                 android:layout_marginTop="50dp"
+                 android:layout_below="@+id/textViewContestSubjects"
+                    android:layout_above="@+id/textViewTotalScore">
+
+        <TableRow>
+            <Button
+                android:id="@+id/buttonMaths"
+                android:text="Maths"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:textColor="@color/colorWhite"
+                android:onClick="onClickButtonMaths"
+                android:background="@drawable/books_cover_green"/>
+            <Button
+                android:id="@+id/buttonScience"
+                android:text="Science"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:onClick="onClickButtonScience"
+                android:background="@drawable/books_cover_yellow"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text=""
+                android:gravity="center"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                />
+
+            <TextView
+                android:text=""
+                android:gravity="center"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/buttonComputers"
+                android:text="Computers"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:onClick="onClickButtonComputers"
+                android:background="@drawable/books_cover"/>
+            <Button
+                android:id="@+id/buttonGk"
+                android:text="GK"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:textColor="@color/colorWhite"
+                android:onClick="onClickButtonGk"
+                android:background="@drawable/books_cover_blue"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewTotalScore"
+        android:text="Total Score: NA"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/buttonGetMyScore"
+        android:layout_marginBottom="5dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/textViewWaiting"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/textViewWaiting"
+        android:text="@string/waiting_for_data_please_wait"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/textViewTotalScore"
+        android:layout_marginBottom="5dp"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/buttonGetMyScore"
+        android:text="Get My Score"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:onClick="onClickButtonGetMyScore"
+        android:layout_above="@+id/adView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_button_dark_grey"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/admob_banner_adunitid">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

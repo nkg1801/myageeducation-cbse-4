@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myAgeEducation.cbseClass4"
+          >
+
+    <!--
+    android:versionCode="16"
+    android:versionName="1.16" >
+    -->
+
+    <!-- Whats new in version
+            1.14 - App share link included
+            1.15 - revision problem solved
+            1.16 - Knowledge Contest
+    -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".CbseApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4837855590190532~6355971406"/>
+
+        <activity
+            android:name=".QuestionPage"
+            android:label="Test"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".SupportiveTextLargeView"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name=".LoginSignupActivity"
+            android:label="Login Signup"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" >
+        </activity>
+        <activity
+            android:name=".SubjectList"
+            android:exported="true"
+            android:label = "@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Chapters"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".TestReport"
+            android:label="@string/title_test_report"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ScoreHistory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PointSettings"
+            android:label="Points Settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".RewardsTable"
+            android:label="Rewards"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PointsTable"
+            android:label="Points Table"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".StartMode"
+            android:label="Start Mode"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".GetMore"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+            android:name=".ContestSubjectList"
+            android:label="Subject List"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".Registration"
+            android:label="Contest Registration Form"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".ContestRules"
+            android:label="Contest Rules"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".ContestChapters"
+            android:label="Test Info"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".NewUpdateRegistration"
+            android:label="New/Update Registration"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".UpdateRegistration"
+            android:label="Registration Update Form"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+</manifest>

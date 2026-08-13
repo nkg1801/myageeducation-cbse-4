@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ads="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/question_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+             android:layout_above="@+id/adView"/>
+
+    <TextView
+        android:id="@+id/textViewTimeOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:layout_centerVertical="true"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        android:text="@string/time_out"/>
+
+    <TextView
+        android:id="@+id/textViewCounter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:text="60"
+        android:background="#07000000"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
+         />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-4837855590190532/5559068200">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

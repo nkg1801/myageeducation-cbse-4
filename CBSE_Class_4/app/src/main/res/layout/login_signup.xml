@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="10dip">
+
+    <TextView
+        android:id="@+id/textViewUserName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="Please login by providing your credentials" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUserName"
+        android:layout_marginTop="20dp"
+        android:inputType="textEmailAddress"
+        android:hint="Your email address"
+        android:gravity="center_horizontal"
+        />
+
+    <EditText
+        android:id="@+id/editTextPin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_marginTop="10dp"
+        android:inputType="numberPassword"
+        android:gravity="center_horizontal"
+        android:hint="Enter 6-digit PIN"
+        />
+
+    <TextView
+        android:id="@+id/textViewWaitingForData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editTextPin"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:textColor="#FF0000"
+        android:text="Connecting to server, please wait..."
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewWaitingForData"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TableRow>
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewWaitingForData"
+        android:layout_marginTop="10dp"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:background="#000000"
+        android:paddingRight="10dp"
+        android:onClick="onClickButtonRegister"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="10dp"/>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewWaitingForData"
+        android:layout_marginTop="10dp"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:background="#000000"
+        android:paddingLeft="10dp"
+        android:onClick="onClickButtonLogin"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewForgotPin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tableLayout"
+        android:layout_alignLeft="@+id/tableLayout"
+        android:textColor="#0000FF"
+        android:onClick="onClickForgotPin"
+        android:textSize="13sp"
+        android:text="If you have forgotten your PIN, click this link to generate it" />
+
+    <TextView
+        android:id="@+id/textViewNote"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textViewForgotPin"
+        android:layout_alignLeft="@+id/tableLayout"
+        android:textColor="#938359"
+        android:text="Note: If you are not yet registered for the contest, please register yourself by clicking the REGISTER button." />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/admob_banner_adunitid">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<resources>
+    <string name="admob_banner_adunitid">ca-app-pub-4837855590190532/7832704609</string>
+    <string name="admob_banner_adunitid_temp">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="app_name">CBSE - 4</string>
+    <string name="image">Image</string>
+    <string name="title_activity_main">CBSE - 4</string>
+   <string name="time_out">Time Out</string>
+    <string name="title_test_report">Test Report</string>
+    <string name="title_settings">Settings</string>
+
+    <string-array name="subjects">
+        <item>Science</item>
+        <item>Maths</item>
+        <item>Computers</item>
+        <item>GK</item>
+        <item>English</item>
+        <item>Moral Science</item>
+    </string-array>
+
+    <string-array name="chapters">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="percentage">
+        <item>100%</item>
+        <item>95%</item>
+        <item>90%</item>
+        <item>85%</item>
+        <item>80%</item>
+        <item>75%</item>
+        <item>70%</item>
+        <item>65%</item>
+        <item>60%</item>
+        <item>55%</item>
+        <item>50%</item>
+    </string-array>
+    
+    <string-array name="indian_states">
+        <item>-Select your state-</item>
+        <item>Andaman and Nicobar Islands</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadar and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Lakshadweep</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Puducherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+    
+    <item type="id" name="TAG_SELECTION"/>
+
+    <string-array name="mock_exam_list">
+        <item>Chapter Wise - Set 1</item>
+        <item>Chapter Wise - Set 2</item>
+        <item>Chapter Wise - Set 3</item>
+        <item>Chapter Wise - Set 4</item>
+        <item>Chapter Wise - Set 5</item>
+        <item>Chapter Wise - Set 6</item>
+    </string-array>
+
+    <string-array name="contest_flash">
+        <item>Participate and Win Exciting Prizes</item>
+        <item>No Participation fee</item>
+        <item>Contest begins 10th of every month</item>
+        <item>Contest ends last date of every month</item>
+        <item>Answer easy questions and be eligible to win prizes</item>
+        <item>Win Amazon Echo Dot - 3rd Generation</item>
+        <item>Win Portable Hard drives and many more items</item>
+        <item>Every month something to win</item>
+    </string-array>
+
+    <string name="title_activity_offline_version">OfflineVersionActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="register">Register</string>
+    <string name="confirm_pin">Confirm 6-digit Pin</string>
+    <string name="enter_pin">Enter 6-digit Pin</string>
+    <string name="confirm_email">confirm your email address</string>
+    <string name="email_address">email address</string>
+    <string name="town_city">Town/City</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="contest_registration_form">Contest Registration Form</string>
+    <string name="registration_note">Note: Winners will be notified via this app as well as via email. Make sure you provide your correct email address.</string>
+    <string name="optional_note">The following details are OPTIONAL but will be required if you are declared a WINNER so that the prizes can be sent to you. Either you can enter them now, or later after you are declared a WINNER. These optional details can be provided later via the CONTEST REGISTRATION PAGE and then the UPDATE REGISTRATION DETAILS</string>
+    <string name="optional_header">Optional Details:</string>
+    <string name="contest_closed">Contest Closed</string>
+    <string name="close">Close</string>
+    <string name="start_mock_test">Start Mock Test</string>
+    <string name="new_registration">New Registration</string>
+    <string name="update_registration">Update existing registration</string>
+    <string name="your_details_will_be_updated">Your details will be updated. Thank you</string>
+    <string name="waiting_for_data_please_wait">Waiting for data, please wait...</string>
+</resources>

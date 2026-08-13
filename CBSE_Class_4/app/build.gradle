@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 37
+    namespace 'com.myAgeEducation.cbseClass4'
+
+    /*Version details
+    33: Updated SDK version to 37
+    32: Update to new SDK after the app was removed from playstore - could not be published
+    31: Not tracked
+    30: Cuemaths ads removed
+    29: Cuemaths olympiad link included
+    28: Cuemath ad link corrected. By mistake it was given for Class-3
+    27: Crash on opening fixed
+    26: Cuemath ad image from the local drawable folder rather than from firebase to save bandwidth
+    25: Shifted to its own firebase project
+    24: Third party add included in the Chapters Activity
+    23:   - GetMore to get data from cloud database
+          */
+
+    defaultConfig {
+        applicationId "com.myAgeEducation.cbseClass4"
+        minSdkVersion 26
+        targetSdkVersion 37
+        multiDexEnabled true
+        versionCode 33
+        versionName "3.3"
+    }
+
+    /*buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }*/
+
+    signingConfigs {
+        release {
+            storeFile file("../MySchoolMyTest_1.jks")
+            storePassword "duliajan"
+            keyAlias "myschoolmytest"
+            keyPassword "duliajan"
+        }
+    }
+
+    buildTypes {
+
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'com.google.android.gms:play-services-ads:25.4.0'
+    implementation project(":cbsecommon_aar-release")
+    implementation 'com.google.firebase:firebase-database:22.0.1'
+    implementation 'com.google.firebase:firebase-auth:24.2.0'
+    implementation 'com.squareup.picasso:picasso:2.71828' // do not change this, it creates some problems - Nand
+}
+
+android {
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
