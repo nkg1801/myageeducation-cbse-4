@@ -94,6 +94,24 @@ public class PersonNameUtil
         return list.subList(0, count).toArray(new String[count]);
     }
 
+    public static String[] getDifferentMaleNames(int count)
+    {
+        String[] all_names = new String[MALE_NAMES.length];
+        System.arraycopy(MALE_NAMES, 0, all_names, 0, MALE_NAMES.length);
+        List<String> list = Arrays.asList(all_names);
+        Collections.shuffle(list);
+        return list.subList(0, count).toArray(new String[count]);
+    }
+
+    public static String[] getDifferentFemaleNames(int count)
+    {
+        String[] all_names = new String[FEMALE_NAMES.length];
+        System.arraycopy(FEMALE_NAMES, 0, all_names, 0, FEMALE_NAMES.length);
+        List<String> list = Arrays.asList(all_names);
+        Collections.shuffle(list);
+        return list.subList(0, count).toArray(new String[count]);
+    }
+
     private PersonNameUtil()
     {
         // Prevent object creation
