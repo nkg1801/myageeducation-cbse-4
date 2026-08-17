@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:ads="http://schemas.android.com/apk/res-auto"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="#FFFFFF">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
 
     <TextView
         android:id="@+id/textViewQuestionNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="16sp"
         android:text="@string/question_number" />
 
     <TextView
         android:id="@+id/textViewScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="5dp" />
+        android:textSize="16sp"
+        android:layout_marginEnd="5dp" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -35,48 +36,72 @@
 
             <TextView
                 android:id="@+id/textViewQuestion"
-                android:text="Question text goes here"
+                android:text="@string/question_text"
+                android:background="@drawable/bg_gradient_pill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="20sp"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"
-                android:textSize="20sp"/>
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"/>
 
             <RadioButton
                 android:id="@+id/radio_option1"
+                android:background="@drawable/bg_gradient_red_pill"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textViewQuestion"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="20dp"
-                android:text=""/>
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/option_1"/>
 
             <RadioButton
                 android:id="@+id/radio_option2"
+                android:background="@drawable/bg_gradient_red_pill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/radio_option1"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"/>
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:text="@string/option_2"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"/>
 
             <RadioButton
                 android:id="@+id/radio_option3"
+                android:background="@drawable/bg_gradient_red_pill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/radio_option2"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true" />
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:text="@string/option_3"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
 
             <RadioButton
                 android:id="@+id/radio_option4"
+                android:background="@drawable/bg_gradient_red_pill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/radio_option3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true" />
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:text="@string/option_4"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
 
             <ImageView
                 android:id="@+id/imageView1"
@@ -85,7 +110,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/radio_option4"
                 android:layout_marginTop="15dp"
-                android:scaleType="fitXY"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
                 android:contentDescription="@string/image"
                 android:clickable="true"
                 android:onClick="onClickAdImage"
@@ -96,14 +122,13 @@
                 android:visibility="invisible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
                 android:layout_below="@+id/radio_option4"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:padding="10dp"
-                android:text = "myAge Education"
                 android:typeface="monospace"
                 android:background="#dbd5d5"/>
 
@@ -111,8 +136,8 @@
                 android:id="@+id/imageViewRight"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
                 android:layout_below="@+id/textViewQuestion"
                 android:layout_marginTop="15dp"
                 android:scaleType="fitXY"
@@ -124,8 +149,8 @@
                 android:id="@+id/imageViewWrong"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
                 android:layout_below="@+id/textViewQuestion"
                 android:layout_marginTop="15dp"
                 android:scaleType="fitXY"
@@ -135,74 +160,68 @@
         </RelativeLayout>
     </ScrollView>
 
-  <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:id="@+id/tableLayout1"
-             android:layout_width="fill_parent"
-             android:layout_height="wrap_content"
-             android:stretchColumns="*"
-             android:layout_above="@+id/tableLayout2">
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/textViewPlaceHolder"
+        android:layout_marginBottom="10dp">
 
-      <TableRow
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/buttonExitTest"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Exit Test"
-            android:background="#FF0000"
-            android:textColor="#FFFFFF"
-            android:gravity="center_horizontal|center_vertical"
-            />
-
-        <Button
-            android:id="@+id/buttonNext"
-            android:text="Next Q"
-            android:layout_height="50dp"
-            android:layout_width="match_parent"
-            android:textColor="#000000"
-            android:background="#0bFbaf"
-            android:gravity="center_horizontal|center_vertical"
-             />
-      </TableRow>
-  </TableLayout>
-
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                 android:id="@+id/tableLayout2"
-                 android:layout_width="fill_parent"
-                 android:layout_height="wrap_content"
-                 android:stretchColumns="*"
-                 android:layout_alignParentBottom="true">
-
-        <TableRow  android:layout_width="match_parent"
-                   android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textViewSubject"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="Subject"
-                android:background="#AAB7B8"
+            <Button
+                android:id="@+id/buttonExitTest"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/exit_test"
+                android:background="#FF0000"
                 android:textColor="#FFFFFF"
-                android:paddingLeft="5dp"
-                android:layout_alignParentBottom="true"/>
+                android:gravity="center_horizontal|center_vertical"
+                />
 
-                <TextView
-                    android:id="@+id/textViewTimer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:background="#AAB7B8"
-                    android:textColor="#FFFFFF"
-                    android:paddingRight="5dp"
-                    android:gravity="right"
-                    android:text="Timer"/>
-
-
+            <Button
+                android:id="@+id/buttonNext"
+                android:text="@string/next_q"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:textColor="#000000"
+                android:background="#0bFbaf"
+                android:gravity="center_horizontal|center_vertical"
+                />
         </TableRow>
     </TableLayout>
 
+    <TextView
+        android:id="@+id/textViewPlaceHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorLightBlack"
+        android:layout_alignParentBottom="true"
+        />
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorLightBlack"
+        android:layout_alignBaseline="@+id/textViewPlaceHolder"
+        />
+
+    <TextView
+        android:id="@+id/textViewSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorLightBlack"
+        android:layout_alignBaseline="@+id/textViewPlaceHolder"
+        />
 </RelativeLayout>

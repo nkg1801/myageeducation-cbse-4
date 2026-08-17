@@ -15,10 +15,10 @@ public class ImageAdapter extends BaseAdapter {
 
     // Keep all Images in array
     public Integer[] mThumbIds = {
-            R.drawable.round_maths, R.drawable.round_evs,
+            /*R.drawable.round_maths, R.drawable.round_evs,
             R.drawable.round_english, R.drawable.round_moralscience,
             R.drawable.round_computers, R.drawable.round_gk,
-            R.drawable.round_scores, R.drawable.round_exit
+            R.drawable.round_scores, R.drawable.round_exit*/
 
     };
 

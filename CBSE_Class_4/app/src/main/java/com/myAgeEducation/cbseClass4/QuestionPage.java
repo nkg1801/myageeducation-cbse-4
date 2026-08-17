@@ -1,6 +1,5 @@
 package com.myAgeEducation.cbseClass4;
 
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -16,6 +15,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -38,6 +38,14 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.myAgeEducation.cbseClass4.maths.charts.BarChartImageGenerator;
+import com.myAgeEducation.cbseClass4.maths.charts.BarChartQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphImageGenerator;
+import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.pictograph.PictographImageGenerator;
+import com.myAgeEducation.cbseClass4.maths.pictograph.PictographQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeParser;
+import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeType;
 import com.myAgeEducation.cbsecommon.Question;
 
 import java.io.BufferedWriter;
@@ -47,6 +55,8 @@ import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Map;
+import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -54,30 +64,26 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.UUID;
 
-public class QuestionPage extends Activity
-{
+public class QuestionPage extends Activity {
 	private RadioButton radioSelectedButton;
-  	private Button buttonNext;
-    private TableLayout tableLayout1;
-  	private int _currentQuestionNumber;
+	private Button buttonNext;
+	private TableLayout tableLayout1;
+	private int _currentQuestionNumber;
 	private Question _question;
 	public static ArrayList<Question> QuestionList;
 	private ArrayList<Question> revisionQuestions;
-  	private String answer;
-  	private int correctAnswerCount;
-  	private int questionCount;
-  	public int seconds = 0;
-  	public int totalSeconds = 0;
-  	public int minutes = 0;
-  	public int hours = 0;
-  	private String isRevision;
-  	private ArrayList<Integer> _usedNumbers = new ArrayList<Integer>();
+	private String answer;
+	private int correctAnswerCount;
+	private int questionCount;
+	public int seconds = 0;
+	private String isRevision;
+	private ArrayList<Integer> _usedNumbers = new ArrayList<Integer>();
 	public ArrayList _questionNumbers = new ArrayList();
-  	private SharedPreferences sharedPrefs;
-  	private String reward = "";
-  	private boolean _automaticallyMoveToNextQuestion = false;
+	private SharedPreferences sharedPrefs;
+	private String reward = "";
+	private boolean _automaticallyMoveToNextQuestion = false;
 	private boolean _isRandomQuestions = false;
-  	private String rewardPoints = "";
+	private String rewardPoints = "";
 	private InterstitialAd mInterstitialAd;
 	private boolean _isRecoverMode;
 	private String isExit;
@@ -93,15 +99,13 @@ public class QuestionPage extends Activity
 	int _scoreSavedIntermediately = 0;
 
 	@Override
-  	public void onCreate(Bundle savedInstanceState)
-  	{
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.questionpage);
 		_bundle = getIntent().getExtras();
 		readBundle();
-		
-		if(!storeQuestionNumbers())
-		{
+
+		if (!storeQuestionNumbers()) {
 			finish();
 			return;
 		}
@@ -110,10 +114,10 @@ public class QuestionPage extends Activity
 		addBannerAd();
 
 		setTextViewProperties();
-	
+
 		sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-    	_currentQuestionNumber = 1;
+		_currentQuestionNumber = 1;
 		correctAnswerCount = 0;
 		counter = 61;
 
@@ -121,62 +125,52 @@ public class QuestionPage extends Activity
 
 		displayInitialScore();
 
-		if(isExit.equalsIgnoreCase("true"))
-		{
+		if (isExit.equalsIgnoreCase("true")) {
 			finish();
 		}
 
 		displayScore();
 
 		buttonNext = findViewById(R.id.buttonNext);
-        tableLayout1 = findViewById(R.id.tableLayout1);
+		tableLayout1 = findViewById(R.id.tableLayout1);
 		textViewCounter = findViewById(R.id.textViewCounter);
 
-    	setQuestionTextColor();
+		setQuestionTextColor();
 
 		buttonNext.setEnabled(false);
 		HideButtonNext();
 
-		if(sharedPrefs.getBoolean("random_questions", true))
-		{
+		if (sharedPrefs.getBoolean("random_questions", true)) {
 			_isRandomQuestions = true;
 		}
 
-		if(isRevision.equals("true"))
-		{
+		if (isRevision.equals("true")) {
 			_isRandomQuestions = false;
-			QuestionList = (ArrayList<Question>)Util.revisionQuestions.clone();
+			QuestionList = (ArrayList<Question>) Util.revisionQuestions.clone();
 		}
 
-		if(_isRandomQuestions)
-		{
+		if (_isRandomQuestions) {
 			try {
 				_questionIndex = getRandomQuestionNumber();
 				_usedNumbers.add(_questionIndex);
-			}
-			catch(Exception e)
-			{
-                Util.displayAlert("Questions could not be retrieved, please try again", "Error", QuestionPage.this);
+			} catch (Exception e) {
+				Util.displayAlert("Questions could not be retrieved, please try again", "Error", QuestionPage.this);
 				finish();
 			}
-		}
-		else
-		{
+		} else {
 			_questionIndex = 0;
 		}
 
 		_question = QuestionList.get(_questionIndex); // getting the first question
 		setControlTexts(_question);
-    
-    	if(questionCount == 1)
-    	{
-            buttonNext.setText("Submit");
-    	}
+
+		if (questionCount == 1) {
+			buttonNext.setText("Submit");
+		}
 
 		addTimer();
 
-      	if(sharedPrefs.getBoolean("move_to_next_question", false))
-		{
+		if (sharedPrefs.getBoolean("move_to_next_question", false)) {
 			_automaticallyMoveToNextQuestion = true;
 			tableLayout1.setVisibility(View.INVISIBLE);
 		}
@@ -184,34 +178,29 @@ public class QuestionPage extends Activity
 		setActivityTitle();
 		addButtonListener();
 		addRadioButtonListener();
-  	}
+		setRandomBackgroundForOptions();
+	}
 
-	private boolean storeQuestionNumbers()
-	{
+	private boolean storeQuestionNumbers() {
 		Util.forLogD = "";
 		_questionNumbers.clear();
-		if(QuestionList == null)
-		{
+		if (QuestionList == null) {
 			return false;
 		}
-		for(int i = 0; i < QuestionList.size(); i++)
-		{
+		for (int i = 0; i < QuestionList.size(); i++) {
 			_questionNumbers.add(i);
 		}
 		return true;
 	}
 
-	private void displayScore()
-	{
+	private void displayScore() {
 		TextView tvScore = findViewById(R.id.textViewScore);
-		if(!sharedPrefs.getBoolean("score_with_every_question", true))
-		{
+		if (!sharedPrefs.getBoolean("score_with_every_question", true)) {
 			tvScore.setVisibility(View.GONE);
 		}
 	}
 
-	private void setTextViewProperties()
-	{
+	private void setTextViewProperties() {
 		TextView tv = findViewById(R.id.textViewQuestionNumber);
 		tv.setTextColor(Color.WHITE);
 		tv.setBackgroundColor(Color.DKGRAY);
@@ -229,73 +218,56 @@ public class QuestionPage extends Activity
 		tv.setBackgroundColor(Color.DKGRAY);
 	}
 
-	private void setQuestionTextColor()
-	{
+	private void setQuestionTextColor() {
 		TextView textView = findViewById(R.id.textViewQuestion);
 
-		if(isRevision.equals("true"))
-		{
+		if (isRevision.equals("true")) {
 			textView.setTextColor(Color.RED);
-		}
-		else
-		{
+		} else {
 			textView.setTextColor(Color.BLUE);
 		}
 	}
 
-	private void setActivityTitle()
-	{
+	private void setActivityTitle() {
 		String title = getTitle().toString();
 		setTitle(title + " - " + Util.Subject);
 
-		if(isRevision.equals("true"))
-		{
+		if (isRevision.equals("true")) {
 			title = getTitle().toString();
 			setTitle(title + " (Revision)");
 		}
 
 		String subject;
-		if(Util.Subject.equalsIgnoreCase("cs"))
-		{
+		if (Util.Subject.equalsIgnoreCase("cs")) {
 			subject = "Computers";
-		}
-		else if(Util.Subject.equalsIgnoreCase("evs"))
-		{
+		} else if (Util.Subject.equalsIgnoreCase("evs")) {
 			subject = "Science";
-		}
-		else
-		{
+		} else {
 			subject = Util.Subject;
 		}
 
 
-		if(Util.Android_id.equalsIgnoreCase("6d692d322d2df2fb") || Util.Android_id.equalsIgnoreCase("e64b49e28d3e849c")) {
+		if (Util.Android_id.equalsIgnoreCase("6d692d322d2df2fb") || Util.Android_id.equalsIgnoreCase("e64b49e28d3e849c")) {
 			displayQuestionSetAndQuestionNumber();
-		}
-		else
-		{
+		} else {
 			((TextView) findViewById(R.id.textViewSubject)).setText("Subject: " + subject);
 		}
 	}
 
-	private void displayInitialScore()
-	{
+	private void displayInitialScore() {
 		TextView tvScore = findViewById(R.id.textViewScore);
-		if(_isRecoverMode)
-		{
+		if (_isRecoverMode) {
 			int lastScore = _bundle.getInt("last_score");
 			tvScore.setText("Score: " + String.valueOf(lastScore) + "/" + String.valueOf(questionCount));
-		}
-		else
-		{
+		} else {
 			tvScore.setText("Score: 0/" + questionCount);
 		}
 	}
 
-	private void readBundle()
-	{
+	private void readBundle() {
 		Bundle bundle = getIntent().getExtras();
-		questionCount = bundle.getInt("questionCount");
+        assert bundle != null;
+        questionCount = bundle.getInt("questionCount");
 		isRevision = bundle.getString("isRevision");
 		isExit = bundle.getString("isExit");
 		reward = bundle.getString("reward");
@@ -304,14 +276,7 @@ public class QuestionPage extends Activity
 		_questionSet = bundle.getString("question_set");
 	}
 
-    private void HideTimerText()
-    {
-        TextView textViewTimer = findViewById(R.id.textViewTimer);
-        textViewTimer.setVisibility(View.GONE);
-    }
-
-	private void addBannerAd()
-	{
+	private void addBannerAd() {
 		/*AdView mAdView = findViewById(R.id.adView);
 		AdRequest adRequest = new AdRequest.Builder()
 				.build();
@@ -350,8 +315,7 @@ public class QuestionPage extends Activity
 		adView.loadAd(new AdRequest.Builder().build());
 	}
 
-	private void addInterstitialAd()
-	{
+	private void addInterstitialAd() {
 		String adUnitId = Util.isReleaseVersion ? Util.AdMobInterstitialAdUnitId : Util.AdMobInterstitialAdUnitDummyId;
 
 		AdRequest adRequest = new AdRequest.Builder()
@@ -388,149 +352,272 @@ public class QuestionPage extends Activity
 		});
 	}
 
-	private void showInterstitialAdAd()
-	{
-		if (mInterstitialAd != null)
-		{
+	private void showInterstitialAdAd() {
+		if (mInterstitialAd != null) {
 			mInterstitialAd.show(this);
 		}
 	}
 
-  public void displayAlertBox(String message)
-	{
-		if(!QuestionPage.this.isFinishing()) {
+	public void displayAlertBox(String message) {
+		if (!QuestionPage.this.isFinishing()) {
 			Util.displayAlert(message, "Test Report", QuestionPage.this);
 		}
 	}
 
-    public void displayAlertWithOkCancel(String message, String title, Context context) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(context);
-        alert.setMessage(message);
-        alert.setTitle(title);
-        alert.setPositiveButton("Yes", null);
-        alert.setCancelable(true);
+	public void displayAlertWithOkCancel(String message, String title, Context context) {
+		AlertDialog.Builder alert = new AlertDialog.Builder(context);
+		alert.setMessage(message);
+		alert.setTitle(title);
+		alert.setPositiveButton("Yes", null);
+		alert.setCancelable(true);
 
-        alert.setPositiveButton("Yes",new DialogInterface.OnClickListener()
-        {
-            public void onClick (DialogInterface dialog,int which){
-				if(Util.IsContestTest)
-				{
-					//writeLastAttemptScoreToCloud();
-					SaveLastAttemptScore();
-				}
-				else {
-					clearState(); // Test is completed.. so remove the saved state
-					openTestReportActivity();
-					finish();
-				}
-				showInterstitialAdAd();
+		alert.setPositiveButton("Yes", (dialog, which) -> {
+            if (Util.IsContestTest) {
+                SaveLastAttemptScore();
+            } else {
+                clearState(); // Test is completed.. so remove the saved state
+                openTestReportActivity();
+                finish();
             }
+            showInterstitialAdAd();
         });
 
-        alert.setNegativeButton("No",null);
-        alert.create().show();
-    }
+		alert.setNegativeButton("No", null);
+		alert.create().show();
+	}
 
-    private void DisplayTime(int seconds)
-	{
+	private void DisplayTime(int seconds) {
 		int minutes = seconds / 60;
 		int second = seconds % 60;
 		int hours = minutes / 60;
-		minutes = minutes %60;
+		minutes = minutes % 60;
 
 		String elapsedTime;
 		TextView textView = findViewById(R.id.textViewTimer);
 		elapsedTime = String.format("%02d", hours) + ":" + String.format("%02d", minutes) + ":" + String.format("%02d", second) + " ";
 		textView.setText(elapsedTime);
 	}
-  
-  public void addTimer()
-  {
-	  final Timer timer = new Timer();
-	  timer.scheduleAtFixedRate(new TimerTask() {
-		  @Override
-		  public void run() {
-			  runOnUiThread(new Runnable() {
 
-				  @Override
-				  public void run() {
-					  DisplayTime(seconds);
+	public void addTimer() {
+		final Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				runOnUiThread(() -> {
+                    DisplayTime(seconds);
 
-					  if(!Util.isFullPageAdDisplayed) {
-						  seconds += 1;
-					  }
+                    if (!Util.isFullPageAdDisplayed) {
+                        seconds += 1;
+                    }
 
-					  if(Util.IsContestTest)
-					  {
-						  if(Util.TestTimeOut * 60 - seconds <= 60)
-						  {
-							  if(counter > 0) {
-								  counter = counter - 1;
-							  }
-							  textViewCounter.setVisibility(View.VISIBLE);
-							  textViewCounter.setText(String.valueOf(counter));
-						  }
-						  //time is up, display timeout message and auto submit
-						  if(seconds >= Util.TestTimeOut * 60) {
-						      //time out has happened for the test
-							  timer.cancel();
-							  EnableAnswers(false);
-							  textViewCounter.setVisibility(View.GONE);
+                    if (Util.IsContestTest) {
+                        if (Util.TestTimeOut * 60 - seconds <= 60) {
+                            if (counter > 0) {
+                                counter = counter - 1;
+                            }
+                            textViewCounter.setVisibility(View.VISIBLE);
+                            textViewCounter.setText(String.valueOf(counter));
+                        }
+                        //time is up, display timeout message and auto submit
+                        if (seconds >= Util.TestTimeOut * 60) {
+                            //time out has happened for the test
+                            timer.cancel();
+                            EnableAnswers(false);
+                            textViewCounter.setVisibility(View.GONE);
 
-							  showTimeOutMessage();
-							  findViewById(R.id.imageView1).setVisibility(View.INVISIBLE);
-							  ShowSubmitButton();
-							  submitTest(); //auto submit test
-						  }
-					  }
-				  }
-			  });
-		  }
-	  }, 0, 1000);
-  }
+                            showTimeOutMessage();
+                            findViewById(R.id.imageView1).setVisibility(View.INVISIBLE);
+                            ShowSubmitButton();
+                            submitTest(); //auto submit test
+                        }
+                    }
+                });
+			}
+		}, 0, 1000);
+	}
 
-  private void showTimeOutMessage()
-  {
-	  findViewById(R.id.textViewTimeOut).setVisibility(View.VISIBLE);
-  }
+	private void showTimeOutMessage() {
+		findViewById(R.id.textViewTimeOut).setVisibility(View.VISIBLE);
+	}
 
-	private Bitmap loadBitmapFromBase64Encoding(String imageData)
-	{
-		imageData = imageData.replace("data:image/png;base64,",""); // introduced in Release 1.6
+	private Bitmap loadBitmapFromBase64Encoding(String imageData) {
+		imageData = imageData.replace("data:image/png;base64,", ""); // introduced in Release 1.6
 		byte[] decodedString = Base64.decode(imageData, Base64.DEFAULT);
 		return BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 	}
 
-	private void showAllOptions()
-	{
+	private void showAllOptions() {
 		findViewById(R.id.radio_option1).setVisibility(View.VISIBLE);
 		findViewById(R.id.radio_option2).setVisibility(View.VISIBLE);
 		findViewById(R.id.radio_option3).setVisibility(View.VISIBLE);
 		findViewById(R.id.radio_option4).setVisibility(View.VISIBLE);
 	}
 
-	private void setImageForQuestion(String imageData)
+	private Question setQuestionForChapterThirteen()
 	{
+		final Random RANDOM = new Random();
+		int randomNumber;
+		randomNumber = RANDOM.nextInt(100);
+		Question newQuestion;
+
+		if(randomNumber < 34)
+		{
+			newQuestion = CircleGraphQuestionGenerator.generateQuestion();
+		}
+		else if(randomNumber < 67)
+		{
+			newQuestion = PictographQuestionGenerator.generateQuestion();
+		}
+		else {
+			newQuestion = BarChartQuestionGenerator.generateQuestion();
+		}
+
+		newQuestion.setChapter(13);
+		newQuestion.setChapterName("Handling Data");
+		return newQuestion;
+	}
+
+	private void setRandomBackgroundForOptions()
+	{
+		int[] backgrounds = {
+				R.drawable.bg_gradient_blue_purple_pill,
+				R.drawable.bg_gradient_gold_orange_pill,
+				R.drawable.bg_gradient_red_pill,
+				R.drawable.bg_gradient_teal_pill,
+		};
+
+		int index = new Random().nextInt(backgrounds.length);
+		findViewById(R.id.radio_option1).setBackgroundResource(backgrounds[index]);
+		findViewById(R.id.radio_option2).setBackgroundResource(backgrounds[index]);
+		findViewById(R.id.radio_option3).setBackgroundResource(backgrounds[index]);
+		findViewById(R.id.radio_option4).setBackgroundResource(backgrounds[index]);
+	}
+
+	private void setImageForQuestion(String imageData) {
 		ImageView img = findViewById(R.id.imageView1);
 		img.setVisibility(View.INVISIBLE);
 
-		if(imageData == null)
-		{
-			return;
+		if (imageData == null) {
+			imageData = "";
 		}
 
-		if(imageData.length() < 20) {
-			int resourceIdentifier = getResources().getIdentifier(imageData, "drawable", getPackageName());
-			if(resourceIdentifier != 0)
-			{
-				img.setImageResource(resourceIdentifier);
+		Map<String, String> values = ImageCodeParser.parse(imageData);
+
+		if(!Objects.requireNonNull(values.get("TYPE")).isEmpty())
+		{
+			Bitmap bitmap = getQuestionImage(imageData);
+			if(bitmap != null) {
+				img.setImageBitmap(bitmap);
 				img.setVisibility(View.VISIBLE);
+				setImageViewWidth(img, bitmap.getWidth());
 			}
 		}
 		else {
+			if (imageData.length() < 50) {
+				int resourceIdentifier = getResources().getIdentifier(imageData, "drawable", getPackageName());
+				if (resourceIdentifier != 0) {
+					img.setImageResource(resourceIdentifier);
+					img.setVisibility(View.VISIBLE);
+				}
+			} else {
+				img.setImageBitmap(loadBitmapFromBase64Encoding(imageData));
+				img.setVisibility(View.VISIBLE);
+			}
+		}
+
+
+		/*switch (Objects.requireNonNull(values.get("TYPE")))
+		{
+			case ImageCodeType.CIRCLEGRAPH:
+				bitmap = CircleGraphImageGenerator.generate(imageData);
+				img.setImageBitmap(bitmap);
+				img.setVisibility(View.VISIBLE);
+				setImageViewWidth(img, bitmap.getWidth());
+				break;
+
+			case ImageCodeType.PICTOGRAPH:
+				bitmap = PictographImageGenerator.generate(this, imageData);
+				img.setImageBitmap(bitmap);
+				img.setVisibility(View.VISIBLE);
+				setImageViewWidth(img,bitmap.getWidth());
+				break;
+
+			case ImageCodeType.BARCHART:
+				bitmap = BarChartImageGenerator.generate(imageData);
+				img.setImageBitmap(bitmap);
+				img.setVisibility(View.VISIBLE);
+				setImageViewWidth(img,bitmap.getWidth());
+				break;
+
+			default:
+				if (imageData.length() < 50) {
+					int resourceIdentifier = getResources().getIdentifier(imageData, "drawable", getPackageName());
+					if (resourceIdentifier != 0) {
+						img.setImageResource(resourceIdentifier);
+						img.setVisibility(View.VISIBLE);
+					}
+				} else {
+					img.setImageBitmap(loadBitmapFromBase64Encoding(imageData));
+					img.setVisibility(View.VISIBLE);
+				}
+		}*/
+
+		/*if (Objects.equals(values.get("TYPE"), ImageCodeType.CIRCLEGRAPH)) {
+			Bitmap bitmap = CircleGraphImageGenerator.generate(imageData);
+			img.setImageBitmap(bitmap);
+			img.setVisibility(View.VISIBLE);
+			setImageViewWidth(img, bitmap.getWidth());
+		}*/
+
+		/*else if(imageData.contains("PICTOGRAPH_"))
+		{
+			Bitmap bitmap = PictographImageGenerator.generate(this, imageData);
+			img.setImageBitmap(bitmap);
+			img.setVisibility(View.VISIBLE);
+			setImageViewWidth(img,bitmap.getWidth());
+		}*/
+
+		/*else if (imageData.length() < 50) {
+			int resourceIdentifier = getResources().getIdentifier(imageData, "drawable", getPackageName());
+			if (resourceIdentifier != 0) {
+				img.setImageResource(resourceIdentifier);
+				img.setVisibility(View.VISIBLE);
+			}
+		} else {
 			img.setImageBitmap(loadBitmapFromBase64Encoding(imageData));
 			img.setVisibility(View.VISIBLE);
+		}*/
+	}
+
+	private Bitmap getQuestionImage(String imageData)
+	{
+		Map<String, String> values = ImageCodeParser.parse(imageData);
+
+		switch (Objects.requireNonNull(values.get("TYPE")))
+		{
+			case ImageCodeType.CIRCLEGRAPH:
+				return CircleGraphImageGenerator.generate(imageData);
+
+			case ImageCodeType.PICTOGRAPH:
+				return PictographImageGenerator.generate(this, imageData);
+
+			case ImageCodeType.BARCHART:
+				return BarChartImageGenerator.generate(imageData);
+
+			default:
+				return null;
 		}
+	}
+
+	private void setImageViewWidth(ImageView img, int bitmapWidth)
+	{
+		int availableWidth =
+				getResources().getDisplayMetrics().widthPixels
+						- (int)(16 * getResources().getDisplayMetrics().density);
+		ViewGroup.LayoutParams params = img.getLayoutParams();
+		params.width = Math.min(bitmapWidth, availableWidth);
+		params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+		img.setLayoutParams(params);
 	}
 
 	private void setSupportiveText(String supportiveText)
@@ -613,7 +700,11 @@ public class QuestionPage extends Activity
   {
 	  showAllOptions();
 	  _linkText = "";
-	  Firebase.goOffline();
+
+	  if(question.getChapter() == 13)
+	  {
+		  question = setQuestionForChapterThirteen();
+	  }
 
 	  String questionImage = question.getImage();
 	  String supportiveText = question.getSupportiveText();

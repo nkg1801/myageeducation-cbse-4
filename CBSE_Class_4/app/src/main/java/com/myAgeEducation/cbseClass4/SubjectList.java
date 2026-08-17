@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -58,7 +59,6 @@ public class SubjectList extends Activity
     private ArrayList<String> _pendingDownloads = new ArrayList<>();
     private ArrayList<Question> _questionList = new ArrayList<>();
 
-	//private BaseAdapter _listAdapter;
 	ListView _listView;
     ProgressDialog ringProgressDialog;
     private SharedPreferences _sharedPreferences;
@@ -67,15 +67,11 @@ public class SubjectList extends Activity
     private Handler handler = new Handler();
     private boolean runnableStarted = false;
 
-    //final int CONTEST = 0;
 	final int SCIENCE = 0;
     final int MATHS = 1;
     final int COMPUTERS = 2;
     final int GK = 3;
-    //final int ENGLISH = 5;
-    //final int MORALSCIENCE = 6;
     final int SCORE = 4;
-    //final int OFFLINE_VERSION = 6;
     final int SHARE_APP_LINK = 5;
     final int APP_RATING = 6;
     final int GETMORE = 7;
@@ -87,7 +83,7 @@ public class SubjectList extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.subject_list);
         FirebaseApp.initializeApp(this);
-        _listView = (ListView) findViewById(android.R.id.list);
+        _listView = findViewById(android.R.id.list);
         _sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         ringProgressDialog = new ProgressDialog(SubjectList.this);
 
@@ -127,13 +123,6 @@ public class SubjectList extends Activity
                         subPage.setClassName(Util.PACKAGE_NAME, Util.PACKAGE_NAME + ".ScoreHistory");
                         startActivity(subPage);
                         break;
-
-                    /*case CONTEST:
-                        Util.Subject = "";
-                        Intent contestIntent = new Intent();
-                        contestIntent.setClassName(Util.PACKAGE_NAME, Util.PACKAGE_NAME + ".ContestFirstPage");
-                        startActivity(contestIntent);
-                        break;*/
 
                     case SHARE_APP_LINK:
                         Util.Subject = "";
@@ -288,7 +277,7 @@ public class SubjectList extends Activity
 		}
 		catch(IOException e)
         {
-            Log.d("CBSE_ERROR_OPENDATABASE", e.getMessage());
+            Log.d("CBSE_ERROR_OPENDATABASE", Objects.requireNonNull(e.getMessage()));
         }
 
 		_databaseHelper.openDataBase();
@@ -332,11 +321,24 @@ public class SubjectList extends Activity
 
 	public void openChapters(String questionSet)
 	{
+        addQuestionsForChapterThirteen();
 		Intent chapterIntent = new Intent();
 		chapterIntent.setClassName(Util.PACKAGE_NAME, Util.PACKAGE_NAME + ".Chapters");
 		chapterIntent.putExtra("question_set", questionSet);
 		startActivity(chapterIntent);
 	}
+
+    private void addQuestionsForChapterThirteen()
+    {
+        for(int i = 0; i < 20; i++)
+        {
+            Question question = new Question();
+            question.setChapter(13);
+            question.setChapterName("Handling Data");
+            question.setQuestion("this will be auto-generated");
+            Util.allQuestions.add(question);
+        }
+    }
 	
 	private int getRandomQuestionSet()
 	{
@@ -352,7 +354,6 @@ public class SubjectList extends Activity
     private void openPlayStore()
     {
         try {
-            //saveIfAdClicked();
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("market://details?id=com.myAgeEducation.cbseClass4Paid"));
             startActivity(intent);
@@ -363,7 +364,6 @@ public class SubjectList extends Activity
 
     private void openPlayStoreForRating() {
         try {
-            //saveIfAdClicked();
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("market://details?id=com.myAgeEducation.cbseClass4"));
             intent.setPackage("com.android.vending");
@@ -381,45 +381,12 @@ public class SubjectList extends Activity
         sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, Util.ShareLinkTitle);
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
-        //setShareIntent(sharingIntent);
     }
-
-    /*private void saveIfShareButtonClicked() {
-        //Firebase.goOnline();
-        String ShareButtonClickedReportRoot = "https://schooltests.firebaseio.com/sharebuttonclicked";
-        Firebase ref = new Firebase(ShareButtonClickedReportRoot);
-        Firebase childRef = ref.child("000_lastSharedButtonClicked-" + Util.ClassName);
-        childRef.setValue(Util.getCurrentDateTime());
-        childRef = ref.child(UUID.randomUUID().toString());
-        childRef.setValue(Util.ClassName + "/" + Util.getCurrentDateTime());
-    }*/
-
-    private void openOfflineVersionActivity()
-    {
-        try {
-            Intent subPage = new Intent();
-            subPage.setClassName(Util.PACKAGE_NAME, Util.PACKAGE_NAME + ".OfflineVersionActivity");
-            startActivity(subPage);
-        }
-        catch(Exception e)
-        {
-            Util.displayAlert(e.getMessage(), "Error", SubjectList.this);
-        }
-    }
-
-	/*private void saveIfAdClicked() {
-		Firebase ref = new Firebase(Util.UserRoot);
-		Firebase childRef = ref.child("000_lastAdClicked");
-		childRef.setValue(Util.UserUid + "/" + Util.getCurrentDateTime());
-		childRef = ref.child(Util.UserUid).child("isAdClicked");
-		childRef.setValue("Yes/" + Util.getCurrentDateTime());
-	}*/
 
     private void DownloadQuestionsOnlyIfAllowed()
     {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference("questionDatabaseVersion/cbse/settings/disableDownload");
-        //Firebase ref = new Firebase(Util.FirebaseRoot + "/schools/question_database_version/cbse/settings/disableDownload");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
@@ -453,14 +420,10 @@ public class SubjectList extends Activity
                         _randomQuestionSet = random.nextInt(downloadedSets.size());
                         _randomQuestionSet = downloadedSets.get(_randomQuestionSet);
 
-                        runnable = new Runnable(){
-                            @Override
-                            public void run()
-                            {
-                                runnableStarted = true;
-                                readQuestionsFromLocalDatabase();
-                                runnableStarted = false;
-                            }
+                        runnable = () -> {
+                            runnableStarted = true;
+                            readQuestionsFromLocalDatabase();
+                            runnableStarted = false;
                         };
                         new Thread(runnable).start();
                     }
@@ -472,9 +435,8 @@ public class SubjectList extends Activity
             }
 
             @Override
-            public void onCancelled(DatabaseError firebaseError) {
+            public void onCancelled(@NonNull DatabaseError firebaseError) {
                 Log.d("Exception: ", firebaseError.getMessage());
-                //displayAlert("Unable to connect", "Unable to connect to the server. Make sure you are connected to the internet and try again");
             }
         });
     }
@@ -485,10 +447,9 @@ public class SubjectList extends Activity
 
 		FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 		DatabaseReference databaseReference = firebaseDatabase.getReference("questionDatabaseVersion/cbse/" + Util.Subject + "/cbseClass" + Util.GRADE);
-        //Firebase ref = new Firebase(Util.FirebaseRoot + "/schools/question_database_version/cbse/" + Util.Subject +"/cbseClass" + Util.GRADE);
 		databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
 			@Override
-			public void onDataChange(DataSnapshot snapshot) {
+			public void onDataChange(@NonNull DataSnapshot snapshot) {
 				int version = snapshot.getValue(Integer.class);
 
                 dismissProgressDialog();
@@ -503,7 +464,7 @@ public class SubjectList extends Activity
 
 				catch(Exception e)
 				{
-					Log.d("CloudVersionException", e.getMessage());
+					Log.d("CloudVersionException", Objects.requireNonNull(e.getMessage()));
 		    	}
 
                 try {
@@ -525,7 +486,7 @@ public class SubjectList extends Activity
 			}
 
 			@Override
-			public void onCancelled(DatabaseError firebaseError) {
+			public void onCancelled(@NonNull DatabaseError firebaseError) {
                 dismissProgressDialog();
 				Log.d("CBSE_Exception: ", firebaseError.getMessage());
                 Util.displayAlert("Unable to connect to the server. Make sure you are connected to the internet and try again","Unable to connect", SubjectList.this);
@@ -539,20 +500,17 @@ public class SubjectList extends Activity
         _pendingDownloads = _databaseHelper.pendingDownloads(Util.Subject, _randomQuestionSet);
         Log.d("CBSE_PendingDownloads", String.valueOf(_pendingDownloads.size()));
 
-        if(_pendingDownloads.size() > 0)
+        if(!_pendingDownloads.isEmpty())
         {
             addDownloadLinksToDownload();
             DownloadQuestionsOnlyIfAllowed();
         }
         else {
             try {
-                runnable = new Runnable() {
-                    @Override
-                    public void run() {
-                        runnableStarted = true;
-                        readQuestionsFromLocalDatabase();
-                        runnableStarted = false;
-                    }
+                runnable = () -> {
+                    runnableStarted = true;
+                    readQuestionsFromLocalDatabase();
+                    runnableStarted = false;
                 };
                 new Thread(runnable).start();
             }
@@ -656,39 +614,33 @@ public class SubjectList extends Activity
 
     private void showProgressDialog(final String message)
     {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    ringProgressDialog.setTitle("Please wait ...");
-                    ringProgressDialog.setMessage(message);
-                    ringProgressDialog.setCancelable(false);
-                    ringProgressDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                        }
-                    });
-
-                    if (ringProgressDialog != null && (!ringProgressDialog.isShowing())) {
-                        ringProgressDialog.show();
-                        ringProgressDialog.setCancelable(true);
+        runOnUiThread(() -> {
+            try {
+                ringProgressDialog.setTitle("Please wait ...");
+                ringProgressDialog.setMessage(message);
+                ringProgressDialog.setCancelable(false);
+                ringProgressDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
                     }
+                });
+
+                if (ringProgressDialog != null && (!ringProgressDialog.isShowing())) {
+                    ringProgressDialog.show();
+                    ringProgressDialog.setCancelable(true);
                 }
-                catch (Exception e)
-                {
-                }
+            }
+            catch (Exception ignored)
+            {
             }
         });
     }
 
     private void dismissProgressDialog()
     {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if(ringProgressDialog!=null && ringProgressDialog.isShowing()) {
-                    ringProgressDialog.dismiss();
-                }
+        runOnUiThread(() -> {
+            if(ringProgressDialog!=null && ringProgressDialog.isShowing()) {
+                ringProgressDialog.dismiss();
             }
         });
     }
@@ -699,24 +651,23 @@ public class SubjectList extends Activity
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference(downloadLink);
 
-        //Firebase ref = new Firebase(downloadLink);
         Query queryRef = databaseReference.orderByChild("chapter");
         queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 try {
                     for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                         try {
                             Question question = postSnapshot.getValue(Question.class);
                             _questionList.add(question);
                         } catch (Exception e) {
-                            Log.d("CBSE_ERROR", e.getMessage());
+                            Log.d("CBSE_ERROR", Objects.requireNonNull(e.getMessage()));
                         }
                     }
 
-                    Log.d("CBSE_", String.valueOf(_questionList.size()) + " were downloaded");
+                    Log.d("CBSE_", _questionList.size() + " were downloaded");
 
-                    if (_questionList.size() > 0) {
+                    if (!_questionList.isEmpty()) {
                         Util.allQuestions = (ArrayList<Question>) _questionList.clone();
                         if (isAddToLocalDatabaseCompleted)  // if the previous addition is completed, then only we add this, otherwise just ignore adding this set
                         {
@@ -749,7 +700,7 @@ public class SubjectList extends Activity
             }
 
             @Override
-            public void onCancelled(DatabaseError firebaseError) {
+            public void onCancelled(@NonNull DatabaseError firebaseError) {
                 Log.d("Exception: ", firebaseError.getMessage());
             }
         });
@@ -758,7 +709,6 @@ public class SubjectList extends Activity
     private void addDownloadLinksToDownload()
     {
         _downloadLinks.clear();
-        //final String subjectRoot = Util.SubjectRoot;
 
         for(int i = 0; i < _pendingDownloads.size(); i++)
         {
@@ -772,7 +722,6 @@ public class SubjectList extends Activity
 		ArrayList<String> subjectName = new ArrayList<>();
 		ArrayList<String> tagLine = new ArrayList<>();
 
-		//subjectImage.add(CONTEST, R.drawable.contest);
 		subjectImage.add(SCIENCE, R.drawable.science);
 		subjectImage.add(MATHS, R.drawable.maths);
 		subjectImage.add(COMPUTERS, R.drawable.computers);
@@ -783,7 +732,6 @@ public class SubjectList extends Activity
         subjectImage.add(GETMORE, R.drawable.getmore);
         subjectImage.add(EXIT, R.drawable.exit);
 
-		//subjectName.add(CONTEST, "Knowledge Contest");
 		subjectName.add(SCIENCE, "Science");
 		subjectName.add(MATHS, "Maths");
 		subjectName.add(COMPUTERS, "Computers");
@@ -794,7 +742,6 @@ public class SubjectList extends Activity
         subjectName.add(GETMORE, "Get More");
         subjectName.add(EXIT, "Exit");
 
-        //tagLine.add(CONTEST, "Participate and win exciting prizes.");
         tagLine.add(SCIENCE, "");
         tagLine.add(MATHS, "");
         tagLine.add(COMPUTERS, "");
