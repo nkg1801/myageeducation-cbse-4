@@ -102,18 +102,6 @@ public class Util
         return random.nextInt(9) + 11;
     }
 
-    /*
-    public static int getRandomQuestionNumber()
-    {
-        Random random = new Random();
-        int generatedRandomNumber;
-        generatedRandomNumber = random.nextInt(Util.questionNumbers.size());
-        Log.d("QuestionNumbersSize", String.valueOf(Util.questionNumbers.size()));
-        int questionNumber = ((Integer)(Util.questionNumbers.get(generatedRandomNumber))).intValue();
-        Util.questionNumbers.remove(generatedRandomNumber);
-        return questionNumber;
-    }*/
-
     public static String getCurrentDateTime()
     {
         Date date = new Date();

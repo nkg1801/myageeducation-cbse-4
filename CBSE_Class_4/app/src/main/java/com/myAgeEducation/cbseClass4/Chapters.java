@@ -2,7 +2,6 @@ package com.myAgeEducation.cbseClass4;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,28 +11,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import androidx.core.content.ContextCompat;
-
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.SeekBar.OnSeekBarChangeListener;
-import android.widget.ViewFlipper;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
@@ -43,7 +33,6 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.AdError;
 import androidx.annotation.NonNull;
 import com.myAgeEducation.cbsecommon.Question;
-import com.squareup.picasso.Picasso;
 
 public class Chapters  extends Activity
 {
@@ -148,7 +137,7 @@ public class Chapters  extends Activity
 
         String[] tokens = selectedChapter_savedPref.split(",");
 		for (String token : tokens) {
-			if (!token.trim().equals("")) {
+			if (!token.trim().isEmpty()) {
 				int chapter = Integer.parseInt(token);
 
 				if (!selectedChapters.contains(chapter)) {
@@ -157,7 +146,7 @@ public class Chapters  extends Activity
 			}
 		}
 
-        if(selectedChapters.size() == 0)
+        if(selectedChapters.isEmpty())
         {
             selectedChapters.add(1);
         }
@@ -435,7 +424,7 @@ public class Chapters  extends Activity
 		  testPage.putIntegerArrayListExtra("used_numbers", null);
 		  
 		  startActivity(testPage);
-		showInterstitialAdAd();
+		//showInterstitialAdAd();
 		  finish();
 
 	}

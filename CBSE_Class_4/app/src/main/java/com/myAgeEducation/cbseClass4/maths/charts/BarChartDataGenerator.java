@@ -3089,6 +3089,4593 @@ public class BarChartDataGenerator
                             "How many students like %s and %s altogether?",
                             "How many students are shown in the chart?"
                     ),
+                    // -------------------------------------------------
+                    // 82. HOMEWORK COMPLETED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "HOMEWORK",
+                            "The chart shows the number of homework assignments completed by students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "assignment",
+                            "assignments",
+
+                            "Who completed the most assignments?",
+                            "Who completed the fewest assignments?",
+                            "Who completed the second most assignments?",
+                            "Who completed the second fewest assignments?",
+
+                            "How many assignments did %s complete?",
+                            "How many more assignments did %s complete than %s?",
+                            "How many fewer assignments did %s complete than %s?",
+                            "How many assignments did %s and %s complete altogether?",
+                            "How many assignments were completed in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 83. BOOKS READ
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BOOKSREAD",
+                            "The chart shows the number of books read by students in a month.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "book",
+                            "books",
+
+                            "Who read the most books?",
+                            "Who read the fewest books?",
+                            "Who read the second most books?",
+                            "Who read the second fewest books?",
+
+                            "How many books did %s read?",
+                            "How many more books did %s read than %s?",
+                            "How many fewer books did %s read than %s?",
+                            "How many books did %s and %s read altogether?",
+                            "How many books were read in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 84. LIBRARY BOOKS BORROWED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "LIBRARYBOOKS",
+                            "The chart shows the number of books borrowed from the school library by different classes.",
+
+                            new String[]
+                                    {
+                                            "Class 1",
+                                            "Class 2",
+                                            "Class 3",
+                                            "Class 4"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Class 1",
+                                            "Class 2",
+                                            "Class 3",
+                                            "Class 4"
+                                    },
+
+                            "book",
+                            "books",
+
+                            "Which class borrowed the most books?",
+                            "Which class borrowed the fewest books?",
+                            "Which class borrowed the second most books?",
+                            "Which class borrowed the second fewest books?",
+
+                            "How many books did %s borrow?",
+                            "How many more books did %s borrow than %s?",
+                            "How many fewer books did %s borrow than %s?",
+                            "How many books did %s and %s borrow altogether?",
+                            "How many books were borrowed in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 85. QUESTIONS ANSWERED CORRECTLY
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "QUESTIONS",
+                            "The chart shows the number of questions answered correctly by students in a test.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "question",
+                            "questions",
+
+                            "Who answered the most questions correctly?",
+                            "Who answered the fewest questions correctly?",
+                            "Who answered the second most questions correctly?",
+                            "Who answered the second fewest questions correctly?",
+
+                            "How many questions did %s answer correctly?",
+                            "How many more questions did %s answer correctly than %s?",
+                            "How many fewer questions did %s answer correctly than %s?",
+                            "How many questions did %s and %s answer correctly altogether?",
+                            "How many questions were answered correctly in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 86. NEW WORDS LEARNED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "NEWWORDS",
+                            "The chart shows the number of new words learned by students in a week.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "word",
+                            "words",
+
+                            "Who learned the most new words?",
+                            "Who learned the fewest new words?",
+                            "Who learned the second most new words?",
+                            "Who learned the second fewest new words?",
+
+                            "How many new words did %s learn?",
+                            "How many more new words did %s learn than %s?",
+                            "How many fewer new words did %s learn than %s?",
+                            "How many new words did %s and %s learn altogether?",
+                            "How many new words were learned in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 87. SPELLING TEST SCORES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SPELLING",
+                            "The chart shows the scores of students in a spelling test.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "mark",
+                            "marks",
+
+                            "Who scored the most marks?",
+                            "Who scored the fewest marks?",
+                            "Who scored the second most marks?",
+                            "Who scored the second fewest marks?",
+
+                            "How many marks did %s score?",
+                            "How many more marks did %s score than %s?",
+                            "How many fewer marks did %s score than %s?",
+                            "How many marks did %s and %s score altogether?",
+                            "What is the total of the four scores?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 88. MATH PROBLEMS SOLVED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "MATHPROBLEMS",
+                            "The chart shows the number of maths problems solved by students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "problem",
+                            "problems",
+
+                            "Who solved the most maths problems?",
+                            "Who solved the fewest maths problems?",
+                            "Who solved the second most maths problems?",
+                            "Who solved the second fewest maths problems?",
+
+                            "How many maths problems did %s solve?",
+                            "How many more maths problems did %s solve than %s?",
+                            "How many fewer maths problems did %s solve than %s?",
+                            "How many maths problems did %s and %s solve altogether?",
+                            "How many maths problems were solved in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 89. CERTIFICATES EARNED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "CERTIFICATES",
+                            "The chart shows the number of certificates earned by students during the school year.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "certificate",
+                            "certificates",
+
+                            "Who earned the most certificates?",
+                            "Who earned the fewest certificates?",
+                            "Who earned the second most certificates?",
+                            "Who earned the second fewest certificates?",
+
+                            "How many certificates did %s earn?",
+                            "How many more certificates did %s earn than %s?",
+                            "How many fewer certificates did %s earn than %s?",
+                            "How many certificates did %s and %s earn altogether?",
+                            "How many certificates were earned in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 90. LIBRARY VISITS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "LIBRARYVISITS",
+                            "The chart shows the number of times students visited the school library.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "visit",
+                            "visits",
+
+                            "Who visited the library the most?",
+                            "Who visited the library the fewest times?",
+                            "Who visited the library the second most times?",
+                            "Who visited the library the second fewest times?",
+
+                            "How many times did %s visit the library?",
+                            "How many more times did %s visit the library than %s?",
+                            "How many fewer times did %s visit the library than %s?",
+                            "How many library visits did %s and %s make altogether?",
+                            "How many library visits were made in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 91. SCHOOL TRIPS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SCHOOLTRIPS",
+                            "The chart shows the number of students who went on different school trips.",
+
+                            new String[]
+                                    {
+                                            "Zoo",
+                                            "Museum",
+                                            "Science Park",
+                                            "Farm"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Zoo",
+                                            "Museum",
+                                            "Science Park",
+                                            "Farm"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which trip had the most students?",
+                            "Which trip had the fewest students?",
+                            "Which trip had the second most students?",
+                            "Which trip had the second fewest students?",
+
+                            "How many students went on the %s trip?",
+                            "How many more students went on the %s trip than the %s trip?",
+                            "How many fewer students went on the %s trip than the %s trip?",
+                            "How many students went on the %s and %s trips altogether?",
+                            "How many students went on the four trips in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 92. PENS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "PENSSOLD",
+                            "The chart shows the number of pens sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Blue Pens",
+                                            "Black Pens",
+                                            "Red Pens",
+                                            "Green Pens"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Blue",
+                                            "Black",
+                                            "Red",
+                                            "Green"
+                                    },
+
+                            "pen",
+                            "pens",
+
+                            "Which type of pen was sold the most?",
+                            "Which type of pen was sold the least?",
+                            "Which type of pen was sold the second most?",
+                            "Which type of pen was sold the second least?",
+
+                            "How many %s pens were sold?",
+                            "How many more %s pens were sold than %s pens?",
+                            "How many fewer %s pens were sold than %s pens?",
+                            "How many %s and %s pens were sold altogether?",
+                            "How many pens were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 93. NOTEBOOKS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "NOTEBOOKSSOLD",
+                            "The chart shows the number of notebooks sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Ruled Notebooks",
+                                            "Plain Notebooks",
+                                            "Maths Notebooks",
+                                            "Drawing Notebooks"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Ruled",
+                                            "Plain",
+                                            "Maths",
+                                            "Drawing"
+                                    },
+
+                            "notebook",
+                            "notebooks",
+
+                            "Which type of notebook was sold the most?",
+                            "Which type of notebook was sold the least?",
+                            "Which type of notebook was sold the second most?",
+                            "Which type of notebook was sold the second least?",
+
+                            "How many %s notebooks were sold?",
+                            "How many more %s notebooks were sold than %s notebooks?",
+                            "How many fewer %s notebooks were sold than %s notebooks?",
+                            "How many %s and %s notebooks were sold altogether?",
+                            "How many notebooks were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 94. GREETING CARDS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "CARDS",
+                            "The chart shows the number of greeting cards sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Birthday Cards",
+                                            "Thank You Cards",
+                                            "Festival Cards",
+                                            "Friendship Cards"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Birthday",
+                                            "Thank You",
+                                            "Festival",
+                                            "Friendship"
+                                    },
+
+                            "card",
+                            "cards",
+
+                            "Which type of card was sold the most?",
+                            "Which type of card was sold the least?",
+                            "Which type of card was sold the second most?",
+                            "Which type of card was sold the second least?",
+
+                            "How many %s cards were sold?",
+                            "How many more %s cards were sold than %s cards?",
+                            "How many fewer %s cards were sold than %s cards?",
+                            "How many %s and %s cards were sold altogether?",
+                            "How many cards were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 95. T-SHIRTS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TSHIRTS",
+                            "The chart shows the number of T-shirts sold in different colours.",
+
+                            new String[]
+                                    {
+                                            "Red",
+                                            "Blue",
+                                            "Green",
+                                            "Yellow"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Red",
+                                            "Blue",
+                                            "Green",
+                                            "Yellow"
+                                    },
+
+                            "T-shirt",
+                            "T-shirts",
+
+                            "Which colour of T-shirt was sold the most?",
+                            "Which colour of T-shirt was sold the least?",
+                            "Which colour of T-shirt was sold the second most?",
+                            "Which colour of T-shirt was sold the second least?",
+
+                            "How many %s T-shirts were sold?",
+                            "How many more %s T-shirts were sold than %s T-shirts?",
+                            "How many fewer %s T-shirts were sold than %s T-shirts?",
+                            "How many %s and %s T-shirts were sold altogether?",
+                            "How many T-shirts were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 96. SHOES SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SHOES",
+                            "The chart shows the number of shoes sold in different sizes.",
+
+                            new String[]
+                                    {
+                                            "Size 2",
+                                            "Size 3",
+                                            "Size 4",
+                                            "Size 5"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Size 2",
+                                            "Size 3",
+                                            "Size 4",
+                                            "Size 5"
+                                    },
+
+                            "pair",
+                            "pairs",
+
+                            "Which size of shoes was sold the most?",
+                            "Which size of shoes was sold the least?",
+                            "Which size of shoes was sold the second most?",
+                            "Which size of shoes was sold the second least?",
+
+                            "How many pairs of %s shoes were sold?",
+                            "How many more pairs of %s shoes were sold than %s shoes?",
+                            "How many fewer pairs of %s shoes were sold than %s shoes?",
+                            "How many pairs of %s and %s shoes were sold altogether?",
+                            "How many pairs of shoes were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 97. MONEY SAVED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "MONEYSAVED",
+                            "The chart shows the money saved by four children.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "rupee",
+                            "rupees",
+
+                            "Who saved the most money?",
+                            "Who saved the least money?",
+                            "Who saved the second most money?",
+                            "Who saved the second least money?",
+
+                            "How many rupees did %s save?",
+                            "How many more rupees did %s save than %s?",
+                            "How many fewer rupees did %s save than %s?",
+                            "How many rupees did %s and %s save altogether?",
+                            "How many rupees were saved in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 98. MONEY SPENT
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "MONEYSPENT",
+                            "The chart shows the money spent by four children.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "rupee",
+                            "rupees",
+
+                            "Who spent the most money?",
+                            "Who spent the least money?",
+                            "Who spent the second most money?",
+                            "Who spent the second least money?",
+
+                            "How many rupees did %s spend?",
+                            "How many more rupees did %s spend than %s?",
+                            "How many fewer rupees did %s spend than %s?",
+                            "How many rupees did %s and %s spend altogether?",
+                            "How many rupees were spent in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 99. CUSTOMERS VISITING SHOPS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "CUSTOMERS",
+                            "The chart shows the number of customers visiting different shops.",
+
+                            new String[]
+                                    {
+                                            "Book Shop",
+                                            "Toy Shop",
+                                            "Bakery",
+                                            "Fruit Shop"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Book",
+                                            "Toy",
+                                            "Bakery",
+                                            "Fruit"
+                                    },
+
+                            "customer",
+                            "customers",
+
+                            "Which shop had the most customers?",
+                            "Which shop had the fewest customers?",
+                            "Which shop had the second most customers?",
+                            "Which shop had the second fewest customers?",
+
+                            "How many customers visited the %s shop?",
+                            "How many more customers visited the %s shop than the %s shop?",
+                            "How many fewer customers visited the %s shop than the %s shop?",
+                            "How many customers visited the %s and %s shops altogether?",
+                            "How many customers visited the shops in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 100. SHOPPING BAGS USED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SHOPPINGBAGS",
+                            "The chart shows the number of shopping bags used at a store.",
+
+                            new String[]
+                                    {
+                                            "Paper Bags",
+                                            "Cloth Bags",
+                                            "Jute Bags",
+                                            "Reusable Bags"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Paper",
+                                            "Cloth",
+                                            "Jute",
+                                            "Reusable"
+                                    },
+
+                            "bag",
+                            "bags",
+
+                            "Which type of bag was used the most?",
+                            "Which type of bag was used the least?",
+                            "Which type of bag was used the second most?",
+                            "Which type of bag was used the second least?",
+
+                            "How many %s bags were used?",
+                            "How many more %s bags were used than %s bags?",
+                            "How many fewer %s bags were used than %s bags?",
+                            "How many %s and %s bags were used altogether?",
+                            "How many shopping bags were used in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 101. ITEMS SOLD IN A SHOP
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SHOPITEMS",
+                            "The chart shows the number of different items sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Pens",
+                                            "Pencils",
+                                            "Erasers",
+                                            "Rulers"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Pens",
+                                            "Pencils",
+                                            "Erasers",
+                                            "Rulers"
+                                    },
+
+                            "item",
+                            "items",
+
+                            "Which item was sold the most?",
+                            "Which item was sold the least?",
+                            "Which item was sold the second most?",
+                            "Which item was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many items were sold in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 102. FRUITS EATEN
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FRUITSEATEN",
+                            "The chart shows the number of fruits eaten by four children in a week.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "fruit",
+                            "fruits",
+
+                            "Who ate the most fruits?",
+                            "Who ate the fewest fruits?",
+                            "Who ate the second most fruits?",
+                            "Who ate the second fewest fruits?",
+
+                            "How many fruits did %s eat?",
+                            "How many more fruits did %s eat than %s?",
+                            "How many fewer fruits did %s eat than %s?",
+                            "How many fruits did %s and %s eat altogether?",
+                            "How many fruits were eaten in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 103. GLASSES OF MILK
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "MILK",
+                            "The chart shows the number of glasses of milk drunk by four children in a week.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "glass",
+                            "glasses",
+
+                            "Who drank the most glasses of milk?",
+                            "Who drank the fewest glasses of milk?",
+                            "Who drank the second most glasses of milk?",
+                            "Who drank the second fewest glasses of milk?",
+
+                            "How many glasses of milk did %s drink?",
+                            "How many more glasses of milk did %s drink than %s?",
+                            "How many fewer glasses of milk did %s drink than %s?",
+                            "How many glasses of milk did %s and %s drink altogether?",
+                            "How many glasses of milk were drunk in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 104. HEALTHY SNACKS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "HEALTHYSNACKS",
+                            "The chart shows the number of healthy snacks chosen by students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "snack",
+                            "snacks",
+
+                            "Who chose the most healthy snacks?",
+                            "Who chose the fewest healthy snacks?",
+                            "Who chose the second most healthy snacks?",
+                            "Who chose the second fewest healthy snacks?",
+
+                            "How many healthy snacks did %s choose?",
+                            "How many more healthy snacks did %s choose than %s?",
+                            "How many fewer healthy snacks did %s choose than %s?",
+                            "How many healthy snacks did %s and %s choose altogether?",
+                            "How many healthy snacks were chosen in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 105. FRUITS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FRUITSSOLD",
+                            "The chart shows the number of fruits sold at a fruit shop.",
+
+                            new String[]
+                                    {
+                                            "Apples",
+                                            "Bananas",
+                                            "Oranges",
+                                            "Mangoes"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Apples",
+                                            "Bananas",
+                                            "Oranges",
+                                            "Mangoes"
+                                    },
+
+                            "fruit",
+                            "fruits",
+
+                            "Which fruit was sold the most?",
+                            "Which fruit was sold the least?",
+                            "Which fruit was sold the second most?",
+                            "Which fruit was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many fruits were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 106. VEGETABLES SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "VEGETABLESSOLD",
+                            "The chart shows the number of vegetables sold at a vegetable shop.",
+
+                            new String[]
+                                    {
+                                            "Potatoes",
+                                            "Tomatoes",
+                                            "Carrots",
+                                            "Onions"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Potatoes",
+                                            "Tomatoes",
+                                            "Carrots",
+                                            "Onions"
+                                    },
+
+                            "vegetable",
+                            "vegetables",
+
+                            "Which vegetable was sold the most?",
+                            "Which vegetable was sold the least?",
+                            "Which vegetable was sold the second most?",
+                            "Which vegetable was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many vegetables were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 107. LUNCH BOXES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "LUNCHBOXES",
+                            "The chart shows the number of lunch boxes brought to school on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "lunch box",
+                            "lunch boxes",
+
+                            "On which day were the most lunch boxes brought?",
+                            "On which day were the fewest lunch boxes brought?",
+                            "On which day were the second most lunch boxes brought?",
+                            "On which day were the second fewest lunch boxes brought?",
+
+                            "How many lunch boxes were brought on %s?",
+                            "How many more lunch boxes were brought on %s than %s?",
+                            "How many fewer lunch boxes were brought on %s than %s?",
+                            "How many lunch boxes were brought on %s and %s altogether?",
+                            "How many lunch boxes were brought in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 108. JUICE CUPS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "JUICECUPS",
+                            "The chart shows the number of cups of juice sold at a school canteen.",
+
+                            new String[]
+                                    {
+                                            "Orange",
+                                            "Apple",
+                                            "Mango",
+                                            "Lemon"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Orange",
+                                            "Apple",
+                                            "Mango",
+                                            "Lemon"
+                                    },
+
+                            "cup",
+                            "cups",
+
+                            "Which type of juice was sold the most?",
+                            "Which type of juice was sold the least?",
+                            "Which type of juice was sold the second most?",
+                            "Which type of juice was sold the second least?",
+
+                            "How many cups of %s juice were sold?",
+                            "How many more cups of %s juice were sold than %s juice?",
+                            "How many fewer cups of %s juice were sold than %s juice?",
+                            "How many cups of %s and %s juice were sold altogether?",
+                            "How many cups of juice were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 109. MEALS SERVED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "MEALSSERVED",
+                            "The chart shows the number of meals served at a school canteen on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "meal",
+                            "meals",
+
+                            "On which day were the most meals served?",
+                            "On which day were the fewest meals served?",
+                            "On which day were the second most meals served?",
+                            "On which day were the second fewest meals served?",
+
+                            "How many meals were served on %s?",
+                            "How many more meals were served on %s than %s?",
+                            "How many fewer meals were served on %s than %s?",
+                            "How many meals were served on %s and %s altogether?",
+                            "How many meals were served in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 110. WATER DRUNK
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "WATERDRUNK",
+                            "The chart shows the number of glasses of water drunk by four children in a day.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "glass",
+                            "glasses",
+
+                            "Who drank the most glasses of water?",
+                            "Who drank the fewest glasses of water?",
+                            "Who drank the second most glasses of water?",
+                            "Who drank the second fewest glasses of water?",
+
+                            "How many glasses of water did %s drink?",
+                            "How many more glasses of water did %s drink than %s?",
+                            "How many fewer glasses of water did %s drink than %s?",
+                            "How many glasses of water did %s and %s drink altogether?",
+                            "How many glasses of water were drunk in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 111. HEALTHY FOOD CHOICES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "HEALTHYFOOD",
+                            "The chart shows the number of healthy food items chosen by students.",
+
+                            new String[]
+                                    {
+                                            "Fruits",
+                                            "Vegetables",
+                                            "Milk",
+                                            "Nuts"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Fruits",
+                                            "Vegetables",
+                                            "Milk",
+                                            "Nuts"
+                                    },
+
+                            "choice",
+                            "choices",
+
+                            "Which food was chosen the most?",
+                            "Which food was chosen the least?",
+                            "Which food was chosen the second most?",
+                            "Which food was chosen the second least?",
+
+                            "How many choices were made for %s?",
+                            "How many more choices were made for %s than %s?",
+                            "How many fewer choices were made for %s than %s?",
+                            "How many choices were made for %s and %s altogether?",
+                            "How many healthy food choices were made in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 112. VEHICLES PASSING A ROAD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "ROADVEHICLES",
+                            "The chart shows the number of vehicles passing a road in one hour.",
+
+                            new String[]
+                                    {
+                                            "Cars",
+                                            "Buses",
+                                            "Bicycles",
+                                            "Trucks"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Cars",
+                                            "Buses",
+                                            "Bicycles",
+                                            "Trucks"
+                                    },
+
+                            "vehicle",
+                            "vehicles",
+
+                            "Which type of vehicle passed the road the most?",
+                            "Which type of vehicle passed the road the least?",
+                            "Which type of vehicle passed the road the second most?",
+                            "Which type of vehicle passed the road the second least?",
+
+                            "How many %s passed the road?",
+                            "How many more %s passed the road than %s?",
+                            "How many fewer %s passed the road than %s?",
+                            "How many %s and %s passed the road altogether?",
+                            "How many vehicles passed the road in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 113. VEHICLES IN A PARKING AREA
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "PARKING",
+                            "The chart shows the number of vehicles parked in a parking area.",
+
+                            new String[]
+                                    {
+                                            "Cars",
+                                            "Scooters",
+                                            "Bicycles",
+                                            "Motorcycles"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Cars",
+                                            "Scooters",
+                                            "Bicycles",
+                                            "Motorcycles"
+                                    },
+
+                            "vehicle",
+                            "vehicles",
+
+                            "Which type of vehicle was parked the most?",
+                            "Which type of vehicle was parked the least?",
+                            "Which type of vehicle was parked the second most?",
+                            "Which type of vehicle was parked the second least?",
+
+                            "How many %s were parked?",
+                            "How many more %s were parked than %s?",
+                            "How many fewer %s were parked than %s?",
+                            "How many %s and %s were parked altogether?",
+                            "How many vehicles were parked in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 114. PASSENGERS ON BUSES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BUSPASSENGERS",
+                            "The chart shows the number of passengers travelling on four buses.",
+
+                            new String[]
+                                    {
+                                            "Bus A",
+                                            "Bus B",
+                                            "Bus C",
+                                            "Bus D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Bus A",
+                                            "Bus B",
+                                            "Bus C",
+                                            "Bus D"
+                                    },
+
+                            "passenger",
+                            "passengers",
+
+                            "Which bus had the most passengers?",
+                            "Which bus had the fewest passengers?",
+                            "Which bus had the second most passengers?",
+                            "Which bus had the second fewest passengers?",
+
+                            "How many passengers travelled on %s?",
+                            "How many more passengers travelled on %s than %s?",
+                            "How many fewer passengers travelled on %s than %s?",
+                            "How many passengers travelled on %s and %s altogether?",
+                            "How many passengers travelled on the four buses in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 115. TYPES OF TRANSPORT USED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TRANSPORTUSED",
+                            "The chart shows the number of students using different types of transport to reach school.",
+
+                            new String[]
+                                    {
+                                            "Bus",
+                                            "Car",
+                                            "Bicycle",
+                                            "Walking"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Bus",
+                                            "Car",
+                                            "Bicycle",
+                                            "Walking"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which type of transport was used by the most students?",
+                            "Which type of transport was used by the fewest students?",
+                            "Which type of transport was used by the second most students?",
+                            "Which type of transport was used by the second fewest students?",
+
+                            "How many students used %s?",
+                            "How many more students used %s than %s?",
+                            "How many fewer students used %s than %s?",
+                            "How many students used %s and %s altogether?",
+                            "How many students used these types of transport in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 116. TRIPS MADE IN A WEEK
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "WEEKLYTRIPS",
+                            "The chart shows the number of trips made by a family on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "trip",
+                            "trips",
+
+                            "On which day were the most trips made?",
+                            "On which day were the fewest trips made?",
+                            "On which day were the second most trips made?",
+                            "On which day were the second fewest trips made?",
+
+                            "How many trips were made on %s?",
+                            "How many more trips were made on %s than %s?",
+                            "How many fewer trips were made on %s than %s?",
+                            "How many trips were made on %s and %s altogether?",
+                            "How many trips were made in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 117. DISTANCE TRAVELLED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "DISTANCETRAVELLED",
+                            "The chart shows the distance travelled by a family on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "kilometre",
+                            "kilometres",
+
+                            "On which day was the greatest distance travelled?",
+                            "On which day was the shortest distance travelled?",
+                            "On which day was the second greatest distance travelled?",
+                            "On which day was the second shortest distance travelled?",
+
+                            "How many kilometres were travelled on %s?",
+                            "How many more kilometres were travelled on %s than %s?",
+                            "How many fewer kilometres were travelled on %s than %s?",
+                            "How many kilometres were travelled on %s and %s altogether?",
+                            "How many kilometres were travelled in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 118. VEHICLES PARKED AT SCHOOL
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SCHOOLPARKING",
+                            "The chart shows the number of vehicles parked at school on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "vehicle",
+                            "vehicles",
+
+                            "On which day were the most vehicles parked?",
+                            "On which day were the fewest vehicles parked?",
+                            "On which day were the second most vehicles parked?",
+                            "On which day were the second fewest vehicles parked?",
+
+                            "How many vehicles were parked on %s?",
+                            "How many more vehicles were parked on %s than %s?",
+                            "How many fewer vehicles were parked on %s than %s?",
+                            "How many vehicles were parked on %s and %s altogether?",
+                            "How many vehicles were parked in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 119. BICYCLES USED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BICYCLES",
+                            "The chart shows the number of bicycles used by students on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "bicycle",
+                            "bicycles",
+
+                            "On which day were the most bicycles used?",
+                            "On which day were the fewest bicycles used?",
+                            "On which day were the second most bicycles used?",
+                            "On which day were the second fewest bicycles used?",
+
+                            "How many bicycles were used on %s?",
+                            "How many more bicycles were used on %s than %s?",
+                            "How many fewer bicycles were used on %s than %s?",
+                            "How many bicycles were used on %s and %s altogether?",
+                            "How many bicycles were used in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 120. CARS PASSING SCHOOL
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "CARSSCHOOL",
+                            "The chart shows the number of cars passing a school on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "car",
+                            "cars",
+
+                            "On which day did the most cars pass the school?",
+                            "On which day did the fewest cars pass the school?",
+                            "On which day did the second most cars pass the school?",
+                            "On which day did the second fewest cars pass the school?",
+
+                            "How many cars passed the school on %s?",
+                            "How many more cars passed the school on %s than %s?",
+                            "How many fewer cars passed the school on %s than %s?",
+                            "How many cars passed the school on %s and %s altogether?",
+                            "How many cars passed the school in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 121. TRAIN PASSENGERS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TRAINPASSENGERS",
+                            "The chart shows the number of passengers travelling on four trains.",
+
+                            new String[]
+                                    {
+                                            "Train A",
+                                            "Train B",
+                                            "Train C",
+                                            "Train D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Train A",
+                                            "Train B",
+                                            "Train C",
+                                            "Train D"
+                                    },
+
+                            "passenger",
+                            "passengers",
+
+                            "Which train had the most passengers?",
+                            "Which train had the fewest passengers?",
+                            "Which train had the second most passengers?",
+                            "Which train had the second fewest passengers?",
+
+                            "How many passengers travelled on %s?",
+                            "How many more passengers travelled on %s than %s?",
+                            "How many fewer passengers travelled on %s than %s?",
+                            "How many passengers travelled on %s and %s altogether?",
+                            "How many passengers travelled on the four trains in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 122. DRAWINGS MADE
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "DRAWINGS",
+                            "The chart shows the number of drawings made by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "drawing",
+                            "drawings",
+
+                            "Who made the most drawings?",
+                            "Who made the fewest drawings?",
+                            "Who made the second most drawings?",
+                            "Who made the second fewest drawings?",
+
+                            "How many drawings did %s make?",
+                            "How many more drawings did %s make than %s?",
+                            "How many fewer drawings did %s make than %s?",
+                            "How many drawings did %s and %s make altogether?",
+                            "How many drawings were made in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 123. PAINTINGS COMPLETED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "PAINTINGS",
+                            "The chart shows the number of paintings completed by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "painting",
+                            "paintings",
+
+                            "Who completed the most paintings?",
+                            "Who completed the fewest paintings?",
+                            "Who completed the second most paintings?",
+                            "Who completed the second fewest paintings?",
+
+                            "How many paintings did %s complete?",
+                            "How many more paintings did %s complete than %s?",
+                            "How many fewer paintings did %s complete than %s?",
+                            "How many paintings did %s and %s complete altogether?",
+                            "How many paintings were completed in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 124. CRAFT ITEMS MADE
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "CRAFTITEMS",
+                            "The chart shows the number of craft items made by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "craft item",
+                            "craft items",
+
+                            "Who made the most craft items?",
+                            "Who made the fewest craft items?",
+                            "Who made the second most craft items?",
+                            "Who made the second fewest craft items?",
+
+                            "How many craft items did %s make?",
+                            "How many more craft items did %s make than %s?",
+                            "How many fewer craft items did %s make than %s?",
+                            "How many craft items did %s and %s make altogether?",
+                            "How many craft items were made in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 125. SONGS LEARNED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SONGS",
+                            "The chart shows the number of songs learned by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "song",
+                            "songs",
+
+                            "Who learned the most songs?",
+                            "Who learned the fewest songs?",
+                            "Who learned the second most songs?",
+                            "Who learned the second fewest songs?",
+
+                            "How many songs did %s learn?",
+                            "How many more songs did %s learn than %s?",
+                            "How many fewer songs did %s learn than %s?",
+                            "How many songs did %s and %s learn altogether?",
+                            "How many songs were learned in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 126. DANCE PRACTICES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "DANCEPRACTICE",
+                            "The chart shows the number of dance practices attended by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "practice",
+                            "practices",
+
+                            "Who attended the most dance practices?",
+                            "Who attended the fewest dance practices?",
+                            "Who attended the second most dance practices?",
+                            "Who attended the second fewest dance practices?",
+
+                            "How many dance practices did %s attend?",
+                            "How many more dance practices did %s attend than %s?",
+                            "How many fewer dance practices did %s attend than %s?",
+                            "How many dance practices did %s and %s attend altogether?",
+                            "How many dance practices were attended in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 127. GAMES PLAYED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "GAMESPLAYED",
+                            "The chart shows the number of games played by four students during a holiday.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "game",
+                            "games",
+
+                            "Who played the most games?",
+                            "Who played the fewest games?",
+                            "Who played the second most games?",
+                            "Who played the second fewest games?",
+
+                            "How many games did %s play?",
+                            "How many more games did %s play than %s?",
+                            "How many fewer games did %s play than %s?",
+                            "How many games did %s and %s play altogether?",
+                            "How many games were played in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 128. MOVIES WATCHED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "MOVIESWATCHED",
+                            "The chart shows the number of movies watched by four students during a holiday.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "movie",
+                            "movies",
+
+                            "Who watched the most movies?",
+                            "Who watched the fewest movies?",
+                            "Who watched the second most movies?",
+                            "Who watched the second fewest movies?",
+
+                            "How many movies did %s watch?",
+                            "How many more movies did %s watch than %s?",
+                            "How many fewer movies did %s watch than %s?",
+                            "How many movies did %s and %s watch altogether?",
+                            "How many movies were watched in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 129. STORIES READ
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "STORIESREAD",
+                            "The chart shows the number of stories read by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "story",
+                            "stories",
+
+                            "Who read the most stories?",
+                            "Who read the fewest stories?",
+                            "Who read the second most stories?",
+                            "Who read the second fewest stories?",
+
+                            "How many stories did %s read?",
+                            "How many more stories did %s read than %s?",
+                            "How many fewer stories did %s read than %s?",
+                            "How many stories did %s and %s read altogether?",
+                            "How many stories were read in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 130. HOBBY CLASSES ATTENDED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "HOBBYCLASSES",
+                            "The chart shows the number of hobby classes attended by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "class",
+                            "classes",
+
+                            "Who attended the most hobby classes?",
+                            "Who attended the fewest hobby classes?",
+                            "Who attended the second most hobby classes?",
+                            "Who attended the second fewest hobby classes?",
+
+                            "How many hobby classes did %s attend?",
+                            "How many more hobby classes did %s attend than %s?",
+                            "How many fewer hobby classes did %s attend than %s?",
+                            "How many hobby classes did %s and %s attend altogether?",
+                            "How many hobby classes were attended in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 131. ART PROJECTS COMPLETED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "ARTPROJECTS",
+                            "The chart shows the number of art projects completed by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "art project",
+                            "art projects",
+
+                            "Who completed the most art projects?",
+                            "Who completed the fewest art projects?",
+                            "Who completed the second most art projects?",
+                            "Who completed the second fewest art projects?",
+
+                            "How many art projects did %s complete?",
+                            "How many more art projects did %s complete than %s?",
+                            "How many fewer art projects did %s complete than %s?",
+                            "How many art projects did %s and %s complete altogether?",
+                            "How many art projects were completed in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 132. FAVOURITE VEGETABLES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FAVVEGETABLES",
+                            "The chart shows the favourite vegetables of four students.",
+
+                            new String[]
+                                    {
+                                            "Carrots",
+                                            "Potatoes",
+                                            "Tomatoes",
+                                            "Spinach"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Carrots",
+                                            "Potatoes",
+                                            "Tomatoes",
+                                            "Spinach"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which vegetable is liked by the most students?",
+                            "Which vegetable is liked by the fewest students?",
+                            "Which vegetable is liked by the second most students?",
+                            "Which vegetable is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 133. FAVOURITE SNACKS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FAVSNACKS",
+                            "The chart shows the favourite snacks of students in a class.",
+
+                            new String[]
+                                    {
+                                            "Biscuits",
+                                            "Popcorn",
+                                            "Sandwiches",
+                                            "Chips"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Biscuits",
+                                            "Popcorn",
+                                            "Sandwiches",
+                                            "Chips"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which snack is liked by the most students?",
+                            "Which snack is liked by the fewest students?",
+                            "Which snack is liked by the second most students?",
+                            "Which snack is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 134. FAVOURITE DRINKS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FAVDRINKS",
+                            "The chart shows the favourite drinks of students in a class.",
+
+                            new String[]
+                                    {
+                                            "Milk",
+                                            "Juice",
+                                            "Lemonade",
+                                            "Water"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Milk",
+                                            "Juice",
+                                            "Lemonade",
+                                            "Water"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which drink is liked by the most students?",
+                            "Which drink is liked by the fewest students?",
+                            "Which drink is liked by the second most students?",
+                            "Which drink is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 135. FRUITS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FRUITSSOLD",
+                            "The chart shows the number of fruits sold at a fruit shop.",
+
+                            new String[]
+                                    {
+                                            "Apples",
+                                            "Bananas",
+                                            "Oranges",
+                                            "Mangoes"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Apples",
+                                            "Bananas",
+                                            "Oranges",
+                                            "Mangoes"
+                                    },
+
+                            "fruit",
+                            "fruits",
+
+                            "Which fruit was sold the most?",
+                            "Which fruit was sold the least?",
+                            "Which fruit was sold the second most?",
+                            "Which fruit was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many fruits were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 136. ICE CREAMS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "ICECREAMSOLD",
+                            "The chart shows the number of ice creams sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Vanilla",
+                                            "Chocolate",
+                                            "Strawberry",
+                                            "Mango"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Vanilla",
+                                            "Chocolate",
+                                            "Strawberry",
+                                            "Mango"
+                                    },
+
+                            "ice cream",
+                            "ice creams",
+
+                            "Which flavour of ice cream was sold the most?",
+                            "Which flavour of ice cream was sold the least?",
+                            "Which flavour of ice cream was sold the second most?",
+                            "Which flavour of ice cream was sold the second least?",
+
+                            "How many %s ice creams were sold?",
+                            "How many more %s ice creams were sold than %s ice creams?",
+                            "How many fewer %s ice creams were sold than %s ice creams?",
+                            "How many %s and %s ice creams were sold altogether?",
+                            "How many ice creams were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 137. BAKERY ITEMS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BAKERYITEMS",
+                            "The chart shows the number of bakery items sold at a bakery.",
+
+                            new String[]
+                                    {
+                                            "Bread",
+                                            "Buns",
+                                            "Cakes",
+                                            "Cookies"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Bread",
+                                            "Buns",
+                                            "Cakes",
+                                            "Cookies"
+                                    },
+
+                            "bakery item",
+                            "bakery items",
+
+                            "Which bakery item was sold the most?",
+                            "Which bakery item was sold the least?",
+                            "Which bakery item was sold the second most?",
+                            "Which bakery item was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many bakery items were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 138. CHOCOLATES SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "CHOCOLATESSOLD",
+                            "The chart shows the number of chocolates sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Milk Chocolate",
+                                            "Dark Chocolate",
+                                            "White Chocolate",
+                                            "Caramel Chocolate"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Milk",
+                                            "Dark",
+                                            "White",
+                                            "Caramel"
+                                    },
+
+                            "chocolate",
+                            "chocolates",
+
+                            "Which type of chocolate was sold the most?",
+                            "Which type of chocolate was sold the least?",
+                            "Which type of chocolate was sold the second most?",
+                            "Which type of chocolate was sold the second least?",
+
+                            "How many %s chocolates were sold?",
+                            "How many more %s chocolates were sold than %s chocolates?",
+                            "How many fewer %s chocolates were sold than %s chocolates?",
+                            "How many %s and %s chocolates were sold altogether?",
+                            "How many chocolates were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 139. GROCERIES SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "GROCERIES",
+                            "The chart shows the number of grocery items sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Rice Bags",
+                                            "Sugar Bags",
+                                            "Flour Bags",
+                                            "Dal Bags"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Rice",
+                                            "Sugar",
+                                            "Flour",
+                                            "Dal"
+                                    },
+
+                            "bag",
+                            "bags",
+
+                            "Which type of grocery bag was sold the most?",
+                            "Which type of grocery bag was sold the least?",
+                            "Which type of grocery bag was sold the second most?",
+                            "Which type of grocery bag was sold the second least?",
+
+                            "How many %s bags were sold?",
+                            "How many more %s bags were sold than %s bags?",
+                            "How many fewer %s bags were sold than %s bags?",
+                            "How many %s and %s bags were sold altogether?",
+                            "How many grocery bags were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 140. BOOKS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BOOKSSOLD",
+                            "The chart shows the number of books sold at a book shop.",
+
+                            new String[]
+                                    {
+                                            "Story Books",
+                                            "Science Books",
+                                            "Picture Books",
+                                            "Activity Books"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Story",
+                                            "Science",
+                                            "Picture",
+                                            "Activity"
+                                    },
+
+                            "book",
+                            "books",
+
+                            "Which type of book was sold the most?",
+                            "Which type of book was sold the least?",
+                            "Which type of book was sold the second most?",
+                            "Which type of book was sold the second least?",
+
+                            "How many %s books were sold?",
+                            "How many more %s books were sold than %s books?",
+                            "How many fewer %s books were sold than %s books?",
+                            "How many %s and %s books were sold altogether?",
+                            "How many books were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 141. SHOPPING ITEMS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SHOPPINGITEMS",
+                            "The chart shows the number of different items bought by customers at a shop.",
+
+                            new String[]
+                                    {
+                                            "Pencils",
+                                            "Notebooks",
+                                            "Erasers",
+                                            "Rulers"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Pencils",
+                                            "Notebooks",
+                                            "Erasers",
+                                            "Rulers"
+                                    },
+
+                            "item",
+                            "items",
+
+                            "Which item was bought the most?",
+                            "Which item was bought the least?",
+                            "Which item was bought the second most?",
+                            "Which item was bought the second least?",
+
+                            "How many %s were bought?",
+                            "How many more %s were bought than %s?",
+                            "How many fewer %s were bought than %s?",
+                            "How many %s and %s were bought altogether?",
+                            "How many items were bought in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 142. TREES PLANTED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TREESPLANTED",
+                            "The chart shows the number of trees planted by four classes.",
+
+                            new String[]
+                                    {
+                                            "Class 4A",
+                                            "Class 4B",
+                                            "Class 4C",
+                                            "Class 4D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "4A",
+                                            "4B",
+                                            "4C",
+                                            "4D"
+                                    },
+
+                            "tree",
+                            "trees",
+
+                            "Which class planted the most trees?",
+                            "Which class planted the fewest trees?",
+                            "Which class planted the second most trees?",
+                            "Which class planted the second fewest trees?",
+
+                            "How many trees did %s plant?",
+                            "How many more trees did %s plant than %s?",
+                            "How many fewer trees did %s plant than %s?",
+                            "How many trees did %s and %s plant altogether?",
+                            "How many trees were planted in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 143. FLOWERS IN A GARDEN
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "GARDENFLOWERS",
+                            "The chart shows the number of different flowers in a garden.",
+
+                            new String[]
+                                    {
+                                            "Roses",
+                                            "Sunflowers",
+                                            "Marigolds",
+                                            "Lilies"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Roses",
+                                            "Sunflowers",
+                                            "Marigolds",
+                                            "Lilies"
+                                    },
+
+                            "flower",
+                            "flowers",
+
+                            "Which flower is there the most of?",
+                            "Which flower is there the least of?",
+                            "Which flower is there the second most of?",
+                            "Which flower is there the second least of?",
+
+                            "How many %s are there?",
+                            "How many more %s are there than %s?",
+                            "How many fewer %s are there than %s?",
+                            "How many %s and %s are there altogether?",
+                            "How many flowers are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 144. ANIMALS IN A ZOO
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "ZOOANIMALS",
+                            "The chart shows the number of different animals in a zoo.",
+
+                            new String[]
+                                    {
+                                            "Elephants",
+                                            "Tigers",
+                                            "Monkeys",
+                                            "Zebras"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Elephants",
+                                            "Tigers",
+                                            "Monkeys",
+                                            "Zebras"
+                                    },
+
+                            "animal",
+                            "animals",
+
+                            "Which animal is there the most of?",
+                            "Which animal is there the least of?",
+                            "Which animal is there the second most of?",
+                            "Which animal is there the second least of?",
+
+                            "How many %s are there?",
+                            "How many more %s are there than %s?",
+                            "How many fewer %s are there than %s?",
+                            "How many %s and %s are there altogether?",
+                            "How many animals are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 145. BIRDS SEEN IN A PARK
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "PARKBIRDS",
+                            "The chart shows the number of different birds seen in a park.",
+
+                            new String[]
+                                    {
+                                            "Sparrows",
+                                            "Pigeons",
+                                            "Parrots",
+                                            "Crows"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Sparrows",
+                                            "Pigeons",
+                                            "Parrots",
+                                            "Crows"
+                                    },
+
+                            "bird",
+                            "birds",
+
+                            "Which bird was seen the most?",
+                            "Which bird was seen the least?",
+                            "Which bird was seen the second most?",
+                            "Which bird was seen the second least?",
+
+                            "How many %s were seen?",
+                            "How many more %s were seen than %s?",
+                            "How many fewer %s were seen than %s?",
+                            "How many %s and %s were seen altogether?",
+                            "How many birds were seen in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 146. RECYCLING COLLECTED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "RECYCLING",
+                            "The chart shows the number of bags of recyclable materials collected by four classes.",
+
+                            new String[]
+                                    {
+                                            "Class 4A",
+                                            "Class 4B",
+                                            "Class 4C",
+                                            "Class 4D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "4A",
+                                            "4B",
+                                            "4C",
+                                            "4D"
+                                    },
+
+                            "bag",
+                            "bags",
+
+                            "Which class collected the most bags?",
+                            "Which class collected the fewest bags?",
+                            "Which class collected the second most bags?",
+                            "Which class collected the second fewest bags?",
+
+                            "How many bags did %s collect?",
+                            "How many more bags did %s collect than %s?",
+                            "How many fewer bags did %s collect than %s?",
+                            "How many bags did %s and %s collect altogether?",
+                            "How many bags were collected in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 147. WATER USED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "WATERUSED",
+                            "The chart shows the amount of water used on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "litre",
+                            "litres",
+
+                            "On which day was the most water used?",
+                            "On which day was the least water used?",
+                            "On which day was the second most water used?",
+                            "On which day was the second least water used?",
+
+                            "How many litres of water were used on %s?",
+                            "How many more litres of water were used on %s than %s?",
+                            "How many fewer litres of water were used on %s than %s?",
+                            "How many litres of water were used on %s and %s altogether?",
+                            "How many litres of water were used in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 148. RAINFALL
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "RAINFALL",
+                            "The chart shows the amount of rainfall received in four months.",
+
+                            new String[]
+                                    {
+                                            "June",
+                                            "July",
+                                            "August",
+                                            "September"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Jun",
+                                            "Jul",
+                                            "Aug",
+                                            "Sep"
+                                    },
+
+                            "millimetre",
+                            "millimetres",
+
+                            "Which month had the most rainfall?",
+                            "Which month had the least rainfall?",
+                            "Which month had the second most rainfall?",
+                            "Which month had the second least rainfall?",
+
+                            "How many millimetres of rainfall were received in %s?",
+                            "How many more millimetres of rainfall were received in %s than %s?",
+                            "How many fewer millimetres of rainfall were received in %s than %s?",
+                            "How many millimetres of rainfall were received in %s and %s altogether?",
+                            "How many millimetres of rainfall were received in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 149. TEMPERATURE
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TEMPERATURE",
+                            "The chart shows the temperature recorded on four days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "degree",
+                            "degrees",
+
+                            "Which day had the highest temperature?",
+                            "Which day had the lowest temperature?",
+                            "Which day had the second highest temperature?",
+                            "Which day had the second lowest temperature?",
+
+                            "What was the temperature on %s?",
+                            "How many degrees higher was the temperature on %s than %s?",
+                            "How many degrees lower was the temperature on %s than %s?",
+                            "What was the total of the temperatures on %s and %s?",
+                            "What was the total of the four temperatures?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 150. CLOUDY DAYS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "CLOUDYDAYS",
+                            "The chart shows the number of cloudy days in four months.",
+
+                            new String[]
+                                    {
+                                            "June",
+                                            "July",
+                                            "August",
+                                            "September"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Jun",
+                                            "Jul",
+                                            "Aug",
+                                            "Sep"
+                                    },
+
+                            "day",
+                            "days",
+
+                            "Which month had the most cloudy days?",
+                            "Which month had the fewest cloudy days?",
+                            "Which month had the second most cloudy days?",
+                            "Which month had the second fewest cloudy days?",
+
+                            "How many cloudy days were there in %s?",
+                            "How many more cloudy days were there in %s than %s?",
+                            "How many fewer cloudy days were there in %s than %s?",
+                            "How many cloudy days were there in %s and %s altogether?",
+                            "How many cloudy days were there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 151. NATURE PROJECTS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "NATUREPROJECTS",
+                            "The chart shows the number of nature projects completed by four classes.",
+
+                            new String[]
+                                    {
+                                            "Class 4A",
+                                            "Class 4B",
+                                            "Class 4C",
+                                            "Class 4D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "4A",
+                                            "4B",
+                                            "4C",
+                                            "4D"
+                                    },
+
+                            "project",
+                            "projects",
+
+                            "Which class completed the most nature projects?",
+                            "Which class completed the fewest nature projects?",
+                            "Which class completed the second most nature projects?",
+                            "Which class completed the second fewest nature projects?",
+
+                            "How many nature projects did %s complete?",
+                            "How many more nature projects did %s complete than %s?",
+                            "How many fewer nature projects did %s complete than %s?",
+                            "How many nature projects did %s and %s complete altogether?",
+                            "How many nature projects were completed in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 152. FAVOURITE SPORTS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FAVSPORTS",
+                            "The chart shows the favourite sports of students in a class.",
+
+                            new String[]
+                                    {
+                                            "Cricket",
+                                            "Football",
+                                            "Basketball",
+                                            "Tennis"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Cricket",
+                                            "Football",
+                                            "Basketball",
+                                            "Tennis"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which sport is liked by the most students?",
+                            "Which sport is liked by the fewest students?",
+                            "Which sport is liked by the second most students?",
+                            "Which sport is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 153. GOALS SCORED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "GOALSSCORED",
+                            "The chart shows the number of goals scored by four football teams.",
+
+                            new String[]
+                                    {
+                                            "Tigers",
+                                            "Lions",
+                                            "Eagles",
+                                            "Panthers"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Tigers",
+                                            "Lions",
+                                            "Eagles",
+                                            "Panthers"
+                                    },
+
+                            "goal",
+                            "goals",
+
+                            "Which team scored the most goals?",
+                            "Which team scored the fewest goals?",
+                            "Which team scored the second most goals?",
+                            "Which team scored the second fewest goals?",
+
+                            "How many goals did %s score?",
+                            "How many more goals did %s score than %s?",
+                            "How many fewer goals did %s score than %s?",
+                            "How many goals did %s and %s score altogether?",
+                            "How many goals were scored in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 154. RUNS SCORED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "RUNSSCORED",
+                            "The chart shows the number of runs scored by four cricket teams.",
+
+                            new String[]
+                                    {
+                                            "India",
+                                            "Australia",
+                                            "England",
+                                            "South Africa"
+                                    },
+
+                            new String[]
+                                    {
+                                            "India",
+                                            "Australia",
+                                            "England",
+                                            "South Africa"
+                                    },
+
+                            "run",
+                            "runs",
+
+                            "Which team scored the most runs?",
+                            "Which team scored the fewest runs?",
+                            "Which team scored the second most runs?",
+                            "Which team scored the second fewest runs?",
+
+                            "How many runs did %s score?",
+                            "How many more runs did %s score than %s?",
+                            "How many fewer runs did %s score than %s?",
+                            "How many runs did %s and %s score altogether?",
+                            "How many runs were scored in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 155. MEDALS WON
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "MEDALSWON",
+                            "The chart shows the number of medals won by four school teams.",
+
+                            new String[]
+                                    {
+                                            "Red Team",
+                                            "Blue Team",
+                                            "Green Team",
+                                            "Yellow Team"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Red",
+                                            "Blue",
+                                            "Green",
+                                            "Yellow"
+                                    },
+
+                            "medal",
+                            "medals",
+
+                            "Which team won the most medals?",
+                            "Which team won the fewest medals?",
+                            "Which team won the second most medals?",
+                            "Which team won the second fewest medals?",
+
+                            "How many medals did %s win?",
+                            "How many more medals did %s win than %s?",
+                            "How many fewer medals did %s win than %s?",
+                            "How many medals did %s and %s win altogether?",
+                            "How many medals were won in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 156. INDOOR GAMES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "INDOORGAMES",
+                            "The chart shows the favourite indoor games of students.",
+
+                            new String[]
+                                    {
+                                            "Chess",
+                                            "Carrom",
+                                            "Ludo",
+                                            "Table Tennis"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Chess",
+                                            "Carrom",
+                                            "Ludo",
+                                            "Table Tennis"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which indoor game is liked by the most students?",
+                            "Which indoor game is liked by the fewest students?",
+                            "Which indoor game is liked by the second most students?",
+                            "Which indoor game is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 157. OUTDOOR GAMES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "OUTDOORGAMES",
+                            "The chart shows the favourite outdoor games of students.",
+
+                            new String[]
+                                    {
+                                            "Cricket",
+                                            "Football",
+                                            "Badminton",
+                                            "Basketball"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Cricket",
+                                            "Football",
+                                            "Badminton",
+                                            "Basketball"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which outdoor game is liked by the most students?",
+                            "Which outdoor game is liked by the fewest students?",
+                            "Which outdoor game is liked by the second most students?",
+                            "Which outdoor game is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 158. SPORTS EQUIPMENT
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SPORTEQUIPMENT",
+                            "The chart shows the number of different sports items in a school store.",
+
+                            new String[]
+                                    {
+                                            "Football",
+                                            "Cricket Bat",
+                                            "Basketball",
+                                            "Tennis Racket"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Football",
+                                            "Cricket Bat",
+                                            "Basketball",
+                                            "Tennis"
+                                    },
+
+                            "item",
+                            "items",
+
+                            "Which sports item is there the most of?",
+                            "Which sports item is there the least of?",
+                            "Which sports item is there the second most of?",
+                            "Which sports item is there the second least of?",
+
+                            "How many %s are there?",
+                            "How many more %s are there than %s?",
+                            "How many fewer %s are there than %s?",
+                            "How many %s and %s are there altogether?",
+                            "How many sports items are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 159. PLAYERS IN TEAMS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TEAMPLAYERS",
+                            "The chart shows the number of players in four school teams.",
+
+                            new String[]
+                                    {
+                                            "Cricket",
+                                            "Football",
+                                            "Basketball",
+                                            "Hockey"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Cricket",
+                                            "Football",
+                                            "Basketball",
+                                            "Hockey"
+                                    },
+
+                            "player",
+                            "players",
+
+                            "Which team has the most players?",
+                            "Which team has the fewest players?",
+                            "Which team has the second most players?",
+                            "Which team has the second fewest players?",
+
+                            "How many players are in the %s team?",
+                            "How many more players are in the %s team than the %s team?",
+                            "How many fewer players are in the %s team than the %s team?",
+                            "How many players are in the %s and %s teams altogether?",
+                            "How many players are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 160. SPORTS PRACTICE
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SPORTSPRACTICE",
+                            "The chart shows the number of sports practice sessions attended by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "practice session",
+                            "practice sessions",
+
+                            "Who attended the most practice sessions?",
+                            "Who attended the fewest practice sessions?",
+                            "Who attended the second most practice sessions?",
+                            "Who attended the second fewest practice sessions?",
+
+                            "How many practice sessions did %s attend?",
+                            "How many more practice sessions did %s attend than %s?",
+                            "How many fewer practice sessions did %s attend than %s?",
+                            "How many practice sessions did %s and %s attend altogether?",
+                            "How many practice sessions were attended in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 161. SPORTS EVENTS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SPORTSEVENTS",
+                            "The chart shows the number of events completed by four students during a sports day.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "event",
+                            "events",
+
+                            "Who completed the most events?",
+                            "Who completed the fewest events?",
+                            "Who completed the second most events?",
+                            "Who completed the second fewest events?",
+
+                            "How many events did %s complete?",
+                            "How many more events did %s complete than %s?",
+                            "How many fewer events did %s complete than %s?",
+                            "How many events did %s and %s complete altogether?",
+                            "How many events were completed in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 162. BUS PASSENGERS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BUSPASSENGERS",
+                            "The chart shows the number of passengers travelling on four buses.",
+
+                            new String[]
+                                    {
+                                            "Bus A",
+                                            "Bus B",
+                                            "Bus C",
+                                            "Bus D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Bus A",
+                                            "Bus B",
+                                            "Bus C",
+                                            "Bus D"
+                                    },
+
+                            "passenger",
+                            "passengers",
+
+                            "Which bus had the most passengers?",
+                            "Which bus had the fewest passengers?",
+                            "Which bus had the second most passengers?",
+                            "Which bus had the second fewest passengers?",
+
+                            "How many passengers travelled on %s?",
+                            "How many more passengers travelled on %s than %s?",
+                            "How many fewer passengers travelled on %s than %s?",
+                            "How many passengers travelled on %s and %s altogether?",
+                            "How many passengers travelled on the four buses in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 163. VEHICLES ON A ROAD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "ROADVEHICLES",
+                            "The chart shows the number of vehicles passing a road in one hour.",
+
+                            new String[]
+                                    {
+                                            "Cars",
+                                            "Buses",
+                                            "Bicycles",
+                                            "Trucks"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Cars",
+                                            "Buses",
+                                            "Bicycles",
+                                            "Trucks"
+                                    },
+
+                            "vehicle",
+                            "vehicles",
+
+                            "Which type of vehicle passed the road the most?",
+                            "Which type of vehicle passed the road the least?",
+                            "Which type of vehicle passed the road the second most?",
+                            "Which type of vehicle passed the road the second least?",
+
+                            "How many %s passed the road?",
+                            "How many more %s passed the road than %s?",
+                            "How many fewer %s passed the road than %s?",
+                            "How many %s and %s passed the road altogether?",
+                            "How many vehicles passed the road in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 164. VEHICLES IN A PARKING AREA
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "PARKINGVEHICLES",
+                            "The chart shows the number of vehicles parked in a parking area.",
+
+                            new String[]
+                                    {
+                                            "Cars",
+                                            "Scooters",
+                                            "Bicycles",
+                                            "Motorcycles"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Cars",
+                                            "Scooters",
+                                            "Bicycles",
+                                            "Motorcycles"
+                                    },
+
+                            "vehicle",
+                            "vehicles",
+
+                            "Which type of vehicle was parked the most?",
+                            "Which type of vehicle was parked the least?",
+                            "Which type of vehicle was parked the second most?",
+                            "Which type of vehicle was parked the second least?",
+
+                            "How many %s were parked?",
+                            "How many more %s were parked than %s?",
+                            "How many fewer %s were parked than %s?",
+                            "How many %s and %s were parked altogether?",
+                            "How many vehicles were parked in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 165. TRANSPORT USED BY STUDENTS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TRANSPORTUSED",
+                            "The chart shows the number of students using different types of transport to reach school.",
+
+                            new String[]
+                                    {
+                                            "Bus",
+                                            "Car",
+                                            "Bicycle",
+                                            "Walking"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Bus",
+                                            "Car",
+                                            "Bicycle",
+                                            "Walking"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which type of transport was used by the most students?",
+                            "Which type of transport was used by the fewest students?",
+                            "Which type of transport was used by the second most students?",
+                            "Which type of transport was used by the second fewest students?",
+
+                            "How many students used %s?",
+                            "How many more students used %s than %s?",
+                            "How many fewer students used %s than %s?",
+                            "How many students used %s and %s altogether?",
+                            "How many students used these types of transport in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 166. TRIPS MADE
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TRIPSDAY",
+                            "The chart shows the number of trips made by a family on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "trip",
+                            "trips",
+
+                            "On which day were the most trips made?",
+                            "On which day were the fewest trips made?",
+                            "On which day were the second most trips made?",
+                            "On which day were the second fewest trips made?",
+
+                            "How many trips were made on %s?",
+                            "How many more trips were made on %s than %s?",
+                            "How many fewer trips were made on %s than %s?",
+                            "How many trips were made on %s and %s altogether?",
+                            "How many trips were made in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 167. BICYCLES USED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BICYCLESDAYS",
+                            "The chart shows the number of bicycles used by students on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "bicycle",
+                            "bicycles",
+
+                            "On which day were the most bicycles used?",
+                            "On which day were the fewest bicycles used?",
+                            "On which day were the second most bicycles used?",
+                            "On which day were the second fewest bicycles used?",
+
+                            "How many bicycles were used on %s?",
+                            "How many more bicycles were used on %s than %s?",
+                            "How many fewer bicycles were used on %s than %s?",
+                            "How many bicycles were used on %s and %s altogether?",
+                            "How many bicycles were used in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 168. CARS PASSING A SCHOOL
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SCHOOLCARS",
+                            "The chart shows the number of cars passing a school on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "car",
+                            "cars",
+
+                            "On which day did the most cars pass the school?",
+                            "On which day did the fewest cars pass the school?",
+                            "On which day did the second most cars pass the school?",
+                            "On which day did the second fewest cars pass the school?",
+
+                            "How many cars passed the school on %s?",
+                            "How many more cars passed the school on %s than %s?",
+                            "How many fewer cars passed the school on %s than %s?",
+                            "How many cars passed the school on %s and %s altogether?",
+                            "How many cars passed the school in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 169. TRAINS AND PASSENGERS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TRAINPASSENGERS",
+                            "The chart shows the number of passengers travelling on four trains.",
+
+                            new String[]
+                                    {
+                                            "Train A",
+                                            "Train B",
+                                            "Train C",
+                                            "Train D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Train A",
+                                            "Train B",
+                                            "Train C",
+                                            "Train D"
+                                    },
+
+                            "passenger",
+                            "passengers",
+
+                            "Which train had the most passengers?",
+                            "Which train had the fewest passengers?",
+                            "Which train had the second most passengers?",
+                            "Which train had the second fewest passengers?",
+
+                            "How many passengers travelled on %s?",
+                            "How many more passengers travelled on %s than %s?",
+                            "How many fewer passengers travelled on %s than %s?",
+                            "How many passengers travelled on %s and %s altogether?",
+                            "How many passengers travelled on the four trains in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 170. DISTANCE TRAVELLED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "DISTANCE",
+                            "The chart shows the distance travelled by a family on different days.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "kilometre",
+                            "kilometres",
+
+                            "On which day was the greatest distance travelled?",
+                            "On which day was the shortest distance travelled?",
+                            "On which day was the second greatest distance travelled?",
+                            "On which day was the second shortest distance travelled?",
+
+                            "How many kilometres were travelled on %s?",
+                            "How many more kilometres were travelled on %s than %s?",
+                            "How many fewer kilometres were travelled on %s than %s?",
+                            "How many kilometres were travelled on %s and %s altogether?",
+                            "How many kilometres were travelled in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 171. TAXIS AT A STATION
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TAXISSTATION",
+                            "The chart shows the number of taxis at a railway station at different times.",
+
+                            new String[]
+                                    {
+                                            "Morning",
+                                            "Afternoon",
+                                            "Evening",
+                                            "Night"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Morning",
+                                            "Afternoon",
+                                            "Evening",
+                                            "Night"
+                                    },
+
+                            "taxi",
+                            "taxis",
+
+                            "At which time were there the most taxis?",
+                            "At which time were there the fewest taxis?",
+                            "At which time were there the second most taxis?",
+                            "At which time were there the second fewest taxis?",
+
+                            "How many taxis were there in the %s?",
+                            "How many more taxis were there in the %s than in the %s?",
+                            "How many fewer taxis were there in the %s than in the %s?",
+                            "How many taxis were there in the %s and %s altogether?",
+                            "How many taxis were there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 172. BOAT PASSENGERS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BOATPASSENGERS",
+                            "The chart shows the number of passengers travelling on four boats.",
+
+                            new String[]
+                                    {
+                                            "Boat A",
+                                            "Boat B",
+                                            "Boat C",
+                                            "Boat D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Boat A",
+                                            "Boat B",
+                                            "Boat C",
+                                            "Boat D"
+                                    },
+
+                            "passenger",
+                            "passengers",
+
+                            "Which boat had the most passengers?",
+                            "Which boat had the fewest passengers?",
+                            "Which boat had the second most passengers?",
+                            "Which boat had the second fewest passengers?",
+
+                            "How many passengers travelled on %s?",
+                            "How many more passengers travelled on %s than %s?",
+                            "How many fewer passengers travelled on %s than %s?",
+                            "How many passengers travelled on %s and %s altogether?",
+                            "How many passengers travelled on the four boats in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 173. FAVOURITE FRUITS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FAVFRUITS",
+                            "The chart shows the favourite fruits of students in a class.",
+
+                            new String[]
+                                    {
+                                            "Apples",
+                                            "Bananas",
+                                            "Mangoes",
+                                            "Oranges"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Apples",
+                                            "Bananas",
+                                            "Mangoes",
+                                            "Oranges"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which fruit is liked by the most students?",
+                            "Which fruit is liked by the fewest students?",
+                            "Which fruit is liked by the second most students?",
+                            "Which fruit is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 174. FAVOURITE SNACKS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FAVSNACKS",
+                            "The chart shows the favourite snacks of students in a class.",
+
+                            new String[]
+                                    {
+                                            "Biscuits",
+                                            "Popcorn",
+                                            "Sandwiches",
+                                            "Samosas"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Biscuits",
+                                            "Popcorn",
+                                            "Sandwiches",
+                                            "Samosas"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which snack is liked by the most students?",
+                            "Which snack is liked by the fewest students?",
+                            "Which snack is liked by the second most students?",
+                            "Which snack is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 175. FAVOURITE DRINKS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FAVDRINKS",
+                            "The chart shows the favourite drinks of students in a class.",
+
+                            new String[]
+                                    {
+                                            "Milk",
+                                            "Juice",
+                                            "Lemonade",
+                                            "Water"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Milk",
+                                            "Juice",
+                                            "Lemonade",
+                                            "Water"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which drink is liked by the most students?",
+                            "Which drink is liked by the fewest students?",
+                            "Which drink is liked by the second most students?",
+                            "Which drink is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 176. FRUITS SOLD AT A SHOP
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FRUITSSOLD",
+                            "The chart shows the number of fruits sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Apples",
+                                            "Bananas",
+                                            "Mangoes",
+                                            "Oranges"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Apples",
+                                            "Bananas",
+                                            "Mangoes",
+                                            "Oranges"
+                                    },
+
+                            "fruit",
+                            "fruits",
+
+                            "Which fruit was sold the most?",
+                            "Which fruit was sold the least?",
+                            "Which fruit was sold the second most?",
+                            "Which fruit was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many fruits were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 177. ICE CREAMS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "ICECREAMSOLD",
+                            "The chart shows the number of ice creams sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Vanilla",
+                                            "Chocolate",
+                                            "Strawberry",
+                                            "Mango"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Vanilla",
+                                            "Chocolate",
+                                            "Strawberry",
+                                            "Mango"
+                                    },
+
+                            "ice cream",
+                            "ice creams",
+
+                            "Which flavour of ice cream was sold the most?",
+                            "Which flavour of ice cream was sold the least?",
+                            "Which flavour of ice cream was sold the second most?",
+                            "Which flavour of ice cream was sold the second least?",
+
+                            "How many %s ice creams were sold?",
+                            "How many more %s ice creams were sold than %s ice creams?",
+                            "How many fewer %s ice creams were sold than %s ice creams?",
+                            "How many %s and %s ice creams were sold altogether?",
+                            "How many ice creams were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 178. BAKERY ITEMS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BAKERYITEMS",
+                            "The chart shows the number of bakery items sold at a bakery.",
+
+                            new String[]
+                                    {
+                                            "Bread",
+                                            "Buns",
+                                            "Cakes",
+                                            "Cookies"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Bread",
+                                            "Buns",
+                                            "Cakes",
+                                            "Cookies"
+                                    },
+
+                            "bakery item",
+                            "bakery items",
+
+                            "Which bakery item was sold the most?",
+                            "Which bakery item was sold the least?",
+                            "Which bakery item was sold the second most?",
+                            "Which bakery item was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many bakery items were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 179. FAVOURITE DESSERTS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FAVDESSERTS",
+                            "The chart shows the favourite desserts of students in a class.",
+
+                            new String[]
+                                    {
+                                            "Ice Cream",
+                                            "Cake",
+                                            "Gulab Jamun",
+                                            "Fruit Salad"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Ice Cream",
+                                            "Cake",
+                                            "Gulab Jamun",
+                                            "Fruit Salad"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which dessert is liked by the most students?",
+                            "Which dessert is liked by the fewest students?",
+                            "Which dessert is liked by the second most students?",
+                            "Which dessert is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 180. VEGETABLES SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "VEGETABLESSOLD",
+                            "The chart shows the number of vegetables sold at a shop.",
+
+                            new String[]
+                                    {
+                                            "Carrots",
+                                            "Potatoes",
+                                            "Tomatoes",
+                                            "Spinach"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Carrots",
+                                            "Potatoes",
+                                            "Tomatoes",
+                                            "Spinach"
+                                    },
+
+                            "vegetable",
+                            "vegetables",
+
+                            "Which vegetable was sold the most?",
+                            "Which vegetable was sold the least?",
+                            "Which vegetable was sold the second most?",
+                            "Which vegetable was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many vegetables were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 181. PIZZAS SOLD
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "PIZZASSOLD",
+                            "The chart shows the number of pizzas sold at a restaurant.",
+
+                            new String[]
+                                    {
+                                            "Cheese",
+                                            "Corn",
+                                            "Paneer",
+                                            "Vegetable"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Cheese",
+                                            "Corn",
+                                            "Paneer",
+                                            "Vegetable"
+                                    },
+
+                            "pizza",
+                            "pizzas",
+
+                            "Which type of pizza was sold the most?",
+                            "Which type of pizza was sold the least?",
+                            "Which type of pizza was sold the second most?",
+                            "Which type of pizza was sold the second least?",
+
+                            "How many %s pizzas were sold?",
+                            "How many more %s pizzas were sold than %s pizzas?",
+                            "How many fewer %s pizzas were sold than %s pizzas?",
+                            "How many %s and %s pizzas were sold altogether?",
+                            "How many pizzas were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 182. LUNCH ITEMS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "LUNCHITEMS",
+                            "The chart shows the number of lunch items sold at a school canteen.",
+
+                            new String[]
+                                    {
+                                            "Sandwiches",
+                                            "Samosas",
+                                            "Idlis",
+                                            "Dosas"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Sandwiches",
+                                            "Samosas",
+                                            "Idlis",
+                                            "Dosas"
+                                    },
+
+                            "item",
+                            "items",
+
+                            "Which lunch item was sold the most?",
+                            "Which lunch item was sold the least?",
+                            "Which lunch item was sold the second most?",
+                            "Which lunch item was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many lunch items were sold in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 183. FAVOURITE HOUSE PLANTS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "HOUSEPLANTS",
+                            "The chart shows the favourite house plants of four families.",
+
+                            new String[]
+                                    {
+                                            "Rose",
+                                            "Money Plant",
+                                            "Tulsi",
+                                            "Aloe Vera"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Rose",
+                                            "Money Plant",
+                                            "Tulsi",
+                                            "Aloe Vera"
+                                    },
+
+                            "family",
+                            "families",
+
+                            "Which plant is liked by the most families?",
+                            "Which plant is liked by the fewest families?",
+                            "Which plant is liked by the second most families?",
+                            "Which plant is liked by the second fewest families?",
+
+                            "How many families like %s?",
+                            "How many more families like %s than %s?",
+                            "How many fewer families like %s than %s?",
+                            "How many families like %s and %s altogether?",
+                            "How many families are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 184. GARDEN TOOLS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "GARDENTOOLS",
+                            "The chart shows the number of different garden tools in a garden shed.",
+
+                            new String[]
+                                    {
+                                            "Spades",
+                                            "Rakes",
+                                            "Buckets",
+                                            "Hoes"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Spades",
+                                            "Rakes",
+                                            "Buckets",
+                                            "Hoes"
+                                    },
+
+                            "tool",
+                            "tools",
+
+                            "Which garden tool is there the most of?",
+                            "Which garden tool is there the least of?",
+                            "Which garden tool is there the second most of?",
+                            "Which garden tool is there the second least of?",
+
+                            "How many %s are there?",
+                            "How many more %s are there than %s?",
+                            "How many fewer %s are there than %s?",
+                            "How many %s and %s are there altogether?",
+                            "How many garden tools are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 185. FLOWERS PLANTED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FLOWERSPLANTED",
+                            "The chart shows the number of different flowers planted in a garden.",
+
+                            new String[]
+                                    {
+                                            "Roses",
+                                            "Marigolds",
+                                            "Lilies",
+                                            "Sunflowers"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Roses",
+                                            "Marigolds",
+                                            "Lilies",
+                                            "Sunflowers"
+                                    },
+
+                            "flower",
+                            "flowers",
+
+                            "Which flower was planted the most?",
+                            "Which flower was planted the least?",
+                            "Which flower was planted the second most?",
+                            "Which flower was planted the second least?",
+
+                            "How many %s were planted?",
+                            "How many more %s were planted than %s?",
+                            "How many fewer %s were planted than %s?",
+                            "How many %s and %s were planted altogether?",
+                            "How many flowers were planted in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 186. POTS IN A GARDEN
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "GARDENPOTS",
+                            "The chart shows the number of flower pots of different sizes in a garden.",
+
+                            new String[]
+                                    {
+                                            "Small",
+                                            "Medium",
+                                            "Large",
+                                            "Hanging"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Small",
+                                            "Medium",
+                                            "Large",
+                                            "Hanging"
+                                    },
+
+                            "pot",
+                            "pots",
+
+                            "Which type of pot is there the most of?",
+                            "Which type of pot is there the least of?",
+                            "Which type of pot is there the second most of?",
+                            "Which type of pot is there the second least of?",
+
+                            "How many %s pots are there?",
+                            "How many more %s pots are there than %s pots?",
+                            "How many fewer %s pots are there than %s pots?",
+                            "How many %s and %s pots are there altogether?",
+                            "How many pots are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 187. ROOMS IN HOMES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "HOMEROOMS",
+                            "The chart shows the number of rooms in four homes.",
+
+                            new String[]
+                                    {
+                                            "Home A",
+                                            "Home B",
+                                            "Home C",
+                                            "Home D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Home A",
+                                            "Home B",
+                                            "Home C",
+                                            "Home D"
+                                    },
+
+                            "room",
+                            "rooms",
+
+                            "Which home has the most rooms?",
+                            "Which home has the fewest rooms?",
+                            "Which home has the second most rooms?",
+                            "Which home has the second fewest rooms?",
+
+                            "How many rooms does %s have?",
+                            "How many more rooms does %s have than %s?",
+                            "How many fewer rooms does %s have than %s?",
+                            "How many rooms do %s and %s have altogether?",
+                            "How many rooms are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 188. BOOKSHELVES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BOOKSHELVES",
+                            "The chart shows the number of books on different shelves at home.",
+
+                            new String[]
+                                    {
+                                            "Shelf A",
+                                            "Shelf B",
+                                            "Shelf C",
+                                            "Shelf D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "A",
+                                            "B",
+                                            "C",
+                                            "D"
+                                    },
+
+                            "book",
+                            "books",
+
+                            "Which shelf has the most books?",
+                            "Which shelf has the fewest books?",
+                            "Which shelf has the second most books?",
+                            "Which shelf has the second fewest books?",
+
+                            "How many books are on %s?",
+                            "How many more books are on %s than %s?",
+                            "How many fewer books are on %s than %s?",
+                            "How many books are on %s and %s altogether?",
+                            "How many books are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 189. FURNITURE ITEMS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FURNITURE",
+                            "The chart shows the number of different furniture items in four homes.",
+
+                            new String[]
+                                    {
+                                            "Chairs",
+                                            "Tables",
+                                            "Sofas",
+                                            "Stools"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Chairs",
+                                            "Tables",
+                                            "Sofas",
+                                            "Stools"
+                                    },
+
+                            "item",
+                            "items",
+
+                            "Which furniture item is there the most of?",
+                            "Which furniture item is there the least of?",
+                            "Which furniture item is there the second most of?",
+                            "Which furniture item is there the second least of?",
+
+                            "How many %s are there?",
+                            "How many more %s are there than %s?",
+                            "How many fewer %s are there than %s?",
+                            "How many %s and %s are there altogether?",
+                            "How many furniture items are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 190. HOUSEHOLD ITEMS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "HOUSEHOLDITEMS",
+                            "The chart shows the number of different household items in a home.",
+
+                            new String[]
+                                    {
+                                            "Lamps",
+                                            "Clocks",
+                                            "Fans",
+                                            "Mirrors"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Lamps",
+                                            "Clocks",
+                                            "Fans",
+                                            "Mirrors"
+                                    },
+
+                            "item",
+                            "items",
+
+                            "Which household item is there the most of?",
+                            "Which household item is there the least of?",
+                            "Which household item is there the second most of?",
+                            "Which household item is there the second least of?",
+
+                            "How many %s are there?",
+                            "How many more %s are there than %s?",
+                            "How many fewer %s are there than %s?",
+                            "How many %s and %s are there altogether?",
+                            "How many household items are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 191. VEGETABLE GARDEN
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "VEGGARDEN",
+                            "The chart shows the number of vegetables growing in a home garden.",
+
+                            new String[]
+                                    {
+                                            "Tomatoes",
+                                            "Carrots",
+                                            "Beans",
+                                            "Spinach"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Tomatoes",
+                                            "Carrots",
+                                            "Beans",
+                                            "Spinach"
+                                    },
+
+                            "plant",
+                            "plants",
+
+                            "Which vegetable has the most plants?",
+                            "Which vegetable has the fewest plants?",
+                            "Which vegetable has the second most plants?",
+                            "Which vegetable has the second fewest plants?",
+
+                            "How many %s plants are there?",
+                            "How many more %s plants are there than %s plants?",
+                            "How many fewer %s plants are there than %s plants?",
+                            "How many %s and %s plants are there altogether?",
+                            "How many vegetable plants are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 192. GARDENING ACTIVITIES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "GARDENACTIVITIES",
+                            "The chart shows the number of times a family did different gardening activities.",
+
+                            new String[]
+                                    {
+                                            "Watering",
+                                            "Planting",
+                                            "Weeding",
+                                            "Digging"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Watering",
+                                            "Planting",
+                                            "Weeding",
+                                            "Digging"
+                                    },
+
+                            "activity",
+                            "activities",
+
+                            "Which gardening activity was done the most?",
+                            "Which gardening activity was done the least?",
+                            "Which gardening activity was done the second most?",
+                            "Which gardening activity was done the second least?",
+
+                            "How many times was %s done?",
+                            "How many more times was %s done than %s?",
+                            "How many fewer times was %s done than %s?",
+                            "How many times were %s and %s done altogether?",
+                            "How many gardening activities were done in all?"
+                    ),
+                    // -------------------------------------------------
+                    // 193. FAVOURITE SCHOOL SUBJECTS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "FAVSUBJECTS",
+                            "The chart shows the favourite school subjects of students in a class.",
+
+                            new String[]
+                                    {
+                                            "Maths",
+                                            "Science",
+                                            "English",
+                                            "Art"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Maths",
+                                            "Science",
+                                            "English",
+                                            "Art"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "Which subject is liked by the most students?",
+                            "Which subject is liked by the fewest students?",
+                            "Which subject is liked by the second most students?",
+                            "Which subject is liked by the second fewest students?",
+
+                            "How many students like %s?",
+                            "How many more students like %s than %s?",
+                            "How many fewer students like %s than %s?",
+                            "How many students like %s and %s altogether?",
+                            "How many students are represented in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 194. BOOKS READ
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "BOOKSREAD",
+                            "The chart shows the number of books read by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "book",
+                            "books",
+
+                            "Who read the most books?",
+                            "Who read the fewest books?",
+                            "Who read the second most books?",
+                            "Who read the second fewest books?",
+
+                            "How many books did %s read?",
+                            "How many more books did %s read than %s?",
+                            "How many fewer books did %s read than %s?",
+                            "How many books did %s and %s read altogether?",
+                            "How many books were read in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 195. TEST SCORES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "TESTSCORES",
+                            "The chart shows the test scores of four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "mark",
+                            "marks",
+
+                            "Who scored the most marks?",
+                            "Who scored the fewest marks?",
+                            "Who scored the second most marks?",
+                            "Who scored the second fewest marks?",
+
+                            "How many marks did %s score?",
+                            "How many more marks did %s score than %s?",
+                            "How many fewer marks did %s score than %s?",
+                            "How many marks did %s and %s score altogether?",
+                            "How many marks were scored by the four students in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 196. HOMEWORK COMPLETED
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "HOMEWORK",
+                            "The chart shows the number of homework assignments completed by four students.",
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Aarav",
+                                            "Riya",
+                                            "Kabir",
+                                            "Anaya"
+                                    },
+
+                            "assignment",
+                            "assignments",
+
+                            "Who completed the most assignments?",
+                            "Who completed the fewest assignments?",
+                            "Who completed the second most assignments?",
+                            "Who completed the second fewest assignments?",
+
+                            "How many assignments did %s complete?",
+                            "How many more assignments did %s complete than %s?",
+                            "How many fewer assignments did %s complete than %s?",
+                            "How many assignments did %s and %s complete altogether?",
+                            "How many assignments were completed in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 197. CLASS PROJECTS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "CLASSPROJECTS",
+                            "The chart shows the number of class projects completed by four groups.",
+
+                            new String[]
+                                    {
+                                            "Group A",
+                                            "Group B",
+                                            "Group C",
+                                            "Group D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Group A",
+                                            "Group B",
+                                            "Group C",
+                                            "Group D"
+                                    },
+
+                            "project",
+                            "projects",
+
+                            "Which group completed the most projects?",
+                            "Which group completed the fewest projects?",
+                            "Which group completed the second most projects?",
+                            "Which group completed the second fewest projects?",
+
+                            "How many projects did %s complete?",
+                            "How many more projects did %s complete than %s?",
+                            "How many fewer projects did %s complete than %s?",
+                            "How many projects did %s and %s complete altogether?",
+                            "How many projects were completed in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 198. SCHOOL LIBRARY BOOKS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "LIBRARYBOOKS",
+                            "The chart shows the number of books borrowed by students from different sections of the school library.",
+
+                            new String[]
+                                    {
+                                            "Story Books",
+                                            "Science Books",
+                                            "History Books",
+                                            "Picture Books"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Story",
+                                            "Science",
+                                            "History",
+                                            "Picture"
+                                    },
+
+                            "book",
+                            "books",
+
+                            "Which section had the most books borrowed?",
+                            "Which section had the fewest books borrowed?",
+                            "Which section had the second most books borrowed?",
+                            "Which section had the second fewest books borrowed?",
+
+                            "How many books were borrowed from the %s section?",
+                            "How many more books were borrowed from the %s section than the %s section?",
+                            "How many fewer books were borrowed from the %s section than the %s section?",
+                            "How many books were borrowed from the %s and %s sections altogether?",
+                            "How many books were borrowed in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 199. SCHOOL ATTENDANCE
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "ATTENDANCE",
+                            "The chart shows the number of students present on different days of a school week.",
+
+                            new String[]
+                                    {
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu"
+                                    },
+
+                            "student",
+                            "students",
+
+                            "On which day were the most students present?",
+                            "On which day were the fewest students present?",
+                            "On which day were the second most students present?",
+                            "On which day were the second fewest students present?",
+
+                            "How many students were present on %s?",
+                            "How many more students were present on %s than %s?",
+                            "How many fewer students were present on %s than %s?",
+                            "How many students were present on %s and %s altogether?",
+                            "How many student attendances were recorded in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 200. SCHOOL CANTEEN SALES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "CANTEENSALES",
+                            "The chart shows the number of different items sold at the school canteen.",
+
+                            new String[]
+                                    {
+                                            "Sandwiches",
+                                            "Samosas",
+                                            "Juice",
+                                            "Idlis"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Sandwiches",
+                                            "Samosas",
+                                            "Juice",
+                                            "Idlis"
+                                    },
+
+                            "item",
+                            "items",
+
+                            "Which item was sold the most?",
+                            "Which item was sold the least?",
+                            "Which item was sold the second most?",
+                            "Which item was sold the second least?",
+
+                            "How many %s were sold?",
+                            "How many more %s were sold than %s?",
+                            "How many fewer %s were sold than %s?",
+                            "How many %s and %s were sold altogether?",
+                            "How many canteen items were sold in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 201. SCHOOL SUPPLIES
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SCHOOLSUPPLIES",
+                            "The chart shows the number of different school supplies collected by a class.",
+
+                            new String[]
+                                    {
+                                            "Pencils",
+                                            "Erasers",
+                                            "Notebooks",
+                                            "Crayons"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Pencils",
+                                            "Erasers",
+                                            "Notebooks",
+                                            "Crayons"
+                                    },
+
+                            "item",
+                            "items",
+
+                            "Which school supply is there the most of?",
+                            "Which school supply is there the least of?",
+                            "Which school supply is there the second most of?",
+                            "Which school supply is there the second least of?",
+
+                            "How many %s are there?",
+                            "How many more %s are there than %s?",
+                            "How many fewer %s are there than %s?",
+                            "How many %s and %s are there altogether?",
+                            "How many school supplies are there in all?"
+                    ),
+
+                    // -------------------------------------------------
+                    // 202. SCIENCE EXPERIMENTS
+                    // -------------------------------------------------
+                    new BarChartScenario(
+                            "SCIENCEEXPERIMENTS",
+                            "The chart shows the number of science experiments completed by four groups.",
+
+                            new String[]
+                                    {
+                                            "Group A",
+                                            "Group B",
+                                            "Group C",
+                                            "Group D"
+                                    },
+
+                            new String[]
+                                    {
+                                            "Group A",
+                                            "Group B",
+                                            "Group C",
+                                            "Group D"
+                                    },
+
+                            "experiment",
+                            "experiments",
+
+                            "Which group completed the most experiments?",
+                            "Which group completed the fewest experiments?",
+                            "Which group completed the second most experiments?",
+                            "Which group completed the second fewest experiments?",
+
+                            "How many experiments did %s complete?",
+                            "How many more experiments did %s complete than %s?",
+                            "How many fewer experiments did %s complete than %s?",
+                            "How many experiments did %s and %s complete altogether?",
+                            "How many experiments were completed in all?"
+                    ),
             };
 
 
@@ -3144,16 +7731,40 @@ public class BarChartDataGenerator
 
                 break;
 
+            case "ARTPROJECTS":
+            case "BOOKSREAD":
+            case "CERTIFICATES":
             case "CHORES":
+            case "COINS":
+            case "CRAFTITEMS":
+            case "DANCEPRACTICE":
+            case "DRAWINGS":
+            case "GAMESPLAYED":
+            case "HEALTHYSNACKS":
+            case "HOBBYCLASSES":
+            case "LIBRARYVISITS":
+            case "MATHPROBLEMS":
+            case "MILK":
+            case "MONEYSAVED":
+            case "MONEYSPENT":
+            case "MOVIESWATCHED":
+            case "PAINTINGS":
             case "POCKETMONEY":
             case "READINGTIME":
             case "PLAYINGTIME":
             case "HOMEWORK":
-            case "TESTSCORES":
+            case "NEWWORDS":
+            case "QUESTIONS":
+            case "SONGS":
             case "STEPS":
-            case "TOYS":
+            case "SPELLING":
+            case "SPORTSPRACTICE":
+            case "SPORTSEVENTS":
             case "STICKERS":
-            case "COINS":
+            case "STORIESREAD":
+            case "TESTSCORES":
+            case "TOYS":
+            case "WATERDRUNK":
                 labels = PersonNameUtil.getDifferentNames(4);
                 displayLabels = labels;
                 break;

@@ -39,11 +39,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.myAgeEducation.cbseClass4.maths.charts.BarChartImageGenerator;
-import com.myAgeEducation.cbseClass4.maths.charts.BarChartQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphImageGenerator;
-import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.pictograph.PictographImageGenerator;
-import com.myAgeEducation.cbseClass4.maths.pictograph.PictographQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeParser;
 import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeType;
 import com.myAgeEducation.cbsecommon.Question;
@@ -453,7 +450,31 @@ public class QuestionPage extends Activity {
 		findViewById(R.id.radio_option4).setVisibility(View.VISIBLE);
 	}
 
-	private Question setQuestionForChapterThirteen()
+	/*private Question setQuestionForChapterOne()
+	{
+		final Random RANDOM = new Random();
+		int randomNumber;
+		randomNumber = RANDOM.nextInt(100);
+		Question newQuestion;
+
+		if(randomNumber < 100)
+		{
+			newQuestion = DigitPlaceValueQuestionGenerator.generateQuestion();
+		}
+		else if(randomNumber < 67)
+		{
+			newQuestion = PictographQuestionGenerator.generateQuestion();
+		}
+		else {
+			newQuestion = BarChartQuestionGenerator.generateQuestion();
+		}
+
+		newQuestion.setChapter(1);
+		newQuestion.setChapterName("Place Value");
+		return newQuestion;
+	}*/
+
+	/*private Question setQuestionForChapterThirteen()
 	{
 		final Random RANDOM = new Random();
 		int randomNumber;
@@ -475,7 +496,7 @@ public class QuestionPage extends Activity {
 		newQuestion.setChapter(13);
 		newQuestion.setChapterName("Handling Data");
 		return newQuestion;
-	}
+	}*/
 
 	private void setRandomBackgroundForOptions()
 	{
@@ -503,7 +524,8 @@ public class QuestionPage extends Activity {
 
 		Map<String, String> values = ImageCodeParser.parse(imageData);
 
-		if(!Objects.requireNonNull(values.get("TYPE")).isEmpty())
+		//if(!Objects.requireNonNull(values.get("TYPE")).isEmpty())
+		if (values.containsKey("TYPE") && values.get("TYPE") != null && !Objects.requireNonNull(values.get("TYPE")).isEmpty())
 		{
 			Bitmap bitmap = getQuestionImage(imageData);
 			if(bitmap != null) {
@@ -701,10 +723,21 @@ public class QuestionPage extends Activity {
 	  showAllOptions();
 	  _linkText = "";
 
-	  if(question.getChapter() == 13)
+	  /*if(question.getChapter() == 13)
 	  {
 		  question = setQuestionForChapterThirteen();
-	  }
+	  }*/
+
+	  /*switch (question.getChapter())
+	  {
+		  case 1:
+			  question = setQuestionForChapterOne();
+			  break;
+
+		  case 13:
+			  question = setQuestionForChapterThirteen();
+			  break;
+	  }*/
 
 	  String questionImage = question.getImage();
 	  String supportiveText = question.getSupportiveText();
@@ -723,7 +756,7 @@ public class QuestionPage extends Activity {
 	  TextView textViewQNum;
 
 	  textViewQNum = findViewById(R.id.textViewQuestionNumber);
-	  String myString = new String(" Question " + String.valueOf(_currentQuestionNumber) + " of " + String.valueOf(questionCount));
+	  String myString = " Question " + _currentQuestionNumber + " of " + questionCount;
 	  textViewQNum.setText(myString);
 	    
 	    // Set the Question

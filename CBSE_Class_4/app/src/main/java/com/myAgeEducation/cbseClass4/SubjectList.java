@@ -44,6 +44,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.myAgeEducation.cbseClass4.maths.charts.BarChartQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.arrangedigits.ArrangeDigitsQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.arrangenumbers.ArrangeNumbersDataGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.arrangenumbers.ArrangeNumbersQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.greatestsmallest.GreatestSmallestQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.missingvalue.MissingPlaceValueQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.numbercomparison.ComparisonSymbolQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.numbercomparison.NumberComparisonQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.numberorder.NumberOrderQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.numberword.NumberWordsQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.pictograph.PictographQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.digitplace.DigitPlaceValueQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.placevalue.standardform.StandardFormQuestionGenerator;
+import com.myAgeEducation.cbseClass4.questionpaper.PdfQuestion;
 import com.myAgeEducation.cbsecommon.AdData;
 import com.myAgeEducation.cbsecommon.Question;
 
@@ -321,6 +336,7 @@ public class SubjectList extends Activity
 
 	public void openChapters(String questionSet)
 	{
+        addQuestionsForChapterOne();
         addQuestionsForChapterThirteen();
 		Intent chapterIntent = new Intent();
 		chapterIntent.setClassName(Util.PACKAGE_NAME, Util.PACKAGE_NAME + ".Chapters");
@@ -328,14 +344,145 @@ public class SubjectList extends Activity
 		startActivity(chapterIntent);
 	}
 
+    public void generatePdf()
+    {
+        //PdfTestData pdfTestData = new PdfTestData("Mathematics", "Class 4", "Unit Test", 20, "60 minutes");
+    }
+
     private void addQuestionsForChapterThirteen()
     {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 13);
+        List<PdfQuestion> pdfQuestions = new ArrayList<>();
+        final Random RANDOM = new Random();
+
+        for(int i = 0; i < 20; i++)
+        {
+            int randomNumber = RANDOM.nextInt(100);
+            Question question;
+
+            if(randomNumber < 25)
+            {
+                question = CircleGraphQuestionGenerator.generateQuestion();
+            }
+            else if(randomNumber < 65)
+            {
+                question = PictographQuestionGenerator.generateQuestion();
+            }
+            else {
+                question = BarChartQuestionGenerator.generateQuestion();
+            }
+
+            question.setChapter(13);
+            question.setChapterName("Handling Data");
+            Util.allQuestions.add(question);
+
+            pdfQuestions.add(copyToPdfQuestion(question));
+        }
+
+        /*PdfTestData pdfTestData = new PdfTestData("Mathematics", "Class 4", "Unit Test", 20, "60 minutes", pdfQuestions);
+
+        try {
+            QuestionPaperPdfGenerator.generate(this, pdfTestData);
+        }
+        catch(IOException e)
+        {
+            Log.e("PDF","Failed to generate question paper", e);
+        }*/
+    }
+
+    private PdfQuestion copyToPdfQuestion(Question question)
+    {
+        return new PdfQuestion(
+                question.getQuestion(),
+                new String[]
+                        {
+                                question.getOption1(),
+                                question.getOption2(),
+                                question.getOption3(),
+                                question.getOption4()
+                        },
+                question.getImage(),
+                question.getAnswer());
+    }
+
+    /*private void addQuestionsForChapterOne()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 1);
         for(int i = 0; i < 20; i++)
         {
             Question question = new Question();
-            question.setChapter(13);
-            question.setChapterName("Handling Data");
+            question.setChapter(1);
+            question.setChapterName("Place Value");
             question.setQuestion("this will be auto-generated");
+            Util.allQuestions.add(question);
+        }
+    }*/
+
+    private void addQuestionsForChapterOne()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 1);
+        final Random RANDOM = new Random();
+        int randomNumber;
+
+        Question question;
+
+        for(int i = 0; i < 20; i++)
+        {
+            randomNumber = RANDOM.nextInt(10);
+
+            switch(randomNumber)
+            {
+                case 0:
+                    //checked
+                    question = ArrangeDigitsQuestionGenerator.generateQuestion();
+                    break;
+
+                case 1:
+                    //checked
+                    question = ArrangeNumbersQuestionGenerator.generateQuestion();
+                    break;
+
+                case 2:
+                    //checked
+                    question = NumberComparisonQuestionGenerator.generateQuestion();
+                    break;
+
+                case 3:
+                    //checked
+                    question = ComparisonSymbolQuestionGenerator.generateQuestion();
+                    break;
+
+                case 4:
+                    //checked
+                    question = DigitPlaceValueQuestionGenerator.generateQuestion();
+                    break;
+
+                case 5:
+                    //checked
+                    question = GreatestSmallestQuestionGenerator.generateQuestion();
+                    break;
+
+                /*case 6:
+                    question = MissingPlaceValueQuestionGenerator.generateQuestion();
+                    break;*/
+
+                case 7:
+                    //checked
+                    question = NumberOrderQuestionGenerator.generateQuestion();
+                    break;
+
+                case 8:
+                    //checked
+                    question = StandardFormQuestionGenerator.generateQuestion();
+                    break;
+
+                default:
+                    //checked
+                    question = NumberWordsQuestionGenerator.generateQuestion();
+            }
+            //question = MissingPlaceValueQuestionGenerator.generateQuestion();
+            question.setChapter(1);
+            question.setChapterName("Place Value");
             Util.allQuestions.add(question);
         }
     }

@@ -6,6 +6,7 @@ android {
     namespace 'com.myAgeEducation.cbseClass4'
 
     /*Version details
+    34: Circle graph and bar chart question now auto generating for chapter 13
     33: Updated SDK version to 37
     32: Update to new SDK after the app was removed from playstore - could not be published
     31: Not tracked
@@ -24,16 +25,9 @@ android {
         minSdkVersion 26
         targetSdkVersion 37
         multiDexEnabled true
-        versionCode 33
-        versionName "3.3"
+        versionCode 34
+        versionName "3.4"
     }
-
-    /*buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-        }
-    }*/
 
     signingConfigs {
         release {
