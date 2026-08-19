@@ -1,5 +1,7 @@
 package com.myAgeEducation.cbseClass4;
 
+import static com.myAgeEducation.cbseClass4.maths.fractions.FractionTypes.FRACTION_SERIES;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,6 +53,16 @@ import com.myAgeEducation.cbseClass4.maths.divisions.facts.DivisionFactQuestionG
 import com.myAgeEducation.cbseClass4.maths.divisions.facts.DivisionPictureQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.divisions.story.DivisionStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.factors.FactorQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionAgeQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionConceptQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionOfMeasurementQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionOfNumberQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionSeriesQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionStoryQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionTimeStoryQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionTrueFalseQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionTypes;
 import com.myAgeEducation.cbseClass4.maths.multiples.MultipleQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.multiplication.MultiplicationStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.arrangedigits.ArrangeDigitsQuestionGenerator;
@@ -647,10 +659,47 @@ public class SubjectList extends Activity
         Question question;
 
         for(int i = 0; i < 20; i++) {
-            question = FactorQuestionGenerator.generateQuestion();
+            question = addQuestionsForFraction();
             question.setChapter(8);
             question.setChapterName("Fractions");
             Util.allQuestions.add(question);
+        }
+    }
+
+    static final Random RANDOM = new Random();
+    private static Question addQuestionsForFraction()
+    {
+        FractionTypes[] types = FractionTypes.values();
+        FractionTypes type = types[RANDOM.nextInt(types.length)];
+
+        switch(type)
+        {
+            case FRACTION_SERIES:
+                return FractionSeriesQuestionGenerator.generateQuestion();
+
+            case STORY_TYPE:
+                return FractionStoryQuestionGenerator.generateRemainingQuestion();
+
+            case FRACTION_WITH_AGE:
+                return FractionAgeQuestionGenerator.generateQuestion();
+
+            case FRACTION_OF_NUMBER:
+                return FractionOfNumberQuestionGenerator.generateQuestion();
+
+            case FRACTION_OF_MEASUREMENT_DATA:
+                return FractionOfMeasurementQuestionGenerator.generateQuestion();
+
+            case FRACTION_TIME_STORY:
+                return FractionTimeStoryQuestionGenerator.generateQuestion();
+
+            case FRACTION_TRUE_FALSE:
+                return FractionTrueFalseQuestionGenerator.generateQuestion();
+
+            case FRACTION_CONCEPTS:
+                return FractionConceptQuestionGenerator.generateQuestion();
+
+            default:
+                return FractionQuestionGenerator.generateQuestion();
         }
     }
 

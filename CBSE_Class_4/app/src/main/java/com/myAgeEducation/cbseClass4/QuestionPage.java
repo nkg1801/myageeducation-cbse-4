@@ -40,6 +40,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.myAgeEducation.cbseClass4.maths.charts.BarChartImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphImageGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.FractionImageGenerator;
+import com.myAgeEducation.cbseClass4.maths.fractions.NumericFractionImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.pictograph.PictographImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeParser;
 import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeType;
@@ -626,6 +628,12 @@ public class QuestionPage extends Activity {
 			case ImageCodeType.BARCHART:
 				return BarChartImageGenerator.generate(imageData);
 
+			case ImageCodeType.NUMERICFRACTION:
+				return NumericFractionImageGenerator.generate(imageData);
+
+			case ImageCodeType.SHAPE_PART_FRACTION:
+				return FractionImageGenerator.generateFractionImage(imageData);
+
 			default:
 				return null;
 		}
@@ -849,7 +857,7 @@ public class QuestionPage extends Activity {
 
   private void WhenAnswerSelected()
   {
-      try {
+      //try {
           EnableAnswers(false);
           SetAnswerFeedback();
           buttonNext.setEnabled(true);
@@ -868,11 +876,11 @@ public class QuestionPage extends Activity {
                   EnableAnswers(true);
               }
           }
-      }
-      catch(Exception e)
+      //}
+      /*catch(Exception e)
       {
           displayAlertBox(e.getMessage());
-      }
+      }*/
   }
 
   public void addRadioButtonListener(){
@@ -938,8 +946,8 @@ public class QuestionPage extends Activity {
   {
 	  HideButtonNext();
 
-	  try
-	  {
+	  //try
+	  //{
           if (_currentQuestionNumber <= questionCount)
 		  {
               if (_isRandomQuestions)
@@ -981,11 +989,11 @@ public class QuestionPage extends Activity {
               b.setChecked(false);
               buttonNext.setEnabled(false);
 		  }
-      }
-      catch (Exception e)
+      //}
+      /*catch (Exception e)
       {
           displayAlertBox(e.getMessage());
-      }
+      }*/
   }
 
 	private void displayQuestionSetAndQuestionNumber()

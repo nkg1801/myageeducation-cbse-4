@@ -1,0 +1,14 @@
+package com.myAgeEducation.cbseClass4.maths.fractions;
+
+public enum FractionTypes
+{
+    FRACTION_SERIES,
+    STORY_TYPE,
+    FRACTION_WITH_IMAGES,
+    FRACTION_WITH_AGE,
+    FRACTION_OF_NUMBER,
+    FRACTION_OF_MEASUREMENT_DATA,
+    FRACTION_TIME_STORY,
+    FRACTION_TRUE_FALSE,
+    FRACTION_CONCEPTS
+}

@@ -10,6 +10,8 @@ public final class ImageCodeType
     public static final String CLOCK = "CLK";
     public static final String CIRCLEGRAPH = "CIRCLEGRAPH";
     public static final String BARCHART = "BARCHART";
+    public static final String NUMERICFRACTION = "NUMERICFRACTION";
+    public static final String SHAPE_PART_FRACTION = "SHAPE-PART-FRACTION";
 
     private ImageCodeType()
     {
