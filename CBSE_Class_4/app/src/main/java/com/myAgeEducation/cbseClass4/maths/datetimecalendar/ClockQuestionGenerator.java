@@ -1,5 +1,6 @@
 package com.myAgeEducation.cbseClass4.maths.datetimecalendar;
 
+import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeType;
 import com.myAgeEducation.cbseClass4.utils.OptionUtils;
 import com.myAgeEducation.cbsecommon.Question;
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class ClockQuestionGenerator {
         Question question = new Question();
         question.setQuestion(questionText);
         ClockTime clockTime = timeGenerator.nextTime();
-        question.setImage("CLOCK_" + clockTime.hour + "_" + clockTime.minute);
+        question.setImage(ImageCodeType.CLOCK + "_" + clockTime.hour + "_" + clockTime.minute);
         int twelveHourFormat = clockTime.hour	> 12 ? clockTime.hour - 12 : clockTime.hour;
         String minute = clockTime.minute < 10 ? "0" + clockTime.minute : String.valueOf(clockTime.minute);
         String answer = twelveHourFormat + ":" + minute;

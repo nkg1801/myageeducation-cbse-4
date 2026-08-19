@@ -8,10 +8,12 @@ public final class ImageCodeType
     public static final String GEOMETRY = "GEO";
     public static final String MONEY = "MON";
     public static final String CLOCK = "CLOCK";
-    public static final String CIRCLEGRAPH = "CIRCLEGRAPH";
+    public static final String CIRCLE_GRAPH = "CIRCLEGRAPH";
     public static final String BARCHART = "BARCHART";
-    public static final String NUMERICFRACTION = "NUMERICFRACTION";
+    public static final String NUMERIC_FRACTION = "NUMERICFRACTION";
     public static final String SHAPE_PART_FRACTION = "SHAPE-PART-FRACTION";
+    public static final String DECIMAL_IMAGE = "DECIMAL-IMAGE";
+    public static final String DECIMAL_GRID = "DECIMAL-GRID";
 
     private ImageCodeType()
     {

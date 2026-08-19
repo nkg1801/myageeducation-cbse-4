@@ -1,5 +1,6 @@
 package com.myAgeEducation.cbseClass4.maths.fractions;
 
+import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeType;
 import com.myAgeEducation.cbsecommon.Question;
 
 public class FractionTrueFalseQuestionGenerator
@@ -20,6 +21,6 @@ public class FractionTrueFalseQuestionGenerator
 
     private static String createImageCode(int numerator, int denominator)
     {
-        return "NUMERICFRACTION" + "_" + numerator + "_" + denominator;
+        return ImageCodeType.NUMERIC_FRACTION + "_" + numerator + "_" + denominator;
     }
 }

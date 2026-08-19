@@ -1,4 +1,5 @@
 package com.myAgeEducation.cbseClass4.maths.pictograph;
+import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeType;
 import com.myAgeEducation.cbseClass4.utils.OptionUtils;
 import com.myAgeEducation.cbsecommon.Question;
 
@@ -490,7 +491,7 @@ public class PictographQuestionGenerator
 
     private static String createImageCode(PictographData data)
     {
-        StringBuilder code = new StringBuilder("PICTOGRAPH");
+        StringBuilder code = new StringBuilder(ImageCodeType.PICTOGRAPH);
         code.append("_").append(data.scenario.scenarioCode.replace("_", ""));
         code.append("_").append(data.iconType.getCode());
         code.append("_").append(data.valuePerIcon);

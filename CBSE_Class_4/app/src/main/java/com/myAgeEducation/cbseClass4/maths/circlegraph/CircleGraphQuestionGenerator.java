@@ -1,5 +1,6 @@
 package com.myAgeEducation.cbseClass4.maths.circlegraph;
 
+import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeType;
 import com.myAgeEducation.cbseClass4.utils.OptionUtils;
 import com.myAgeEducation.cbsecommon.Question;
 import java.util.Random;
@@ -220,7 +221,7 @@ public class CircleGraphQuestionGenerator
 
     private static String createImageCode(CircleGraphData data)
     {
-        StringBuilder code = new StringBuilder("CIRCLEGRAPH");
+        StringBuilder code = new StringBuilder(ImageCodeType.CIRCLE_GRAPH);
 
         // Labels
         for (String label : data.labels)

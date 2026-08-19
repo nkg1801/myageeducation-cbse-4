@@ -40,6 +40,16 @@ public class ImageGeneratorFactory
             return PictographImageGenerator.generate(context, imageCode);
         }
 
+        if (imageCode.startsWith("DECIMAL-IMAGE_"))
+        {
+            return com.myAgeEducation.cbseClass4.maths.decimals.DecimalImageGenerator.generate(imageCode);
+        }
+
+        if (imageCode.startsWith("DECIMAL-GRID_"))
+        {
+            return com.myAgeEducation.cbseClass4.maths.decimals.DecimalGridImageGenerator.generate(imageCode);
+        }
+
         // -----------------------------------------
         // Add other generators here
         // -----------------------------------------

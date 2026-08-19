@@ -1,5 +1,7 @@
 package com.myAgeEducation.cbseClass4.maths.fractions;
 
+import com.myAgeEducation.cbseClass4.maths.utils.ImageCodeType;
+
 public class FractionData {
 
     public final int numerator;       // Coloured parts
@@ -25,7 +27,7 @@ public class FractionData {
 
     public String getImageCode() {
 
-        return "SHAPE-PART-FRACTION_"
+        return ImageCodeType.SHAPE_PART_FRACTION + "_"
                 + denominator + "_"
                 + numerator + "_"
                 + shape.name() + "_"

@@ -41,6 +41,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.myAgeEducation.cbseClass4.maths.charts.BarChartImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.datetimecalendar.ClockImageGenerator;
+import com.myAgeEducation.cbseClass4.maths.decimals.DecimalGridImageGenerator;
+import com.myAgeEducation.cbseClass4.maths.decimals.DecimalImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.fractions.FractionImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.fractions.NumericFractionImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.pictograph.PictographImageGenerator;
@@ -633,7 +635,7 @@ public class QuestionPage extends Activity {
 
 		switch (Objects.requireNonNull(values.get("TYPE")))
 		{
-			case ImageCodeType.CIRCLEGRAPH:
+			case ImageCodeType.CIRCLE_GRAPH:
 				return CircleGraphImageGenerator.generate(imageData);
 
 			case ImageCodeType.PICTOGRAPH:
@@ -642,7 +644,7 @@ public class QuestionPage extends Activity {
 			case ImageCodeType.BARCHART:
 				return BarChartImageGenerator.generate(imageData);
 
-			case ImageCodeType.NUMERICFRACTION:
+			case ImageCodeType.NUMERIC_FRACTION:
 				return NumericFractionImageGenerator.generate(imageData);
 
 			case ImageCodeType.SHAPE_PART_FRACTION:
@@ -650,6 +652,12 @@ public class QuestionPage extends Activity {
 
 			case ImageCodeType.CLOCK:
 				return ClockImageGenerator.generateClockImage(imageData);
+
+			case ImageCodeType.DECIMAL_IMAGE:
+				return DecimalImageGenerator.generate(imageData);
+
+			case ImageCodeType.DECIMAL_GRID:
+				return DecimalGridImageGenerator.generate(imageData);
 
 			default:
 				return null;

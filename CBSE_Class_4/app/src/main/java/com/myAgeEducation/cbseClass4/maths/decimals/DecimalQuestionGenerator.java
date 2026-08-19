@@ -11,7 +11,7 @@ public class DecimalQuestionGenerator {
     private static final DecimalFormat DF2 = new DecimalFormat("0.00");
 
     public static Question generateQuestion() {
-        int type = RANDOM.nextInt(5);
+        int type = RANDOM.nextInt(7);
         DecimalQuestionData data;
         switch (type) {
             case 0: data = generateConceptQuestion(); break;
@@ -19,6 +19,8 @@ public class DecimalQuestionGenerator {
             case 2: data = generateWordFormQuestion(); break;
             case 3: data = generateComparisonQuestion(); break;
             case 4: data = generateSequenceQuestion(); break;
+            case 5: return DecimalImageQuestionGenerator.generateQuestion();
+            case 6: return DecimalGridQuestionGenerator.generateQuestion();
             default: data = generateConceptQuestion();
         }
         return convertToQuestion(data);
