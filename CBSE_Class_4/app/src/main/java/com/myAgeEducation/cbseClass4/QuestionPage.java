@@ -40,6 +40,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.myAgeEducation.cbseClass4.maths.charts.BarChartImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphImageGenerator;
+import com.myAgeEducation.cbseClass4.maths.datetimecalendar.ClockImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.fractions.FractionImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.fractions.NumericFractionImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.pictograph.PictographImageGenerator;
@@ -535,6 +536,19 @@ public class QuestionPage extends Activity {
 				img.setVisibility(View.VISIBLE);
 				setImageViewWidth(img, bitmap.getWidth());
 			}
+			else
+			{
+				if (imageData.length() < 50) {
+					int resourceIdentifier = getResources().getIdentifier(imageData, "drawable", getPackageName());
+					if (resourceIdentifier != 0) {
+						img.setImageResource(resourceIdentifier);
+						img.setVisibility(View.VISIBLE);
+					}
+				} else {
+					img.setImageBitmap(loadBitmapFromBase64Encoding(imageData));
+					img.setVisibility(View.VISIBLE);
+				}
+			}
 		}
 		else {
 			if (imageData.length() < 50) {
@@ -633,6 +647,9 @@ public class QuestionPage extends Activity {
 
 			case ImageCodeType.SHAPE_PART_FRACTION:
 				return FractionImageGenerator.generateFractionImage(imageData);
+
+			case ImageCodeType.CLOCK:
+				return ClockImageGenerator.generateClockImage(imageData);
 
 			default:
 				return null;

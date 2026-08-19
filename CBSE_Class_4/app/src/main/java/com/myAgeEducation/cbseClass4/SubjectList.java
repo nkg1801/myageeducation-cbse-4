@@ -49,6 +49,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.myAgeEducation.cbseClass4.maths.additions.AdditionStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.charts.BarChartQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.datetimecalendar.ClockQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.divisions.facts.DivisionFactQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.divisions.facts.DivisionPictureQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.divisions.story.DivisionStoryQuestionGenerator;
@@ -63,8 +64,10 @@ import com.myAgeEducation.cbseClass4.maths.fractions.FractionStoryQuestionGenera
 import com.myAgeEducation.cbseClass4.maths.fractions.FractionTimeStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.fractions.FractionTrueFalseQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.fractions.FractionTypes;
+import com.myAgeEducation.cbseClass4.maths.measurement.MeasurementQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.multiples.MultipleQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.multiplication.MultiplicationStoryQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.perimeterarea.PerimeterAreaQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.arrangedigits.ArrangeDigitsQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.arrangenumbers.ArrangeNumbersDataGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.arrangenumbers.ArrangeNumbersQuestionGenerator;
@@ -189,7 +192,13 @@ public class SubjectList extends Activity
 
                 if (!Util.Subject.isEmpty())
                 {
-                    GetDatabaseLocation();
+                    if(Util.Subject.equalsIgnoreCase("maths"))
+                    {
+                        openChapters("set1");
+                    }
+                    else {
+                        GetDatabaseLocation();
+                    }
                 }
             }
         });
@@ -709,7 +718,7 @@ public class SubjectList extends Activity
         Question question;
 
         for(int i = 0; i < 20; i++) {
-            question = FactorQuestionGenerator.generateQuestion();
+            question = com.myAgeEducation.cbseClass4.maths.decimals.DecimalQuestionGenerator.generateQuestion();
             question.setChapter(9);
             question.setChapterName("Decimals");
             Util.allQuestions.add(question);
@@ -722,7 +731,7 @@ public class SubjectList extends Activity
         Question question;
 
         for(int i = 0; i < 20; i++) {
-            question = FactorQuestionGenerator.generateQuestion();
+            question = MeasurementQuestionGenerator.generateQuestion();
             question.setChapter(10);
             question.setChapterName("Measurement");
             Util.allQuestions.add(question);
@@ -735,7 +744,7 @@ public class SubjectList extends Activity
         Question question;
 
         for(int i = 0; i < 20; i++) {
-            question = FactorQuestionGenerator.generateQuestion();
+            question = PerimeterAreaQuestionGenerator.generateQuestion();
             question.setChapter(11);
             question.setChapterName("Perimeter and Area");
             Util.allQuestions.add(question);
@@ -748,7 +757,7 @@ public class SubjectList extends Activity
         Question question;
 
         for(int i = 0; i < 20; i++) {
-            question = FactorQuestionGenerator.generateQuestion();
+            question = ClockQuestionGenerator.generateQuestion();
             question.setChapter(12);
             question.setChapterName("Time");
             Util.allQuestions.add(question);
@@ -955,9 +964,9 @@ public class SubjectList extends Activity
 		Log.d("CBSE_QuestionSet", String.valueOf(_randomQuestionSet));
 		Log.d("CBSE_QuestionCount", String.valueOf(Util.allQuestions.size()));
 
-		if(Util.allQuestions.size() > 0) {
+		if(!Util.allQuestions.isEmpty()) {
 			{
-				openChapters("set" + String.valueOf(_randomQuestionSet));
+				openChapters("set" + _randomQuestionSet);
 			}
 		}
 	}
