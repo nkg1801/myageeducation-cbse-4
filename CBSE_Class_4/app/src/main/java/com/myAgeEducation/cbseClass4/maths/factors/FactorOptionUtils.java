@@ -84,7 +84,7 @@ public class FactorOptionUtils
         List<Integer> factors = FactorQuestionGenerator.getFactors(number);
         List<Integer> nonFactors = getNonFactors(number, factors);
 
-        if (factors.size() < 3 || nonFactors.isEmpty())
+        if (factors.isEmpty() || nonFactors.isEmpty())
         {
             throw new IllegalArgumentException("Unable to generate NOT-factor options for " + number);
         }

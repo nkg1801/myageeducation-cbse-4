@@ -51,6 +51,7 @@ import com.myAgeEducation.cbseClass4.maths.divisions.facts.DivisionFactQuestionG
 import com.myAgeEducation.cbseClass4.maths.divisions.facts.DivisionPictureQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.divisions.story.DivisionStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.factors.FactorQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.multiples.MultipleQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.multiplication.MultiplicationStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.arrangedigits.ArrangeDigitsQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.arrangenumbers.ArrangeNumbersDataGenerator;
@@ -64,6 +65,7 @@ import com.myAgeEducation.cbseClass4.maths.placevalue.numberword.NumberWordsQues
 import com.myAgeEducation.cbseClass4.maths.pictograph.PictographQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.digitplace.DigitPlaceValueQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.standardform.StandardFormQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.shapes.ShapesQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.subtractions.SubtractionFactQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.subtractions.SubtractionStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.questionpaper.PdfQuestion;
@@ -619,7 +621,7 @@ public class SubjectList extends Activity
         Question question;
 
         for(int i = 0; i < 20; i++) {
-            question = FactorQuestionGenerator.generateQuestion();
+            question = MultipleQuestionGenerator.generateQuestion();
             question.setChapter(6);
             question.setChapterName("Multiples");
             Util.allQuestions.add(question);
@@ -632,7 +634,7 @@ public class SubjectList extends Activity
         Question question;
 
         for(int i = 0; i < 20; i++) {
-            question = FactorQuestionGenerator.generateQuestion();
+            question = ShapesQuestionGenerator.generateQuestion();
             question.setChapter(7);
             question.setChapterName("Shapes and Patterns");
             Util.allQuestions.add(question);

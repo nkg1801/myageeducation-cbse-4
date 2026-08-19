@@ -391,7 +391,7 @@ public class FactorQuestionGenerator
         }
 
         String[] questionTemplates = FactorQuestionTemplatesUtil.getQuestionTemplates(FactorQuestionType.FIND_FACTOR);
-        String question = String.format(questionTemplates[new Random().nextInt(questionTemplates.length)], number);
+        String question = String.format(questionTemplates[RANDOM.nextInt(questionTemplates.length)], number);
 
         return new FactorQuestionData(
                 number,
@@ -428,7 +428,7 @@ public class FactorQuestionGenerator
         }
 
         String[] questionTemplates = FactorQuestionTemplatesUtil.getQuestionTemplates(FactorQuestionType.FIND_NOT_FACTOR);
-        String question = String.format(questionTemplates[new Random().nextInt(questionTemplates.length)], number);
+        String question = String.format(questionTemplates[RANDOM.nextInt(questionTemplates.length)], number);
 
         return new FactorQuestionData(
                 number,
@@ -466,7 +466,7 @@ public class FactorQuestionGenerator
         }
 
         String[] questionTemplates = FactorQuestionTemplatesUtil.getQuestionTemplates(FactorQuestionType.COMMON_FACTOR);
-        String question = String.format(questionTemplates[new Random().nextInt(questionTemplates.length)],number1,number2);
+        String question = String.format(questionTemplates[RANDOM.nextInt(questionTemplates.length)],number1,number2);
 
         return new FactorQuestionData(
                 number1,
@@ -578,7 +578,7 @@ public class FactorQuestionGenerator
         }
 
         String[] questionTemplates = FactorQuestionTemplatesUtil.getQuestionTemplates(FactorQuestionType.LIST_FACTORS);
-        String question = String.format(questionTemplates[new Random().nextInt(questionTemplates.length)], number);
+        String question = String.format(questionTemplates[RANDOM.nextInt(questionTemplates.length)], number);
         String[] options = FactorOptionUtils.generateListFactorsOptions(number);
 
         return new FactorQuestionData(
@@ -609,7 +609,7 @@ public class FactorQuestionGenerator
             List<Integer> factors = getFactors(number);
             List<Integer> nonFactors = new ArrayList<>();
 
-            for (int i = 1; i <= number;i++)
+            for (int i = 1; i <= number + 10; i++)
             {
                 if (!factors.contains(i))
                 {
@@ -623,7 +623,7 @@ public class FactorQuestionGenerator
         boolean isFactor = isFactor(factor, number);
 
         String[] questionTemplates = FactorQuestionTemplatesUtil.getQuestionTemplates(FactorQuestionType.FACTOR_TRUE_FALSE);
-        String question = String.format(questionTemplates[new Random().nextInt(questionTemplates.length)],factor, number);
+        String question = String.format(questionTemplates[RANDOM.nextInt(questionTemplates.length)],factor, number);
 
         String answer = isFactor ? "TRUE" : "FALSE";
         String[] options = FactorOptionUtils.generateTrueFalseOptions();
@@ -644,7 +644,7 @@ public class FactorQuestionGenerator
         List<Integer> factors = getFactors(number);
         int greatestFactor = factors.get(factors.size() - 1);
         String[] questionTemplates = FactorQuestionTemplatesUtil.getQuestionTemplates(FactorQuestionType.GREATEST_FACTOR);
-        String question = String.format(questionTemplates[new Random().nextInt(questionTemplates.length)], number);
+        String question = String.format(questionTemplates[RANDOM.nextInt(questionTemplates.length)], number);
         String[] options = FactorOptionUtils.generateGreatestFactorOptions(number);
 
         return new FactorQuestionData(
@@ -698,7 +698,7 @@ public class FactorQuestionGenerator
         Collections.shuffle(options, RANDOM);
 
         String[] questionTemplates = FactorQuestionTemplatesUtil.getQuestionTemplates(FactorQuestionType.FACTOR_OF_TWO_NUMBERS);
-        String question = String.format(questionTemplates[new Random().nextInt(questionTemplates.length)], factor);
+        String question = String.format(questionTemplates[RANDOM.nextInt(questionTemplates.length)], factor);
 
         return new FactorQuestionData(
                 0,
@@ -741,7 +741,7 @@ public class FactorQuestionGenerator
         //question.append("The factors of ").append(number).append(" are: ");
 
         String[] questionTemplates = FactorQuestionTemplatesUtil.getQuestionTemplates(FactorQuestionType.FILL_MISSING_FACTOR);
-        question.append(String.format(questionTemplates[new Random().nextInt(questionTemplates.length)], number));
+        question.append(String.format(questionTemplates[RANDOM.nextInt(questionTemplates.length)], number));
 
         for (int i = 0; i < factors.size(); i++)
         {
