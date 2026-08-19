@@ -44,8 +44,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.myAgeEducation.cbseClass4.maths.additions.AdditionStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.charts.BarChartQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.divisions.facts.DivisionFactQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.divisions.facts.DivisionPictureQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.divisions.story.DivisionStoryQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.factors.FactorQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.multiplication.MultiplicationStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.arrangedigits.ArrangeDigitsQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.arrangenumbers.ArrangeNumbersDataGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.arrangenumbers.ArrangeNumbersQuestionGenerator;
@@ -58,6 +64,8 @@ import com.myAgeEducation.cbseClass4.maths.placevalue.numberword.NumberWordsQues
 import com.myAgeEducation.cbseClass4.maths.pictograph.PictographQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.digitplace.DigitPlaceValueQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.placevalue.standardform.StandardFormQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.subtractions.SubtractionFactQuestionGenerator;
+import com.myAgeEducation.cbseClass4.maths.subtractions.SubtractionStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.questionpaper.PdfQuestion;
 import com.myAgeEducation.cbsecommon.AdData;
 import com.myAgeEducation.cbsecommon.Question;
@@ -336,13 +344,29 @@ public class SubjectList extends Activity
 
 	public void openChapters(String questionSet)
 	{
-        addQuestionsForChapterOne();
-        addQuestionsForChapterThirteen();
+        addGeneratedQuestions();
 		Intent chapterIntent = new Intent();
 		chapterIntent.setClassName(Util.PACKAGE_NAME, Util.PACKAGE_NAME + ".Chapters");
 		chapterIntent.putExtra("question_set", questionSet);
 		startActivity(chapterIntent);
 	}
+
+    private void addGeneratedQuestions()
+    {
+        addQuestionsForChapterOne();
+        addQuestionsForChapterTwo();
+        addQuestionsForChapterThree();
+        addQuestionsForChapterFour();
+        addQuestionsForChapterFive();
+        addQuestionsForChapterSix();
+        addQuestionsForChapterSeven();;
+        addQuestionsForChapterEight();
+        addQuestionsForChapterNine();
+        addQuestionsForChapterTen();
+        addQuestionsForChapterEleven();
+        addQuestionsForChapterTwelve();
+        addQuestionsForChapterThirteen();
+    }
 
     public void generatePdf()
     {
@@ -483,6 +507,199 @@ public class SubjectList extends Activity
             //question = MissingPlaceValueQuestionGenerator.generateQuestion();
             question.setChapter(1);
             question.setChapterName("Place Value");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterTwo()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 2);
+        final Random RANDOM = new Random();
+        int randomNumber;
+
+        Question question;// = new Question();
+
+        for(int i = 0; i < 20; i++) {
+            randomNumber = RANDOM.nextInt(3);
+
+            switch(randomNumber)
+            {
+                case 0:
+                    question = AdditionStoryQuestionGenerator.generateQuestion();
+                    break;
+
+                case 1:
+                    question = SubtractionFactQuestionGenerator.generateQuestion();
+                    break;
+
+                default:
+                    question = SubtractionStoryQuestionGenerator.generateQuestion();
+            }
+
+            question.setChapter(2);
+            question.setChapterName("Addition and Subtraction");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterThree()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 3);
+        final Random RANDOM = new Random();
+        int randomNumber;
+
+        Question question;// = new Question();
+
+        for(int i = 0; i < 20; i++) {
+            randomNumber = RANDOM.nextInt(1);
+
+            switch(randomNumber)
+            {
+                case 0:
+                    question = MultiplicationStoryQuestionGenerator.generateQuestion();
+                    break;
+
+                default:
+                    question = MultiplicationStoryQuestionGenerator.generateQuestion();
+            }
+
+            question.setChapter(3);
+            question.setChapterName("Multiplication");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterFour()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 4);
+        final Random RANDOM = new Random();
+        int randomNumber;
+
+        Question question;// = new Question();
+
+        for(int i = 0; i < 20; i++) {
+            randomNumber = RANDOM.nextInt(3);
+
+            switch(randomNumber)
+            {
+                case 0:
+                    question = DivisionFactQuestionGenerator.generateQuestion();
+                    break;
+
+                case 1:
+                    question = DivisionStoryQuestionGenerator.generateQuestion();
+                    break;
+
+                default:
+                    question = DivisionPictureQuestionGenerator.generateQuestion();
+            }
+
+            question.setChapter(4);
+            question.setChapterName("Division");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterFive()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 5);
+        Question question;
+
+        for(int i = 0; i < 20; i++) {
+            question = FactorQuestionGenerator.generateQuestion();
+            question.setChapter(5);
+            question.setChapterName("Factors");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterSix()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 6);
+        Question question;
+
+        for(int i = 0; i < 20; i++) {
+            question = FactorQuestionGenerator.generateQuestion();
+            question.setChapter(6);
+            question.setChapterName("Multiples");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterSeven()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 7);
+        Question question;
+
+        for(int i = 0; i < 20; i++) {
+            question = FactorQuestionGenerator.generateQuestion();
+            question.setChapter(7);
+            question.setChapterName("Shapes and Patterns");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterEight()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 8);
+        Question question;
+
+        for(int i = 0; i < 20; i++) {
+            question = FactorQuestionGenerator.generateQuestion();
+            question.setChapter(8);
+            question.setChapterName("Fractions");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterNine()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 9);
+        Question question;
+
+        for(int i = 0; i < 20; i++) {
+            question = FactorQuestionGenerator.generateQuestion();
+            question.setChapter(9);
+            question.setChapterName("Decimals");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterTen()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 10);
+        Question question;
+
+        for(int i = 0; i < 20; i++) {
+            question = FactorQuestionGenerator.generateQuestion();
+            question.setChapter(10);
+            question.setChapterName("Measurement");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterEleven()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 11);
+        Question question;
+
+        for(int i = 0; i < 20; i++) {
+            question = FactorQuestionGenerator.generateQuestion();
+            question.setChapter(11);
+            question.setChapterName("Perimeter and Area");
+            Util.allQuestions.add(question);
+        }
+    }
+
+    private void addQuestionsForChapterTwelve()
+    {
+        Util.allQuestions.removeIf(question -> question.getChapter() == 12);
+        Question question;
+
+        for(int i = 0; i < 20; i++) {
+            question = FactorQuestionGenerator.generateQuestion();
+            question.setChapter(12);
+            question.setChapterName("Time");
             Util.allQuestions.add(question);
         }
     }

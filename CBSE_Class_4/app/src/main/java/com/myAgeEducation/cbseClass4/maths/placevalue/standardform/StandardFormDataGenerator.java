@@ -29,12 +29,9 @@ public class StandardFormDataGenerator
                                 - MIN_VALUE
                                 + 1);
 
-        String expandedForm =
-                getExpandedForm(number);
+        String expandedForm = getExpandedForm(number);
 
         StandardFormQuestionType type = RANDOM.nextBoolean() ? StandardFormQuestionType.EXPANDED_TO_STANDARD : StandardFormQuestionType.STANDARD_TO_EXPANDED;
-
-        //type = StandardFormQuestionType.EXPANDED_TO_STANDARD; //todo: remove it from production.. used here only for testing
 
         return new StandardFormQuestionData(
                 number,
