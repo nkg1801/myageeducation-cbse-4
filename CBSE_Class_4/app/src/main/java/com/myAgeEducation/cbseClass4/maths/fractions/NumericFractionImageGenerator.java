@@ -25,13 +25,8 @@ public class NumericFractionImageGenerator
 
         // Transparent background
         canvas.drawColor(Color.TRANSPARENT);
-
         Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-
-        int fractionColor =
-                FRACTION_COLORS[
-                        RANDOM.nextInt(FRACTION_COLORS.length)];
-
+        int fractionColor = FRACTION_COLORS[RANDOM.nextInt(FRACTION_COLORS.length)];
         textPaint.setColor(fractionColor);
 
         //textPaint.setColor(Color.rgb(120, 50, 180));

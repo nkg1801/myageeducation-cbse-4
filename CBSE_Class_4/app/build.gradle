@@ -6,6 +6,7 @@ android {
     namespace 'com.myAgeEducation.cbseClass4'
 
     /*Version details
+    35: Addition facts questions added. Multiplication questions enhanced to use comma separated numbers
     34: Circle graph and bar chart question now auto generating for chapter 13
     33: Updated SDK version to 37
     32: Update to new SDK after the app was removed from playstore - could not be published
@@ -25,8 +26,8 @@ android {
         minSdkVersion 26
         targetSdkVersion 37
         multiDexEnabled true
-        versionCode 34
-        versionName "3.4"
+        versionCode 35
+        versionName "3.5"
     }
 
     signingConfigs {

@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Random;
 
 public class CitiesNameUtil {
-    private static final Random RANDOM = new Random();
     private static final String[] INDIAN_CITIES = {
             "Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Ahmedabad", "Chennai", "Kolkata", "Surat",
             "Pune", "Jaipur", "Lucknow", "Kanpur", "Nagpur", "Patna", "Indore", "Thane", "Bhopal",

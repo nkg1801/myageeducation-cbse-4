@@ -3,12 +3,9 @@ package com.myAgeEducation.cbseClass4.maths.utils;
 public class NumberPair
 {
     private final int first;
-
     private final int second;
 
-    public NumberPair(
-            int first,
-            int second)
+    public NumberPair(int first, int second)
     {
         this.first = first;
         this.second = second;
@@ -18,7 +15,6 @@ public class NumberPair
     {
         return first;
     }
-
     public int getSecond()
     {
         return second;

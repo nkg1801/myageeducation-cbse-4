@@ -153,21 +153,15 @@ public class SubtractionStoryDataGenerator {
 
     private static SubtractionStoryQuestionData generateUnknownStart()
     {
-        StoryCharacter character =
-                StoryCharacterUtil.getRandomCharacter();
+        StoryCharacter character = StoryCharacterUtil.getRandomCharacter();
 
         SubtractionStoryTemplate template =
                 getRandomTemplate(
                         SubtractionStoryTemplates.UNKNOWN_START);
 
-        NumberPair pair =
-                NumberUtil.getUnknownStartNumbers();
-
-        int remaining =
-                pair.getFirst();
-
-        int lost =
-                pair.getSecond();
+        NumberPair pair = NumberUtil.getUnknownStartNumbers();
+        int remaining = pair.getFirst();
+        int lost = pair.getSecond();
 
         String question =
                 String.format(
@@ -187,18 +181,14 @@ public class SubtractionStoryDataGenerator {
 
     private static SubtractionStoryQuestionData generateUnknownChange()
     {
-        StoryCharacter character =
-                StoryCharacterUtil.getRandomCharacter();
+        StoryCharacter character = StoryCharacterUtil.getRandomCharacter();
 
         SubtractionStoryTemplate template =
                 getRandomTemplate(
                         SubtractionStoryTemplates.UNKNOWN_CHANGE);
 
-        int start =
-                getLargerNumber();
-
-        int remaining =
-                getSmallerNumber(start);
+        int start = getLargerNumber();
+        int remaining = getSmallerNumber(start);
 
         String question =
                 String.format(
@@ -218,23 +208,16 @@ public class SubtractionStoryDataGenerator {
 
     private static SubtractionStoryQuestionData generateComparison()
     {
-        StoryCharacter first =
-                StoryCharacterUtil.getRandomCharacter();
-
-        String second =
-                StoryCharacterUtil.getAnotherPersonName(first);
+        StoryCharacter first = StoryCharacterUtil.getRandomCharacter();
+        String second = StoryCharacterUtil.getAnotherPersonName(first);
 
         SubtractionStoryTemplate template =
                 getRandomTemplate(
                         SubtractionStoryTemplates.COMPARISON);
 
-        NumberPair pair =
-                NumberUtil.getSubtractionNumbers();
-        int bigger =
-                pair.getFirst();
-        int smaller =
-                pair.getSecond();
-
+        NumberPair pair = NumberUtil.getSubtractionNumbers();
+        int bigger = pair.getFirst();
+        int smaller = pair.getSecond();
 
         String question =
                 String.format(

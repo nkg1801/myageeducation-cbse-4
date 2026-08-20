@@ -1,5 +1,4 @@
 package com.myAgeEducation.cbseClass4.maths.utils;
-
 import java.util.Random;
 
 public final class NumberPairUtil

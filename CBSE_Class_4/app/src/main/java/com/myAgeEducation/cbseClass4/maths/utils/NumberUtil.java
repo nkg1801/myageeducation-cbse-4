@@ -1,11 +1,9 @@
 package com.myAgeEducation.cbseClass4.maths.utils;
-
 import java.util.Random;
 
 public final class NumberUtil
 {
-    private static final Random RANDOM =
-            new Random();
+    private static final Random RANDOM = new Random();
 
     private NumberUtil()
     {
@@ -17,15 +15,9 @@ public final class NumberUtil
      */
     public static NumberPair getSubtractionNumbers()
     {
-        int first =
-                RANDOM.nextInt(41) + 40;      // 40-80
-
-        int second =
-                RANDOM.nextInt(first / 2) + 5;
-
-        return new NumberPair(
-                first,
-                second);
+        int first = RANDOM.nextInt(41) + 40;      // 40-80
+        int second = RANDOM.nextInt(first / 2) + 5;
+        return new NumberPair(first, second);
     }
 
     /**
@@ -42,14 +34,8 @@ public final class NumberUtil
      */
     public static NumberPair getUnknownStartNumbers()
     {
-        int remaining =
-                RANDOM.nextInt(31) + 20;
-
-        int removed =
-                RANDOM.nextInt(16) + 5;
-
-        return new NumberPair(
-                remaining,
-                removed);
+        int remaining = RANDOM.nextInt(31) + 20;
+        int removed = RANDOM.nextInt(16) + 5;
+        return new NumberPair(remaining, removed);
     }
 }

@@ -46,6 +46,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.myAgeEducation.cbseClass4.maths.additions.AdditionQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.additions.AdditionStoryQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.charts.BarChartQuestionGenerator;
 import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphQuestionGenerator;
@@ -543,7 +544,7 @@ public class SubjectList extends Activity
         Question question;// = new Question();
 
         for(int i = 0; i < 20; i++) {
-            randomNumber = RANDOM.nextInt(3);
+            randomNumber = RANDOM.nextInt(4);
 
             switch(randomNumber)
             {
@@ -552,6 +553,10 @@ public class SubjectList extends Activity
                     break;
 
                 case 1:
+                    question = AdditionQuestionGenerator.generateQuestion();
+                    break;
+
+                case 2:
                     question = SubtractionFactQuestionGenerator.generateQuestion();
                     break;
 

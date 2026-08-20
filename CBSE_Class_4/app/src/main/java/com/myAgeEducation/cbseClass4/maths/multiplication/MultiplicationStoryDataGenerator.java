@@ -1,5 +1,6 @@
 package com.myAgeEducation.cbseClass4.maths.multiplication;
 
+import com.myAgeEducation.cbseClass4.maths.utils.NumberFormatUtil;
 import com.myAgeEducation.cbseClass4.maths.utils.NumberPair;
 import com.myAgeEducation.cbseClass4.maths.utils.NumberPairUtil;
 import com.myAgeEducation.cbseClass4.maths.utils.StoryCharacter;
@@ -40,7 +41,6 @@ public class MultiplicationStoryDataGenerator
                 throw new IllegalArgumentException(
                         "Unknown multiplication story type");
         }
-
     }
 
     private static String formatQuestion(
@@ -50,20 +50,17 @@ public class MultiplicationStoryDataGenerator
             int firstNumber,
             int secondNumber)
     {
-        return String.format(
-                template.questionTemplate,
+        return String.format(template.questionTemplate,
 
-                character != null
-                        ? character.getName()
-                        : "",
+                character != null ? character.getName() : "",
 
-                firstNumber,
+                NumberFormatUtil.formatIndianNumber(firstNumber),
 
                 secondPerson != null
                         ? secondPerson
                         : "",
 
-                secondNumber,
+                NumberFormatUtil.formatIndianNumber(secondNumber),
 
                 character != null
                         ? character.getPossessivePronoun()
@@ -197,13 +194,8 @@ public class MultiplicationStoryDataGenerator
                 numbers.getFirst() * numbers.getSecond());
     }
 
-    private static MultiplicationStoryTemplate getRandomTemplate(
-            MultiplicationStoryTemplate[] templates)
+    private static MultiplicationStoryTemplate getRandomTemplate(MultiplicationStoryTemplate[] templates)
     {
-        return templates[
-                RANDOM.nextInt(
-                        templates.length)];
+        return templates[RANDOM.nextInt(templates.length)];
     }
-
-
     }

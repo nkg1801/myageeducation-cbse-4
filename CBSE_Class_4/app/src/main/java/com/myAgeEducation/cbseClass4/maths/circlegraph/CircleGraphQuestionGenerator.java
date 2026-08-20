@@ -33,8 +33,7 @@ public class CircleGraphQuestionGenerator
                 return generateMostQuestion();
             case 2:
                 return generateLeastQuestion();
-            /*case 3:
-                return generateDifferenceQuestion();*/
+
             default:
                 return generateSameValueQuestion();
         }
