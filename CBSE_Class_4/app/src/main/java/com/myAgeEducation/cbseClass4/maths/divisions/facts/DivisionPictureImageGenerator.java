@@ -15,7 +15,6 @@ public class DivisionPictureImageGenerator
 {
     private static final int WIDTH = 1000;
     private static final int HEIGHT = 600;
-
     private static final int TEXT_SIZE = 88;
 
     public static Bitmap generate(String imageCode)

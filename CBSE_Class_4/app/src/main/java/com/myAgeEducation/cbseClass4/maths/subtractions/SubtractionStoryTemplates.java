@@ -94,7 +94,7 @@ public class SubtractionStoryTemplates
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.UNKNOWN_CHANGE,
-                            "%1$s had %2$s stickers. Now %1$s has %4$d stickers. How many stickers were used?")
+                            "%1$s had %2$s stickers. Now %1$s has %4$s stickers. How many stickers were used?")
             };
 
     //----------------------------------------------------------

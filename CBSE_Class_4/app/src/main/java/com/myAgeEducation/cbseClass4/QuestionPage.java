@@ -43,6 +43,7 @@ import com.myAgeEducation.cbseClass4.maths.circlegraph.CircleGraphImageGenerator
 import com.myAgeEducation.cbseClass4.maths.datetimecalendar.ClockImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.decimals.DecimalGridImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.decimals.DecimalImageGenerator;
+import com.myAgeEducation.cbseClass4.maths.divisions.facts.DivisionPictureImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.fractions.FractionImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.fractions.NumericFractionImageGenerator;
 import com.myAgeEducation.cbseClass4.maths.pictograph.PictographImageGenerator;
@@ -529,7 +530,6 @@ public class QuestionPage extends Activity {
 
 		Map<String, String> values = ImageCodeParser.parse(imageData);
 
-		//if(!Objects.requireNonNull(values.get("TYPE")).isEmpty())
 		if (values.containsKey("TYPE") && values.get("TYPE") != null && !Objects.requireNonNull(values.get("TYPE")).isEmpty())
 		{
 			Bitmap bitmap = getQuestionImage(imageData);
@@ -540,15 +540,16 @@ public class QuestionPage extends Activity {
 			}
 			else
 			{
-				if (imageData.length() < 50) {
+				if (imageData.length() > 1000) {
+					img.setImageBitmap(loadBitmapFromBase64Encoding(imageData));
+					img.setVisibility(View.VISIBLE);
+
+				} else {
 					int resourceIdentifier = getResources().getIdentifier(imageData, "drawable", getPackageName());
 					if (resourceIdentifier != 0) {
 						img.setImageResource(resourceIdentifier);
 						img.setVisibility(View.VISIBLE);
 					}
-				} else {
-					img.setImageBitmap(loadBitmapFromBase64Encoding(imageData));
-					img.setVisibility(View.VISIBLE);
 				}
 			}
 		}
@@ -635,29 +636,32 @@ public class QuestionPage extends Activity {
 
 		switch (Objects.requireNonNull(values.get("TYPE")))
 		{
-			case ImageCodeType.CIRCLE_GRAPH:
-				return CircleGraphImageGenerator.generate(imageData);
-
-			case ImageCodeType.PICTOGRAPH:
-				return PictographImageGenerator.generate(this, imageData);
-
 			case ImageCodeType.BARCHART:
 				return BarChartImageGenerator.generate(imageData);
 
-			case ImageCodeType.NUMERIC_FRACTION:
-				return NumericFractionImageGenerator.generate(imageData);
-
-			case ImageCodeType.SHAPE_PART_FRACTION:
-				return FractionImageGenerator.generateFractionImage(imageData);
+			case ImageCodeType.CIRCLE_GRAPH:
+				return CircleGraphImageGenerator.generate(imageData);
 
 			case ImageCodeType.CLOCK:
 				return ClockImageGenerator.generateClockImage(imageData);
 
+			case ImageCodeType.DECIMAL_GRID:
+				return DecimalGridImageGenerator.generate(imageData);
+
 			case ImageCodeType.DECIMAL_IMAGE:
 				return DecimalImageGenerator.generate(imageData);
 
-			case ImageCodeType.DECIMAL_GRID:
-				return DecimalGridImageGenerator.generate(imageData);
+			case ImageCodeType.DIVISION:
+				return DivisionPictureImageGenerator.generate(imageData);
+
+			case ImageCodeType.NUMERIC_FRACTION:
+				return NumericFractionImageGenerator.generate(imageData);
+
+			case ImageCodeType.PICTOGRAPH:
+				return PictographImageGenerator.generate(this, imageData);
+
+			case ImageCodeType.SHAPE_PART_FRACTION:
+				return FractionImageGenerator.generateFractionImage(imageData);
 
 			default:
 				return null;
@@ -755,22 +759,6 @@ public class QuestionPage extends Activity {
   {
 	  showAllOptions();
 	  _linkText = "";
-
-	  /*if(question.getChapter() == 13)
-	  {
-		  question = setQuestionForChapterThirteen();
-	  }*/
-
-	  /*switch (question.getChapter())
-	  {
-		  case 1:
-			  question = setQuestionForChapterOne();
-			  break;
-
-		  case 13:
-			  question = setQuestionForChapterThirteen();
-			  break;
-	  }*/
 
 	  String questionImage = question.getImage();
 	  String supportiveText = question.getSupportiveText();
@@ -1055,16 +1043,6 @@ public class QuestionPage extends Activity {
 		Firebase ref = new Firebase(nodePath);
 		Firebase childRef = ref.child(nodeChild);
 		childRef.setValue(nodeValue);
-		//Firebase.goOffline();
-	}
-
-	private void writeLastAttemptScoreToCloud()
-	{
-		/*FirebaseAuth mAuth = FirebaseAuth.getInstance();
-		FirebaseUser user = mAuth.getCurrentUser();
-		String userUuid = user.getUid();*/
-		String nodePath = Util.ContestClassRoot + "/Jan-2018/" + Util.UserUid + "/" + Util.Subject;
-		writeSingleIntegerValueToCloud(nodePath,"lastAttemptScore", correctAnswerCount);
 	}
 
 	private void intermediateSave()
@@ -1120,9 +1098,7 @@ public class QuestionPage extends Activity {
 				}
 
 				@Override
-				public void onCancelled(DatabaseError error) {
-					Firebase.goOffline();
-					//System.err.println("Listener was cancelled");
+				public void onCancelled(@NonNull DatabaseError error) {
 				}
 			});
 		}
