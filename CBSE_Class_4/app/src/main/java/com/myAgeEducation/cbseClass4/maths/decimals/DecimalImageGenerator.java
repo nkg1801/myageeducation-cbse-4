@@ -22,7 +22,7 @@ public class DecimalImageGenerator
 
     /**
      * Generates a bitmap showing a fraction or a mixed number.
-     * imageCode format: DECIMAL_IMAGE_WHOLE_NUMERATOR_DENOMINATOR
+     * imageCode format: DECIMAL-IMAGE_WHOLE_NUMERATOR_DENOMINATOR
      */
     public static Bitmap generate(String imageCode)
     {

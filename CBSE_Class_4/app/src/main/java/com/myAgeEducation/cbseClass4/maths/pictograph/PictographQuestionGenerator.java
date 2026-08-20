@@ -28,18 +28,10 @@ public class PictographQuestionGenerator
 
     private static PictographQuestionData generate()
     {
-        // Generate pictograph first
         PictographData pictographData = PictographGenerator.generate();
-
-        // Select a question type valid for this pictograph
         PictographQuestionType type = getRandomValidQuestionType(pictographData);
-
-        // Generate question text and answer
         PictographQuestionData questionData = generateQuestionData(pictographData, type);
-
-        // Generate options
         questionData.options = generateOptions(questionData);
-
         return questionData;
     }
 

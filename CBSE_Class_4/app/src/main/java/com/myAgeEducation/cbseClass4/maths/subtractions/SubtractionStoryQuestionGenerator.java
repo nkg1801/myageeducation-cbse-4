@@ -1,8 +1,12 @@
 package com.myAgeEducation.cbseClass4.maths.subtractions;
 
+import com.myAgeEducation.cbseClass4.maths.utils.NumberFormatUtil;
 import com.myAgeEducation.cbseClass4.utils.OptionUtils;
-import com.myAgeEducation.cbseClass4.maths.utils.OptionUtil;
+import com.myAgeEducation.cbseClass4.OptionUtil;
 import com.myAgeEducation.cbsecommon.Question;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class SubtractionStoryQuestionGenerator
 {
@@ -13,35 +17,25 @@ public class SubtractionStoryQuestionGenerator
     public static Question generateQuestion()
     {
         SubtractionStoryQuestionData data = SubtractionStoryDataGenerator.generate();
-        String[] options = generateOptions(data);
+        String correctAnswer = NumberFormatUtil.formatIndianNumber(data.answer);
+        String[] options = generateOptions(data.answer);
         Question question = new Question();
         question.setQuestion(data.question);
         OptionUtils.setQuestionOptions(question, options);
-        question.setAnswer(String.valueOf(data.answer));
+        question.setAnswer(correctAnswer);
         return question;
     }
 
-    private static String[] generateOptions(SubtractionStoryQuestionData data)
+    private static String[] generateOptions(int answer)
     {
-        switch (data.template.type)
-        {
-            case HAS_LESS:
-            case GROUP_SHRINKS:
-            case MONEY_SPENT:
-            case UNKNOWN_START:
-            case UNKNOWN_CHANGE:
-            case COMPARISON:
-                return createSubtractionOptions(data);
+        Set<String> distractors = new LinkedHashSet<>();
+        distractors.add(NumberFormatUtil.formatIndianNumber(answer + 1));
+        distractors.add(NumberFormatUtil.formatIndianNumber(answer - 1));
+        distractors.add(NumberFormatUtil.formatIndianNumber(answer + 10));
+        distractors.add(NumberFormatUtil.formatIndianNumber(answer - 10));
+        distractors.add(NumberFormatUtil.formatIndianNumber(answer + 2));
+        distractors.add(NumberFormatUtil.formatIndianNumber(answer - 2));
 
-            default:
-                throw new IllegalArgumentException("Unknown subtraction story type");
-        }
-    }
-
-    //------------------------------------------------------------
-
-    private static String[] createSubtractionOptions(SubtractionStoryQuestionData data)
-    {
-        return OptionUtil.createNearbyOptions(data.answer);
+        return OptionUtil.createOptions(NumberFormatUtil.formatIndianNumber(answer), distractors, 4);
     }
 }

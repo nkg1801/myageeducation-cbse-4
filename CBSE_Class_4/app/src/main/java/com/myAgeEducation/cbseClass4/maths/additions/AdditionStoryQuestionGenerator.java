@@ -1,6 +1,7 @@
 package com.myAgeEducation.cbseClass4.maths.additions;
 
 import com.myAgeEducation.cbseClass4.OptionUtil;
+import com.myAgeEducation.cbseClass4.maths.utils.NumberFormatUtil;
 import com.myAgeEducation.cbseClass4.utils.OptionUtils;
 import com.myAgeEducation.cbsecommon.Question;
 
@@ -15,8 +16,8 @@ public class AdditionStoryQuestionGenerator
 
     public static Question generateQuestion()
     {
-        AdditionStoryQuestionData data =AdditionStoryDataGenerator.generate();
-        String correctAnswer = String.valueOf(data.answer);
+        AdditionStoryQuestionData data = AdditionStoryDataGenerator.generate();
+        String correctAnswer = NumberFormatUtil.formatIndianNumber(data.answer);
         String[] options = generateOptions(data.answer);
         Question question = new Question();
         question.setQuestion(data.question);
@@ -28,12 +29,12 @@ public class AdditionStoryQuestionGenerator
     private static String[] generateOptions(int correctAnswer)
     {
         Set<String> distractors = new LinkedHashSet<>();
-        distractors.add(String.valueOf(correctAnswer + 1));
-        distractors.add(String.valueOf(correctAnswer - 1));
-        distractors.add(String.valueOf(correctAnswer + 10));
-        distractors.add(String.valueOf(correctAnswer - 10));
-        distractors.add(String.valueOf(correctAnswer + 2));
-        distractors.add(String.valueOf(correctAnswer - 2));
-        return OptionUtil.createOptions(String.valueOf(correctAnswer), distractors, 4);
+        distractors.add(NumberFormatUtil.formatIndianNumber(correctAnswer + 1));
+        distractors.add(NumberFormatUtil.formatIndianNumber(correctAnswer - 1));
+        distractors.add(NumberFormatUtil.formatIndianNumber(correctAnswer + 10));
+        distractors.add(NumberFormatUtil.formatIndianNumber(correctAnswer - 10));
+        distractors.add(NumberFormatUtil.formatIndianNumber(correctAnswer + 2));
+        distractors.add(NumberFormatUtil.formatIndianNumber(correctAnswer - 2));
+        return OptionUtil.createOptions(NumberFormatUtil.formatIndianNumber(correctAnswer), distractors, 4);
     }
 }

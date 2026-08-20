@@ -1,5 +1,6 @@
 package com.myAgeEducation.cbseClass4.maths.additions;
 
+import com.myAgeEducation.cbseClass4.maths.utils.NumberFormatUtil;
 import com.myAgeEducation.cbseClass4.maths.utils.NumberPair;
 import com.myAgeEducation.cbseClass4.maths.utils.NumberPairUtil;
 import com.myAgeEducation.cbseClass4.maths.utils.StoryCharacter;
@@ -10,10 +11,20 @@ import java.util.Random;
 public class AdditionStoryDataGenerator
 {
     private static final Random RANDOM = new Random();
-    final static int FIRST_MIN = 100;
-    final static int FIRST_MAX = 50000;
-    final static int SECOND_MIN = 100;
-    final static int SECOND_MAX = 50000;
+    final static int SMALLER_FIRST_MIN = 100;
+    final static int SMALLER_FIRST_MAX = 500;
+    final static int SMALLER_SECOND_MIN = 100;
+    final static int SMALLER_SECOND_MAX = 500;
+
+    final static int HIGHER_FIRST_MIN = 100;
+    final static int HIGHER_FIRST_MAX = 50000;
+    final static int HIGHER_SECOND_MIN = 100;
+    final static int HIGHER_SECOND_MAX = 50000;
+
+    static int FIRST_MIN;
+    static int FIRST_MAX;
+    static int SECOND_MIN;
+    static int SECOND_MAX;
 
     private AdditionStoryDataGenerator()
     {
@@ -21,7 +32,24 @@ public class AdditionStoryDataGenerator
 
     public static AdditionStoryQuestionData generate()
     {
-        AdditionStoryTemplate template = AdditionStoryTemplates.TEMPLATES[RANDOM.nextInt(AdditionStoryTemplates.TEMPLATES.length)];
+        AdditionStoryTemplate template;
+        int random = RANDOM.nextInt(100);
+        if(random < 75)
+        {
+            template = AdditionStoryTemplates.BIGGER_NUMBER_TEMPLATES[RANDOM.nextInt(AdditionStoryTemplates.BIGGER_NUMBER_TEMPLATES.length)];
+            FIRST_MIN = HIGHER_FIRST_MIN;
+            FIRST_MAX = HIGHER_FIRST_MAX;
+            SECOND_MIN = HIGHER_SECOND_MIN;
+            SECOND_MAX = HIGHER_SECOND_MAX;
+        }
+        else {
+            template = AdditionStoryTemplates.SMALLER_NUMBER_TEMPLATES[RANDOM.nextInt(AdditionStoryTemplates.SMALLER_NUMBER_TEMPLATES.length)];
+            FIRST_MIN = SMALLER_FIRST_MIN;
+            FIRST_MAX = SMALLER_FIRST_MAX;
+            SECOND_MIN = SMALLER_SECOND_MIN;
+            SECOND_MAX = SMALLER_SECOND_MAX;
+        }
+        //AdditionStoryTemplate template = AdditionStoryTemplates.SMALLER_NUMBER_TEMPLATES[RANDOM.nextInt(AdditionStoryTemplates.SMALLER_NUMBER_TEMPLATES.length)];
 
         switch (template.type)
         {
@@ -48,14 +76,12 @@ public class AdditionStoryDataGenerator
     private static AdditionStoryQuestionData generateHasMore(AdditionStoryTemplate template)
     {
         StoryCharacter character = StoryCharacterUtil.getRandomCharacter();
-
         String secondPerson = StoryCharacterUtil.getAnotherPersonName(character);
-
         NumberPair numbers = NumberPairUtil.randomPair(
                 FIRST_MIN,
                 FIRST_MAX,
                 SECOND_MIN,
-                        SECOND_MAX);
+                SECOND_MAX);
 
         return new AdditionStoryQuestionData(
                 template,
@@ -163,9 +189,9 @@ public class AdditionStoryDataGenerator
     {
         return String.format(template.questionTemplate,
                 character != null ? character.getName() : "",
-                firstNumber,
+                NumberFormatUtil.formatIndianNumber(firstNumber),
                 secondPerson != null ? secondPerson : "",
-                secondNumber,
+                NumberFormatUtil.formatIndianNumber(secondNumber),
                 character != null ? character.getPossessivePronoun() : "",
                 character != null ? character.getObjectPronoun() : "");
     }

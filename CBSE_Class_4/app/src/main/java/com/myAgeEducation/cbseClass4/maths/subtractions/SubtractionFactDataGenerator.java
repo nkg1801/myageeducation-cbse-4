@@ -1,5 +1,6 @@
 package com.myAgeEducation.cbseClass4.maths.subtractions;
 
+import com.myAgeEducation.cbseClass4.maths.utils.NumberFormatUtil;
 import java.util.Random;
 
 public class SubtractionFactDataGenerator
@@ -46,7 +47,7 @@ public class SubtractionFactDataGenerator
         String question =
                 String.format(
                         template.questionTemplate,
-                        number);
+                        NumberFormatUtil.formatIndianNumber(number));
 
         return createQuestion(
                 template,
@@ -71,7 +72,7 @@ public class SubtractionFactDataGenerator
         String question =
                 String.format(
                         template.questionTemplate,
-                        number);
+                        NumberFormatUtil.formatIndianNumber(number));
 
         return createQuestion(
                 template,
@@ -127,17 +128,17 @@ public class SubtractionFactDataGenerator
             question =
                     String.format(
                             template.questionTemplate,
-                            data.digit1,
-                            data.number);
+                            NumberFormatUtil.formatIndianNumber(data.digit1),
+                            NumberFormatUtil.formatIndianNumber(data.number));
         }
         else
         {
             question =
                     String.format(
                             template.questionTemplate,
-                            data.digit1,
-                            data.digit2,
-                            data.number);
+                            NumberFormatUtil.formatIndianNumber(data.digit1),
+                            NumberFormatUtil.formatIndianNumber(data.digit2),
+                            NumberFormatUtil.formatIndianNumber(data.number));
         }
 
         return createQuestion(
@@ -190,137 +191,89 @@ public class SubtractionFactDataGenerator
         PlaceValueDifferenceData data =
                 new PlaceValueDifferenceData();
 
-        int[] digits =
-                new int[4];
+        int digit = RANDOM.nextInt(9) + 1; // Target digit (1-9)
 
-        digits[0] =
-                RANDOM.nextInt(9) + 1;
-
-        for (int i = 1; i < 4; i++)
+        int[] digits = new int[4];
+        for (int i = 0; i < 4; i++)
         {
-            digits[i] =
-                    RANDOM.nextInt(10);
+            int otherDigit;
+            do
+            {
+                otherDigit = RANDOM.nextInt(10);
+            }
+            while (otherDigit == digit || (i == 0 && otherDigit == 0));
+            digits[i] = otherDigit;
         }
 
-        int firstPlace =
-                RANDOM.nextInt(4);
-
+        int firstPlace = RANDOM.nextInt(4);
         int secondPlace;
-
         do
         {
-            secondPlace =
-                    RANDOM.nextInt(4);
+            secondPlace = RANDOM.nextInt(4);
         }
         while (secondPlace == firstPlace);
 
-        int digit =
-                RANDOM.nextInt(8) + 1;
+        digits[firstPlace] = digit;
+        digits[secondPlace] = digit;
 
-        digits[firstPlace] =
-                digit;
+        data.number = buildNumber(digits);
 
-        digits[secondPlace] =
-                digit;
-
-        data.number =
-                buildNumber(digits);
-
-        int[] placeValues =
-                {1000,100,10,1};
+        int[] placeValues = {1000, 100, 10, 1};
 
         data.sameDigit = true;
-
-        data.digit1 =
-                digit;
-
-        data.placeValue1 =
-                digit * placeValues[firstPlace];
-
-        data.placeValue2 =
-                digit * placeValues[secondPlace];
-
-        data.answer =
-                Math.abs(
-                        data.placeValue1 -
-                                data.placeValue2);
+        data.digit1 = digit;
+        data.placeValue1 = digit * placeValues[firstPlace];
+        data.placeValue2 = digit * placeValues[secondPlace];
+        data.answer = Math.abs(data.placeValue1 - data.placeValue2);
 
         return data;
     }
 
     private static PlaceValueDifferenceData generateDifferentDigitQuestion()
     {
-        PlaceValueDifferenceData data =
-                new PlaceValueDifferenceData();
+        PlaceValueDifferenceData data = new PlaceValueDifferenceData();
 
-        int[] digits =
-                new int[4];
-
-        // Thousands digit cannot be zero
-        digits[0] =
-                RANDOM.nextInt(9) + 1;
-
-        // Remaining digits
-        for (int i = 1; i < 4; i++)
-        {
-            digits[i] =
-                    RANDOM.nextInt(10);
-        }
-
-        int firstPlace =
-                RANDOM.nextInt(4);
-
-        int secondPlace;
-
-        do
-        {
-            secondPlace =
-                    RANDOM.nextInt(4);
-        }
-        while (secondPlace == firstPlace);
-
-        int digit1 =
-                RANDOM.nextInt(8) + 1;
-
+        int digit1 = RANDOM.nextInt(9) + 1;
         int digit2;
-
         do
         {
-            digit2 =
-                    RANDOM.nextInt(8) + 1;
+            digit2 = RANDOM.nextInt(9) + 1;
         }
         while (digit2 == digit1);
 
-        digits[firstPlace] =
-                digit1;
+        int[] digits = new int[4];
+        for (int i = 0; i < 4; i++)
+        {
+            int otherDigit;
+            do
+            {
+                otherDigit = RANDOM.nextInt(10);
+            }
+            while (otherDigit == digit1 || otherDigit == digit2 || (i == 0 && otherDigit == 0));
+            digits[i] = otherDigit;
+        }
 
-        digits[secondPlace] =
-                digit2;
+        int firstPlace = RANDOM.nextInt(4);
+        int secondPlace;
+        do
+        {
+            secondPlace = RANDOM.nextInt(4);
+        }
+        while (secondPlace == firstPlace);
 
-        data.number =
-                buildNumber(digits);
+        digits[firstPlace] = digit1;
+        digits[secondPlace] = digit2;
 
-        int[] placeValues =
-                {1000,100,10,1};
+        data.number = buildNumber(digits);
+
+        int[] placeValues = {1000, 100, 10, 1};
 
         data.sameDigit = false;
-
-        data.digit1 =
-                digit1;
-
-        data.digit2 =
-                digit2;
-
-        data.placeValue1 =
-                digit1 * placeValues[firstPlace];
-
-        data.placeValue2 =
-                digit2 * placeValues[secondPlace];
-
-        data.answer =
-                Math.abs(
-                        data.placeValue1 -
-                                data.placeValue2);
+        data.digit1 = digit1;
+        data.digit2 = digit2;
+        data.placeValue1 = digit1 * placeValues[firstPlace];
+        data.placeValue2 = digit2 * placeValues[secondPlace];
+        data.answer = Math.abs(data.placeValue1 - data.placeValue2);
 
         return data;
     }
@@ -332,6 +285,4 @@ public class SubtractionFactDataGenerator
                 + digits[2] * 10
                 + digits[3];
     }
-
-
 }

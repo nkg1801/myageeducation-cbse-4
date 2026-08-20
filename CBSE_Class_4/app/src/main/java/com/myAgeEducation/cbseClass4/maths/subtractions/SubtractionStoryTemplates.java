@@ -10,15 +10,15 @@ public class SubtractionStoryTemplates
             {
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.HAS_LESS,
-                            "%1$s has %2$d marbles. %1$s gives away %4$d marbles. How many marbles does %1$s have left?"),
+                            "%1$s has %2$s marbles. %1$s gives away %4$s marbles. How many marbles does %1$s have left?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.HAS_LESS,
-                            "%1$s has %2$d balloons. %1$s gives %4$d balloons to %3$s. How many balloons does %1$s have now?"),
+                            "%1$s has %2$s balloons. %1$s gives %4$s balloons to %3$s. How many balloons does %1$s have now?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.HAS_LESS,
-                            "%1$s has %2$d chocolates. %1$s eats %4$d chocolates. How many chocolates are left?")
+                            "%1$s has %2$s chocolates. %1$s eats %4$s chocolates. How many chocolates are left?")
             };
 
     //----------------------------------------------------------
@@ -29,15 +29,15 @@ public class SubtractionStoryTemplates
             {
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.GROUP_SHRINKS,
-                            "There are %2$d birds on a tree. %4$d birds fly away. How many birds remain?"),
+                            "There are %2$s birds on a tree. %4$s birds fly away. How many birds remain?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.GROUP_SHRINKS,
-                            "There are %2$d children in a playground. %4$d children go home. How many children are left?"),
+                            "There are %2$s children in a playground. %4$s children go home. How many children are left?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.GROUP_SHRINKS,
-                            "There are %2$d books on a shelf. %4$d books are taken away. How many books remain?")
+                            "There are %2$s books on a shelf. %4$s books are taken away. How many books remain?")
             };
 
     //----------------------------------------------------------
@@ -48,15 +48,15 @@ public class SubtractionStoryTemplates
             {
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.MONEY_SPENT,
-                            "%1$s has ₹%2$d. %1$s spends ₹%4$d. How much money is left?"),
+                            "%1$s has ₹%2$s. %1$s spends ₹%4$s. How much money is left?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.MONEY_SPENT,
-                            "%1$s has ₹%2$d in a wallet. %1$s buys a toy for ₹%4$d. How much money remains?"),
+                            "%1$s has ₹%2$s in a wallet. %1$s buys a toy for ₹%4$s. How much money remains?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.MONEY_SPENT,
-                            "%1$s saves ₹%2$d. %1$s spends ₹%4$d on books. How much money is left?")
+                            "%1$s saves ₹%2$s. %1$s spends ₹%4$s on books. How much money is left?")
             };
 
     //----------------------------------------------------------
@@ -67,15 +67,15 @@ public class SubtractionStoryTemplates
             {
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.UNKNOWN_START,
-                            "%1$s sold %4$d balloons. %1$s still has %2$d balloons left. How many balloons did %1$s have at first?"),
+                            "%1$s sold %4$s balloons. %1$s still has %2$s balloons left. How many balloons did %1$s have at first?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.UNKNOWN_START,
-                            "%1$s gave away %4$d chocolates. %1$s has %2$d chocolates left. How many chocolates did %1$s have?"),
+                            "%1$s gave away %4$s chocolates. %1$s has %2$s chocolates left. How many chocolates did %1$s have?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.UNKNOWN_START,
-                            "%1$s lost %4$d marbles. %1$s still has %2$d marbles. How many marbles did %1$s have originally?")
+                            "%1$s lost %4$s marbles. %1$s still has %2$s marbles. How many marbles did %1$s have originally?")
             };
 
     //----------------------------------------------------------
@@ -86,15 +86,15 @@ public class SubtractionStoryTemplates
             {
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.UNKNOWN_CHANGE,
-                            "%1$s had %2$d pencils. Now %1$s has %4$d pencils. How many pencils were lost?"),
+                            "%1$s had %2$s pencils. Now %1$s has %4$s pencils. How many pencils were lost?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.UNKNOWN_CHANGE,
-                            "There were %2$d birds on a tree. Now there are %4$d birds. How many birds flew away?"),
+                            "There were %2$s birds on a tree. Now there are %4$s birds. How many birds flew away?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.UNKNOWN_CHANGE,
-                            "%1$s had %2$d stickers. Now %1$s has %4$d stickers. How many stickers were used?")
+                            "%1$s had %2$s stickers. Now %1$s has %4$d stickers. How many stickers were used?")
             };
 
     //----------------------------------------------------------
@@ -105,14 +105,14 @@ public class SubtractionStoryTemplates
             {
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.COMPARISON,
-                            "%1$s has %2$d pencils. %3$s has %4$d pencils. How many more pencils does %1$s have?"),
+                            "%1$s has %2$s pencils. %3$s has %4$s pencils. How many more pencils does %1$s have?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.COMPARISON,
-                            "%1$s collected %2$d shells. %3$s collected %4$d shells. How many more shells did %1$s collect?"),
+                            "%1$s collected %2$s shells. %3$s collected %4$s shells. How many more shells did %1$s collect?"),
 
                     new SubtractionStoryTemplate(
                             SubtractionStoryType.COMPARISON,
-                            "%1$s scored %2$d runs. %3$s scored %4$d runs. By how many runs did %1$s score more?")
+                            "%1$s scored %2$s runs. %3$s scored %4$s runs. By how many runs did %1$s score more?")
             };
 }

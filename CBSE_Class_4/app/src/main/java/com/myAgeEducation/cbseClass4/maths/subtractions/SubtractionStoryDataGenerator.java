@@ -1,5 +1,6 @@
 package com.myAgeEducation.cbseClass4.maths.subtractions;
 
+import com.myAgeEducation.cbseClass4.maths.utils.NumberFormatUtil;
 import com.myAgeEducation.cbseClass4.maths.utils.NumberPair;
 import com.myAgeEducation.cbseClass4.maths.utils.NumberUtil;
 import com.myAgeEducation.cbseClass4.maths.utils.StoryCharacter;
@@ -39,9 +40,7 @@ public class SubtractionStoryDataGenerator {
 
     private static SubtractionStoryTemplate getRandomTemplate(SubtractionStoryTemplate[] templates)
     {
-        return templates[
-                RANDOM.nextInt(
-                        templates.length)];
+        return templates[RANDOM.nextInt(templates.length)];
     }
 
     private static SubtractionStoryQuestionData createQuestion(
@@ -87,9 +86,9 @@ public class SubtractionStoryDataGenerator {
                 String.format(
                         template.questionTemplate,
                         character.getName(),
-                        total,
+                        NumberFormatUtil.formatIndianNumber(total),
                         secondPerson,
-                        taken);
+                        NumberFormatUtil.formatIndianNumber(taken));
 
         return createQuestion(
                 template,
@@ -105,19 +104,16 @@ public class SubtractionStoryDataGenerator {
                 getRandomTemplate(
                         SubtractionStoryTemplates.GROUP_SHRINKS);
 
-        int total =
-                getLargerNumber();
-
-        int left =
-                getSmallerNumber(total);
+        int total = getLargerNumber();
+        int left = getSmallerNumber(total);
 
         String question =
                 String.format(
                         template.questionTemplate,
                         "",
-                        total,
+                        NumberFormatUtil.formatIndianNumber(total),
                         "",
-                        left);
+                        NumberFormatUtil.formatIndianNumber(left));
 
         return createQuestion(
                 template,
@@ -129,26 +125,23 @@ public class SubtractionStoryDataGenerator {
 
     private static SubtractionStoryQuestionData generateMoneySpent()
     {
-        StoryCharacter character =
-                StoryCharacterUtil.getRandomCharacter();
+        StoryCharacter character = StoryCharacterUtil.getRandomCharacter();
 
         SubtractionStoryTemplate template =
                 getRandomTemplate(
                         SubtractionStoryTemplates.MONEY_SPENT);
 
-        int money =
-                getLargerNumber();
+        int money = getLargerNumber();
 
-        int spent =
-                getSmallerNumber(money);
+        int spent = getSmallerNumber(money);
 
         String question =
                 String.format(
                         template.questionTemplate,
                         character.getName(),
-                        money,
+                        NumberFormatUtil.formatIndianNumber(money),
                         "",
-                        spent);
+                        NumberFormatUtil.formatIndianNumber(spent));
 
         return createQuestion(
                 template,
@@ -180,9 +173,9 @@ public class SubtractionStoryDataGenerator {
                 String.format(
                         template.questionTemplate,
                         character.getName(),
-                        remaining,
+                        NumberFormatUtil.formatIndianNumber(remaining),
                         "",
-                        lost);
+                        NumberFormatUtil.formatIndianNumber(lost));
 
         return createQuestion(
                 template,
@@ -211,9 +204,9 @@ public class SubtractionStoryDataGenerator {
                 String.format(
                         template.questionTemplate,
                         character.getName(),
-                        start,
+                        NumberFormatUtil.formatIndianNumber(start),
                         "",
-                        remaining);
+                        NumberFormatUtil.formatIndianNumber(remaining));
 
         return createQuestion(
                 template,
@@ -247,9 +240,9 @@ public class SubtractionStoryDataGenerator {
                 String.format(
                         template.questionTemplate,
                         first.getName(),
-                        bigger,
+                        NumberFormatUtil.formatIndianNumber(bigger),
                         second,
-                        smaller);
+                        NumberFormatUtil.formatIndianNumber(smaller));
 
         return createQuestion(
                 template,

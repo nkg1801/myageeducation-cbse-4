@@ -6,22 +6,22 @@ public class SubtractionFactTemplates
             {
                     new SubtractionFactTemplate(
                             SubtractionFactType.SUCCESSOR,
-                            "Write the successor of %1$d."),
+                            "Write the successor of %1$s."),
 
                     new SubtractionFactTemplate(
                             SubtractionFactType.SUCCESSOR,
-                            "What comes immediately after %1$d?")
+                            "What comes immediately after %1$s?")
             };
 
     public static final SubtractionFactTemplate[] PREDECESSOR =
             {
                     new SubtractionFactTemplate(
                             SubtractionFactType.PREDECESSOR,
-                            "Write the predecessor of %1$d."),
+                            "Write the predecessor of %1$s."),
 
                     new SubtractionFactTemplate(
                             SubtractionFactType.PREDECESSOR,
-                            "What comes immediately before %1$d?")
+                            "What comes immediately before %1$s?")
             };
 
     public static final SubtractionFactTemplate[] LARGEST_4_DIGIT_SUCCESSOR =
@@ -35,10 +35,10 @@ public class SubtractionFactTemplates
             {
                     new SubtractionFactTemplate(
                             SubtractionFactType.PLACE_VALUE_DIFFERENCE,
-                            "Find the difference between the place value of %1$d and the place value of %2$d in the numeral %3$d."),
+                            "Find the difference between the place value of %1$s and the place value of %2$s in the numeral %3$s."),
 
                     new SubtractionFactTemplate(
                             SubtractionFactType.PLACE_VALUE_DIFFERENCE,
-                            "Find the difference between the place values of two %1$ds in %2$d.")
+                            "Find the difference between the place values of two %1$ss in %2$s.")
             };
 }
